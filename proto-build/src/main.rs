@@ -32,13 +32,13 @@ const WASMD_REV: &str = "v0.29.2";
 // working directory.
 
 /// The directory generated cosmos-sdk proto files go into in this repo
-const COSMOS_SDK_PROTO_DIR: &str = "../cosmos-sdk-proto/src/prost/";
+const COSMOS_SDK_PROTO_DIR: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../cosmos-sdk-proto/src/prost/");
 /// Directory where the cosmos-sdk submodule is located
-const COSMOS_SDK_DIR: &str = "../cosmos-sdk-go";
+const COSMOS_SDK_DIR: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../cosmos-sdk-go");
 /// Directory where the cosmos/ibc-go submodule is located
-const IBC_DIR: &str = "../ibc-go";
+const IBC_DIR: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../ibc-go");
 /// Directory where the submodule is located
-const WASMD_DIR: &str = "../wasmd";
+const WASMD_DIR: &str = concat!(env!("CARGO_MANIFEST_DIR"), "/../wasmd");
 /// A temporary directory for proto building
 const TMP_BUILD_DIR: &str = "/tmp/tmp-protobuf/";
 
