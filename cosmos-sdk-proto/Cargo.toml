@@ -19,6 +19,10 @@ rust-version = "1.63"
 prost = "0.11"
 prost-types = "0.11"
 tendermint-proto = "0.33"
+prost-wkt = "0.4.2"
+prost-wkt-types = "0.4.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_with = { version = "3.2", features = ["base64"] }
 
 # Optional dependencies
 tonic = { version = "0.9", optional = true, default-features = false, features = ["codegen", "prost"] }

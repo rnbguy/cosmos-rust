@@ -15,6 +15,8 @@ use std::{
 };
 use walkdir::WalkDir;
 
+use prost_wkt_build::{FileDescriptorSet, Message};
+
 /// Suppress log messages
 // TODO(tarcieri): use a logger for this
 static QUIET: AtomicBool = AtomicBool::new(false);
@@ -258,6 +260,8 @@ fn compile_sdk_protos_and_services(out_dir: &Path) {
     // List available paths for dependencies
     let includes: Vec<PathBuf> = proto_includes_paths.iter().map(PathBuf::from).collect();
 
+    let descriptor_file = out_dir.join("descriptors_sdk.bin");
+
     // Compile all of the proto files, along with grpc service clients
     info!("Compiling proto definitions and clients for GRPC services!");
     tonic_build::configure()
@@ -265,8 +269,27 @@ fn compile_sdk_protos_and_services(out_dir: &Path) {
         .build_server(true)
         .out_dir(out_dir)
         .extern_path(".tendermint", "::tendermint_proto")
+        .type_attribute(".", "#[derive(::serde::Serialize, ::serde::Deserialize)]")
+        .field_attribute("PubKey.key", "#[serde(with = \"serde_with::As::<serde_with::base64::Base64>\")]")
+        .field_attribute("PrivKey.key", "#[serde(with = \"serde_with::As::<serde_with::base64::Base64>\")]")
+        .field_attribute("Tx.signatures", "#[serde(with = \"serde_with::As::<Vec<serde_with::base64::Base64>>\")]")
+        .field_attribute("TxRaw.signatures", "#[serde(with = \"serde_with::As::<Vec<serde_with::base64::Base64>>\")]")
+        .field_attribute(".cosmos.base.abci.v1beta1.Result.events", "#[serde(skip)]")
+        .field_attribute(".cosmos.base.abci.v1beta1.TxResponse.events", "#[serde(skip)]")
+        .field_attribute(".cosmos.base.tendermint.v1beta1.GetNodeInfoResponse.default_node_info", "#[serde(skip)]")
+        .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
+        .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
+        .extern_path(".google.protobuf.Duration", "::prost_wkt_types::Duration")
+        .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
+        .file_descriptor_set_path(&descriptor_file)
         .compile(&protos, &includes)
         .unwrap();
+
+    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+
+    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+
+    prost_wkt_build::add_serde(out_dir.to_path_buf(), descriptor);
 
     info!("=> Done!");
 }
@@ -290,14 +313,28 @@ fn compile_wasmd_proto_and_services(out_dir: &Path) {
     let mut protos: Vec<PathBuf> = vec![];
     collect_protos(&proto_paths, &mut protos);
 
+    let descriptor_file = out_dir.join("descriptors_wasm.bin");
+
     // Compile all proto client for GRPC services
     info!("Compiling wasmd proto clients for GRPC services!");
     tonic_build::configure()
         .build_client(true)
         .build_server(false)
         .out_dir(out_dir)
+        .type_attribute(".", "#[derive(::serde::Serialize, ::serde::Deserialize)]")
+        .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
+        .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
+        .extern_path(".google.protobuf.Duration", "::prost_wkt_types::Duration")
+        .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
+        .file_descriptor_set_path(&descriptor_file)
         .compile(&protos, &includes)
         .unwrap();
+
+    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+
+    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+
+    prost_wkt_build::add_serde(out_dir.to_path_buf(), descriptor);
 
     info!("=> Done!");
 }
@@ -340,6 +377,8 @@ fn compile_ibc_protos_and_services(out_dir: &Path) {
 
     let includes: Vec<PathBuf> = proto_includes_paths.iter().map(PathBuf::from).collect();
 
+    let descriptor_file = out_dir.join("descriptors_ibc.bin");
+
     // Compile all of the proto files, along with the grpc service clients
     info!("Compiling proto definitions and clients for GRPC services!");
     tonic_build::configure()
@@ -347,8 +386,20 @@ fn compile_ibc_protos_and_services(out_dir: &Path) {
         .build_server(false)
         .out_dir(out_dir)
         .extern_path(".tendermint", "::tendermint_proto")
+        .type_attribute(".", "#[derive(::serde::Serialize, ::serde::Deserialize)]")
+        .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
+        .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
+        .extern_path(".google.protobuf.Duration", "::prost_wkt_types::Duration")
+        .extern_path(".google.protobuf.Value", "::prost_wkt_types::Value")
+        .file_descriptor_set_path(&descriptor_file)
         .compile(&protos, &includes)
         .unwrap();
+
+    let descriptor_bytes = std::fs::read(descriptor_file).unwrap();
+
+    let descriptor = FileDescriptorSet::decode(&descriptor_bytes[..]).unwrap();
+
+    prost_wkt_build::add_serde(out_dir.to_path_buf(), descriptor);
 
     info!("=> Done!");
 }
@@ -387,7 +438,7 @@ fn copy_generated_files(from_dir: &Path, to_dir: &Path) {
     let errors = WalkDir::new(from_dir)
         .into_iter()
         .filter_map(|e| e.ok())
-        .filter(|e| e.file_type().is_file())
+        .filter(|e| e.file_type().is_file() && !e.file_name().to_string_lossy().starts_with("descriptors"))
         .map(|e| {
             let filename = e.file_name().to_os_string().to_str().unwrap().to_string();
             filenames.push(filename.clone());
