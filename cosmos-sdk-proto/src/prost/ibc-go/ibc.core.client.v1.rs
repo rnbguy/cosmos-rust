@@ -1,5 +1,6 @@
 /// IdentifiedClientState defines a client state with an additional client
 /// identifier field.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IdentifiedClientState {
@@ -8,10 +9,11 @@ pub struct IdentifiedClientState {
     pub client_id: ::prost::alloc::string::String,
     /// client state
     #[prost(message, optional, tag = "2")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// ConsensusStateWithHeight defines a consensus state with an additional height
 /// field.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConsensusStateWithHeight {
@@ -20,10 +22,11 @@ pub struct ConsensusStateWithHeight {
     pub height: ::core::option::Option<Height>,
     /// consensus state
     #[prost(message, optional, tag = "2")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// ClientConsensusStates defines all the stored consensus states for a given
 /// client.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientConsensusStates {
@@ -38,6 +41,7 @@ pub struct ClientConsensusStates {
 /// client's latest consensus state is copied over to the subject client. The proposal
 /// handler may fail if the subject and the substitute do not match in client and
 /// chain parameters (with exception to latest height, frozen height, and chain-id).
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientUpdateProposal {
@@ -57,6 +61,7 @@ pub struct ClientUpdateProposal {
 }
 /// UpgradeProposal is a gov Content type for initiating an IBC breaking
 /// upgrade.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpgradeProposal {
@@ -73,7 +78,7 @@ pub struct UpgradeProposal {
     /// of the chain. This will allow IBC connections to persist smoothly across
     /// planned chain upgrades
     #[prost(message, optional, tag = "4")]
-    pub upgraded_client_state: ::core::option::Option<::prost_types::Any>,
+    pub upgraded_client_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// Height is a monotonically increasing data type
 /// that can be compared against another Height for the purposes of updating and
@@ -85,6 +90,7 @@ pub struct UpgradeProposal {
 /// breaking changes In these cases, the RevisionNumber is incremented so that
 /// height continues to be monitonically increasing even as the RevisionHeight
 /// gets reset
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Height {
@@ -96,6 +102,7 @@ pub struct Height {
     pub revision_height: u64,
 }
 /// Params defines the set of IBC light client parameters.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Params {
@@ -103,263 +110,9 @@ pub struct Params {
     #[prost(string, repeated, tag = "1")]
     pub allowed_clients: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
-/// MsgCreateClient defines a message to create an IBC client
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgCreateClient {
-    /// light client state
-    #[prost(message, optional, tag = "1")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
-    /// consensus state associated with the client that corresponds to a given
-    /// height.
-    #[prost(message, optional, tag = "2")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
-    /// signer address
-    #[prost(string, tag = "3")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgCreateClientResponse defines the Msg/CreateClient response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgCreateClientResponse {}
-/// MsgUpdateClient defines an sdk.Msg to update a IBC client state using
-/// the given header.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgUpdateClient {
-    /// client unique identifier
-    #[prost(string, tag = "1")]
-    pub client_id: ::prost::alloc::string::String,
-    /// header to update the light client
-    #[prost(message, optional, tag = "2")]
-    pub header: ::core::option::Option<::prost_types::Any>,
-    /// signer address
-    #[prost(string, tag = "3")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgUpdateClientResponse defines the Msg/UpdateClient response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgUpdateClientResponse {}
-/// MsgUpgradeClient defines an sdk.Msg to upgrade an IBC client to a new client
-/// state
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgUpgradeClient {
-    /// client unique identifier
-    #[prost(string, tag = "1")]
-    pub client_id: ::prost::alloc::string::String,
-    /// upgraded client state
-    #[prost(message, optional, tag = "2")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
-    /// upgraded consensus state, only contains enough information to serve as a
-    /// basis of trust in update logic
-    #[prost(message, optional, tag = "3")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
-    /// proof that old chain committed to new client
-    #[prost(bytes = "vec", tag = "4")]
-    pub proof_upgrade_client: ::prost::alloc::vec::Vec<u8>,
-    /// proof that old chain committed to new consensus state
-    #[prost(bytes = "vec", tag = "5")]
-    pub proof_upgrade_consensus_state: ::prost::alloc::vec::Vec<u8>,
-    /// signer address
-    #[prost(string, tag = "6")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgUpgradeClientResponse defines the Msg/UpgradeClient response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgUpgradeClientResponse {}
-/// MsgSubmitMisbehaviour defines an sdk.Msg type that submits Evidence for
-/// light client misbehaviour.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgSubmitMisbehaviour {
-    /// client unique identifier
-    #[prost(string, tag = "1")]
-    pub client_id: ::prost::alloc::string::String,
-    /// misbehaviour used for freezing the light client
-    #[prost(message, optional, tag = "2")]
-    pub misbehaviour: ::core::option::Option<::prost_types::Any>,
-    /// signer address
-    #[prost(string, tag = "3")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgSubmitMisbehaviourResponse defines the Msg/SubmitMisbehaviour response
-/// type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgSubmitMisbehaviourResponse {}
-/// Generated client implementations.
-#[cfg(feature = "grpc")]
-#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
-pub mod msg_client {
-    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
-    use tonic::codegen::http::Uri;
-    use tonic::codegen::*;
-    /// Msg defines the ibc/client Msg service.
-    #[derive(Debug, Clone)]
-    pub struct MsgClient<T> {
-        inner: tonic::client::Grpc<T>,
-    }
-    #[cfg(feature = "grpc-transport")]
-    #[cfg_attr(docsrs, doc(cfg(feature = "grpc-transport")))]
-    impl MsgClient<tonic::transport::Channel> {
-        /// Attempt to create a new client by connecting to a given endpoint.
-        pub async fn connect<D>(dst: D) -> Result<Self, tonic::transport::Error>
-        where
-            D: TryInto<tonic::transport::Endpoint>,
-            D::Error: Into<StdError>,
-        {
-            let conn = tonic::transport::Endpoint::new(dst)?.connect().await?;
-            Ok(Self::new(conn))
-        }
-    }
-    impl<T> MsgClient<T>
-    where
-        T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::Error: Into<StdError>,
-        T::ResponseBody: Body<Data = Bytes> + Send + 'static,
-        <T::ResponseBody as Body>::Error: Into<StdError> + Send,
-    {
-        pub fn new(inner: T) -> Self {
-            let inner = tonic::client::Grpc::new(inner);
-            Self { inner }
-        }
-        pub fn with_origin(inner: T, origin: Uri) -> Self {
-            let inner = tonic::client::Grpc::with_origin(inner, origin);
-            Self { inner }
-        }
-        pub fn with_interceptor<F>(inner: T, interceptor: F) -> MsgClient<InterceptedService<T, F>>
-        where
-            F: tonic::service::Interceptor,
-            T::ResponseBody: Default,
-            T: tonic::codegen::Service<
-                http::Request<tonic::body::BoxBody>,
-                Response = http::Response<
-                    <T as tonic::client::GrpcService<tonic::body::BoxBody>>::ResponseBody,
-                >,
-            >,
-            <T as tonic::codegen::Service<http::Request<tonic::body::BoxBody>>>::Error:
-                Into<StdError> + Send + Sync,
-        {
-            MsgClient::new(InterceptedService::new(inner, interceptor))
-        }
-        /// Compress requests with the given encoding.
-        ///
-        /// This requires the server to support it otherwise it might respond with an
-        /// error.
-        #[must_use]
-        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
-            self.inner = self.inner.send_compressed(encoding);
-            self
-        }
-        /// Enable decompressing responses.
-        #[must_use]
-        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
-            self.inner = self.inner.accept_compressed(encoding);
-            self
-        }
-        /// Limits the maximum size of a decoded message.
-        ///
-        /// Default: `4MB`
-        #[must_use]
-        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
-            self.inner = self.inner.max_decoding_message_size(limit);
-            self
-        }
-        /// Limits the maximum size of an encoded message.
-        ///
-        /// Default: `usize::MAX`
-        #[must_use]
-        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
-            self.inner = self.inner.max_encoding_message_size(limit);
-            self
-        }
-        /// CreateClient defines a rpc handler method for MsgCreateClient.
-        pub async fn create_client(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgCreateClient>,
-        ) -> std::result::Result<tonic::Response<super::MsgCreateClientResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/CreateClient");
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "CreateClient"));
-            self.inner.unary(req, path, codec).await
-        }
-        /// UpdateClient defines a rpc handler method for MsgUpdateClient.
-        pub async fn update_client(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgUpdateClient>,
-        ) -> std::result::Result<tonic::Response<super::MsgUpdateClientResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/UpdateClient");
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "UpdateClient"));
-            self.inner.unary(req, path, codec).await
-        }
-        /// UpgradeClient defines a rpc handler method for MsgUpgradeClient.
-        pub async fn upgrade_client(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgUpgradeClient>,
-        ) -> std::result::Result<tonic::Response<super::MsgUpgradeClientResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path =
-                http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/UpgradeClient");
-            let mut req = request.into_request();
-            req.extensions_mut()
-                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "UpgradeClient"));
-            self.inner.unary(req, path, codec).await
-        }
-        /// SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
-        pub async fn submit_misbehaviour(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgSubmitMisbehaviour>,
-        ) -> std::result::Result<tonic::Response<super::MsgSubmitMisbehaviourResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path =
-                http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/SubmitMisbehaviour");
-            let mut req = request.into_request();
-            req.extensions_mut().insert(GrpcMethod::new(
-                "ibc.core.client.v1.Msg",
-                "SubmitMisbehaviour",
-            ));
-            self.inner.unary(req, path, codec).await
-        }
-    }
-}
 /// QueryClientStateRequest is the request type for the Query/ClientState RPC
 /// method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStateRequest {
@@ -370,12 +123,13 @@ pub struct QueryClientStateRequest {
 /// QueryClientStateResponse is the response type for the Query/ClientState RPC
 /// method. Besides the client state, it includes a proof and the height from
 /// which the proof was retrieved.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStateResponse {
     /// client state associated with the request identifier
     #[prost(message, optional, tag = "1")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
     /// merkle proof of existence
     #[prost(bytes = "vec", tag = "2")]
     pub proof: ::prost::alloc::vec::Vec<u8>,
@@ -385,6 +139,7 @@ pub struct QueryClientStateResponse {
 }
 /// QueryClientStatesRequest is the request type for the Query/ClientStates RPC
 /// method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStatesRequest {
@@ -396,6 +151,7 @@ pub struct QueryClientStatesRequest {
 }
 /// QueryClientStatesResponse is the response type for the Query/ClientStates RPC
 /// method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStatesResponse {
@@ -411,6 +167,7 @@ pub struct QueryClientStatesResponse {
 /// QueryConsensusStateRequest is the request type for the Query/ConsensusState
 /// RPC method. Besides the consensus state, it includes a proof and the height
 /// from which the proof was retrieved.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConsensusStateRequest {
@@ -430,12 +187,13 @@ pub struct QueryConsensusStateRequest {
 }
 /// QueryConsensusStateResponse is the response type for the Query/ConsensusState
 /// RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConsensusStateResponse {
     /// consensus state associated with the client identifier at the given height
     #[prost(message, optional, tag = "1")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
     /// merkle proof of existence
     #[prost(bytes = "vec", tag = "2")]
     pub proof: ::prost::alloc::vec::Vec<u8>,
@@ -445,6 +203,7 @@ pub struct QueryConsensusStateResponse {
 }
 /// QueryConsensusStatesRequest is the request type for the Query/ConsensusStates
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConsensusStatesRequest {
@@ -459,6 +218,7 @@ pub struct QueryConsensusStatesRequest {
 }
 /// QueryConsensusStatesResponse is the response type for the
 /// Query/ConsensusStates RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConsensusStatesResponse {
@@ -473,6 +233,7 @@ pub struct QueryConsensusStatesResponse {
 }
 /// QueryClientStatusRequest is the request type for the Query/ClientStatus RPC
 /// method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStatusRequest {
@@ -482,6 +243,7 @@ pub struct QueryClientStatusRequest {
 }
 /// QueryClientStatusResponse is the response type for the Query/ClientStatus RPC
 /// method. It returns the current status of the IBC client.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientStatusResponse {
@@ -490,11 +252,13 @@ pub struct QueryClientStatusResponse {
 }
 /// QueryClientParamsRequest is the request type for the Query/ClientParams RPC
 /// method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientParamsRequest {}
 /// QueryClientParamsResponse is the response type for the Query/ClientParams RPC
 /// method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientParamsResponse {
@@ -504,31 +268,35 @@ pub struct QueryClientParamsResponse {
 }
 /// QueryUpgradedClientStateRequest is the request type for the
 /// Query/UpgradedClientState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUpgradedClientStateRequest {}
 /// QueryUpgradedClientStateResponse is the response type for the
 /// Query/UpgradedClientState RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUpgradedClientStateResponse {
     /// client state associated with the request identifier
     #[prost(message, optional, tag = "1")]
-    pub upgraded_client_state: ::core::option::Option<::prost_types::Any>,
+    pub upgraded_client_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// QueryUpgradedConsensusStateRequest is the request type for the
 /// Query/UpgradedConsensusState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUpgradedConsensusStateRequest {}
 /// QueryUpgradedConsensusStateResponse is the response type for the
 /// Query/UpgradedConsensusState RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryUpgradedConsensusStateResponse {
     /// Consensus state associated with the request identifier
     #[prost(message, optional, tag = "1")]
-    pub upgraded_consensus_state: ::core::option::Option<::prost_types::Any>,
+    pub upgraded_consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// Generated client implementations.
 #[cfg(feature = "grpc")]
@@ -797,7 +565,271 @@ pub mod query_client {
         }
     }
 }
+/// MsgCreateClient defines a message to create an IBC client
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgCreateClient {
+    /// light client state
+    #[prost(message, optional, tag = "1")]
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
+    /// consensus state associated with the client that corresponds to a given
+    /// height.
+    #[prost(message, optional, tag = "2")]
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
+    /// signer address
+    #[prost(string, tag = "3")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgCreateClientResponse defines the Msg/CreateClient response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgCreateClientResponse {}
+/// MsgUpdateClient defines an sdk.Msg to update a IBC client state using
+/// the given header.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgUpdateClient {
+    /// client unique identifier
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    /// header to update the light client
+    #[prost(message, optional, tag = "2")]
+    pub header: ::core::option::Option<::prost_wkt_types::Any>,
+    /// signer address
+    #[prost(string, tag = "3")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgUpdateClientResponse defines the Msg/UpdateClient response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgUpdateClientResponse {}
+/// MsgUpgradeClient defines an sdk.Msg to upgrade an IBC client to a new client
+/// state
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgUpgradeClient {
+    /// client unique identifier
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    /// upgraded client state
+    #[prost(message, optional, tag = "2")]
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
+    /// upgraded consensus state, only contains enough information to serve as a
+    /// basis of trust in update logic
+    #[prost(message, optional, tag = "3")]
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
+    /// proof that old chain committed to new client
+    #[prost(bytes = "vec", tag = "4")]
+    pub proof_upgrade_client: ::prost::alloc::vec::Vec<u8>,
+    /// proof that old chain committed to new consensus state
+    #[prost(bytes = "vec", tag = "5")]
+    pub proof_upgrade_consensus_state: ::prost::alloc::vec::Vec<u8>,
+    /// signer address
+    #[prost(string, tag = "6")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgUpgradeClientResponse defines the Msg/UpgradeClient response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgUpgradeClientResponse {}
+/// MsgSubmitMisbehaviour defines an sdk.Msg type that submits Evidence for
+/// light client misbehaviour.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgSubmitMisbehaviour {
+    /// client unique identifier
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    /// misbehaviour used for freezing the light client
+    #[prost(message, optional, tag = "2")]
+    pub misbehaviour: ::core::option::Option<::prost_wkt_types::Any>,
+    /// signer address
+    #[prost(string, tag = "3")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgSubmitMisbehaviourResponse defines the Msg/SubmitMisbehaviour response
+/// type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgSubmitMisbehaviourResponse {}
+/// Generated client implementations.
+#[cfg(feature = "grpc")]
+#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
+pub mod msg_client {
+    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
+    use tonic::codegen::http::Uri;
+    use tonic::codegen::*;
+    /// Msg defines the ibc/client Msg service.
+    #[derive(Debug, Clone)]
+    pub struct MsgClient<T> {
+        inner: tonic::client::Grpc<T>,
+    }
+    #[cfg(feature = "grpc-transport")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "grpc-transport")))]
+    impl MsgClient<tonic::transport::Channel> {
+        /// Attempt to create a new client by connecting to a given endpoint.
+        pub async fn connect<D>(dst: D) -> Result<Self, tonic::transport::Error>
+        where
+            D: TryInto<tonic::transport::Endpoint>,
+            D::Error: Into<StdError>,
+        {
+            let conn = tonic::transport::Endpoint::new(dst)?.connect().await?;
+            Ok(Self::new(conn))
+        }
+    }
+    impl<T> MsgClient<T>
+    where
+        T: tonic::client::GrpcService<tonic::body::BoxBody>,
+        T::Error: Into<StdError>,
+        T::ResponseBody: Body<Data = Bytes> + Send + 'static,
+        <T::ResponseBody as Body>::Error: Into<StdError> + Send,
+    {
+        pub fn new(inner: T) -> Self {
+            let inner = tonic::client::Grpc::new(inner);
+            Self { inner }
+        }
+        pub fn with_origin(inner: T, origin: Uri) -> Self {
+            let inner = tonic::client::Grpc::with_origin(inner, origin);
+            Self { inner }
+        }
+        pub fn with_interceptor<F>(inner: T, interceptor: F) -> MsgClient<InterceptedService<T, F>>
+        where
+            F: tonic::service::Interceptor,
+            T::ResponseBody: Default,
+            T: tonic::codegen::Service<
+                http::Request<tonic::body::BoxBody>,
+                Response = http::Response<
+                    <T as tonic::client::GrpcService<tonic::body::BoxBody>>::ResponseBody,
+                >,
+            >,
+            <T as tonic::codegen::Service<http::Request<tonic::body::BoxBody>>>::Error:
+                Into<StdError> + Send + Sync,
+        {
+            MsgClient::new(InterceptedService::new(inner, interceptor))
+        }
+        /// Compress requests with the given encoding.
+        ///
+        /// This requires the server to support it otherwise it might respond with an
+        /// error.
+        #[must_use]
+        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.send_compressed(encoding);
+            self
+        }
+        /// Enable decompressing responses.
+        #[must_use]
+        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.accept_compressed(encoding);
+            self
+        }
+        /// Limits the maximum size of a decoded message.
+        ///
+        /// Default: `4MB`
+        #[must_use]
+        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_decoding_message_size(limit);
+            self
+        }
+        /// Limits the maximum size of an encoded message.
+        ///
+        /// Default: `usize::MAX`
+        #[must_use]
+        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_encoding_message_size(limit);
+            self
+        }
+        /// CreateClient defines a rpc handler method for MsgCreateClient.
+        pub async fn create_client(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgCreateClient>,
+        ) -> std::result::Result<tonic::Response<super::MsgCreateClientResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/CreateClient");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "CreateClient"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// UpdateClient defines a rpc handler method for MsgUpdateClient.
+        pub async fn update_client(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgUpdateClient>,
+        ) -> std::result::Result<tonic::Response<super::MsgUpdateClientResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/UpdateClient");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "UpdateClient"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// UpgradeClient defines a rpc handler method for MsgUpgradeClient.
+        pub async fn upgrade_client(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgUpgradeClient>,
+        ) -> std::result::Result<tonic::Response<super::MsgUpgradeClientResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path =
+                http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/UpgradeClient");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("ibc.core.client.v1.Msg", "UpgradeClient"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// SubmitMisbehaviour defines a rpc handler method for MsgSubmitMisbehaviour.
+        pub async fn submit_misbehaviour(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgSubmitMisbehaviour>,
+        ) -> std::result::Result<tonic::Response<super::MsgSubmitMisbehaviourResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path =
+                http::uri::PathAndQuery::from_static("/ibc.core.client.v1.Msg/SubmitMisbehaviour");
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "ibc.core.client.v1.Msg",
+                "SubmitMisbehaviour",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+    }
+}
 /// GenesisState defines the ibc client submodule's genesis state.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {
@@ -821,6 +853,7 @@ pub struct GenesisState {
 }
 /// GenesisMetadata defines the genesis type for metadata that clients may return
 /// with ExportMetadata
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisMetadata {
@@ -833,6 +866,7 @@ pub struct GenesisMetadata {
 }
 /// IdentifiedGenesisMetadata has the client metadata with the corresponding
 /// client id.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IdentifiedGenesisMetadata {
@@ -841,3 +875,1201 @@ pub struct IdentifiedGenesisMetadata {
     #[prost(message, repeated, tag = "2")]
     pub client_metadata: ::prost::alloc::vec::Vec<GenesisMetadata>,
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CLIENT_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.IdentifiedClientState")]
+    impl ::prost_wkt::MessageSerde for IdentifiedClientState {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "IdentifiedClientState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.IdentifiedClientState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.IdentifiedClientState" , decoder : | buf : & [u8] | { let msg : IdentifiedClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE_WITH_HEIGHT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.ConsensusStateWithHeight")]
+    impl ::prost_wkt::MessageSerde for ConsensusStateWithHeight {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConsensusStateWithHeight"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.ConsensusStateWithHeight"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.ConsensusStateWithHeight" , decoder : | buf : & [u8] | { let msg : ConsensusStateWithHeight = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_CONSENSUS_STATES: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.ClientConsensusStates")]
+    impl ::prost_wkt::MessageSerde for ClientConsensusStates {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientConsensusStates"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.ClientConsensusStates"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.ClientConsensusStates" , decoder : | buf : & [u8] | { let msg : ClientConsensusStates = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_UPDATE_PROPOSAL: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.ClientUpdateProposal")]
+    impl ::prost_wkt::MessageSerde for ClientUpdateProposal {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientUpdateProposal"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.ClientUpdateProposal"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.ClientUpdateProposal" , decoder : | buf : & [u8] | { let msg : ClientUpdateProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_UPGRADE_PROPOSAL: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.UpgradeProposal")]
+    impl ::prost_wkt::MessageSerde for UpgradeProposal {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "UpgradeProposal"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.UpgradeProposal"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.UpgradeProposal" , decoder : | buf : & [u8] | { let msg : UpgradeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_HEIGHT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.Height")]
+    impl ::prost_wkt::MessageSerde for Height {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Height"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.Height"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.Height" , decoder : | buf : & [u8] | { let msg : Height = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.Params")]
+    impl ::prost_wkt::MessageSerde for Params {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Params"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.Params"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStateRequest")]
+    impl ::prost_wkt::MessageSerde for QueryClientStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStateResponse")]
+    impl ::prost_wkt::MessageSerde for QueryClientStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATES_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStatesRequest")]
+    impl ::prost_wkt::MessageSerde for QueryClientStatesRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStatesRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStatesRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStatesRequest" , decoder : | buf : & [u8] | { let msg : QueryClientStatesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATES_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStatesResponse")]
+    impl ::prost_wkt::MessageSerde for QueryClientStatesResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStatesResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStatesResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStatesResponse" , decoder : | buf : & [u8] | { let msg : QueryClientStatesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONSENSUS_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateRequest")]
+    impl ::prost_wkt::MessageSerde for QueryConsensusStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConsensusStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONSENSUS_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateResponse")]
+    impl ::prost_wkt::MessageSerde for QueryConsensusStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConsensusStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONSENSUS_STATES_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesRequest")]
+    impl ::prost_wkt::MessageSerde for QueryConsensusStatesRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConsensusStatesRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesRequest" , decoder : | buf : & [u8] | { let msg : QueryConsensusStatesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONSENSUS_STATES_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesResponse")]
+    impl ::prost_wkt::MessageSerde for QueryConsensusStatesResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConsensusStatesResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryConsensusStatesResponse" , decoder : | buf : & [u8] | { let msg : QueryConsensusStatesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATUS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStatusRequest")]
+    impl ::prost_wkt::MessageSerde for QueryClientStatusRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStatusRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStatusRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStatusRequest" , decoder : | buf : & [u8] | { let msg : QueryClientStatusRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_STATUS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientStatusResponse")]
+    impl ::prost_wkt::MessageSerde for QueryClientStatusResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientStatusResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientStatusResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientStatusResponse" , decoder : | buf : & [u8] | { let msg : QueryClientStatusResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_PARAMS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientParamsRequest")]
+    impl ::prost_wkt::MessageSerde for QueryClientParamsRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientParamsRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientParamsRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryClientParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_PARAMS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.QueryClientParamsResponse")]
+    impl ::prost_wkt::MessageSerde for QueryClientParamsResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientParamsResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryClientParamsResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryClientParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryClientParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CLIENT_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryUpgradedClientStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryUpgradedClientStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryUpgradedClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CLIENT_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryUpgradedClientStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryUpgradedClientStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryUpgradedClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryUpgradedClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryUpgradedConsensusStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryUpgradedConsensusStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryUpgradedConsensusStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryUpgradedConsensusStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.QueryUpgradedConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_CLIENT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgCreateClient")]
+    impl ::prost_wkt::MessageSerde for MsgCreateClient {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgCreateClient"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgCreateClient"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgCreateClient" , decoder : | buf : & [u8] | { let msg : MsgCreateClient = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_CLIENT_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgCreateClientResponse")]
+    impl ::prost_wkt::MessageSerde for MsgCreateClientResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgCreateClientResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgCreateClientResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgCreateClientResponse" , decoder : | buf : & [u8] | { let msg : MsgCreateClientResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_CLIENT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgUpdateClient")]
+    impl ::prost_wkt::MessageSerde for MsgUpdateClient {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgUpdateClient"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgUpdateClient"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgUpdateClient" , decoder : | buf : & [u8] | { let msg : MsgUpdateClient = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_CLIENT_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgUpdateClientResponse")]
+    impl ::prost_wkt::MessageSerde for MsgUpdateClientResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgUpdateClientResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgUpdateClientResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgUpdateClientResponse" , decoder : | buf : & [u8] | { let msg : MsgUpdateClientResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_UPGRADE_CLIENT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClient")]
+    impl ::prost_wkt::MessageSerde for MsgUpgradeClient {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgUpgradeClient"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClient"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClient" , decoder : | buf : & [u8] | { let msg : MsgUpgradeClient = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_UPGRADE_CLIENT_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClientResponse")]
+    impl ::prost_wkt::MessageSerde for MsgUpgradeClientResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgUpgradeClientResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClientResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgUpgradeClientResponse" , decoder : | buf : & [u8] | { let msg : MsgUpgradeClientResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_SUBMIT_MISBEHAVIOUR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviour")]
+    impl ::prost_wkt::MessageSerde for MsgSubmitMisbehaviour {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgSubmitMisbehaviour"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviour"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviour" , decoder : | buf : & [u8] | { let msg : MsgSubmitMisbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_SUBMIT_MISBEHAVIOUR_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviourResponse")]
+    impl ::prost_wkt::MessageSerde for MsgSubmitMisbehaviourResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgSubmitMisbehaviourResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviourResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.MsgSubmitMisbehaviourResponse" , decoder : | buf : & [u8] | { let msg : MsgSubmitMisbehaviourResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.GenesisState")]
+    impl ::prost_wkt::MessageSerde for GenesisState {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GenesisState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.GenesisState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GENESIS_METADATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.GenesisMetadata")]
+    impl ::prost_wkt::MessageSerde for GenesisMetadata {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GenesisMetadata"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.GenesisMetadata"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.GenesisMetadata" , decoder : | buf : & [u8] | { let msg : GenesisMetadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_GENESIS_METADATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.client.v1.IdentifiedGenesisMetadata")]
+    impl ::prost_wkt::MessageSerde for IdentifiedGenesisMetadata {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.client.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "IdentifiedGenesisMetadata"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.client.v1.IdentifiedGenesisMetadata"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.client.v1.IdentifiedGenesisMetadata" , decoder : | buf : & [u8] | { let msg : IdentifiedGenesisMetadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

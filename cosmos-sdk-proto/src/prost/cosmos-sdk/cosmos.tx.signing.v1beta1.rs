@@ -1,5 +1,6 @@
-// @generated
 /// SignatureDescriptors wraps multiple SignatureDescriptor's.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignatureDescriptors {
     /// signatures are the signature descriptors
@@ -10,11 +11,13 @@ pub struct SignatureDescriptors {
 /// a signature including the public key of the signer, signing modes and the
 /// signature itself. It is primarily used for coordinating signatures between
 /// clients.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignatureDescriptor {
     /// public_key is the public key of the signer
     #[prost(message, optional, tag = "1")]
-    pub public_key: ::core::option::Option<::prost_types::Any>,
+    pub public_key: ::core::option::Option<::prost_wkt_types::Any>,
     #[prost(message, optional, tag = "2")]
     pub data: ::core::option::Option<signature_descriptor::Data>,
     /// sequence is the sequence of the account, which describes the
@@ -26,6 +29,8 @@ pub struct SignatureDescriptor {
 /// Nested message and enum types in `SignatureDescriptor`.
 pub mod signature_descriptor {
     /// Data represents signature data
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
+    #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Data {
         /// sum is the oneof that specifies whether this represents single or multi-signature data
@@ -35,6 +40,8 @@ pub mod signature_descriptor {
     /// Nested message and enum types in `Data`.
     pub mod data {
         /// Single is the signature data for a single signer
+        #[derive(::serde::Serialize, ::serde::Deserialize)]
+        #[allow(clippy::derive_partial_eq_without_eq)]
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct Single {
             /// mode is the signing mode of the single signer
@@ -45,6 +52,8 @@ pub mod signature_descriptor {
             pub signature: ::prost::alloc::vec::Vec<u8>,
         }
         /// Multi is the signature data for a multisig public key
+        #[derive(::serde::Serialize, ::serde::Deserialize)]
+        #[allow(clippy::derive_partial_eq_without_eq)]
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct Multi {
             /// bitarray specifies which keys within the multisig are signing
@@ -57,6 +66,8 @@ pub mod signature_descriptor {
             pub signatures: ::prost::alloc::vec::Vec<super::Data>,
         }
         /// sum is the oneof that specifies whether this represents single or multi-signature data
+        #[derive(::serde::Serialize, ::serde::Deserialize)]
+        #[allow(clippy::derive_partial_eq_without_eq)]
         #[derive(Clone, PartialEq, ::prost::Oneof)]
         pub enum Sum {
             /// single represents a single signer
@@ -76,7 +87,19 @@ pub mod signature_descriptor {
 /// encouraged to open a small PR against this file to add a new case
 /// to this SignMode enum describing their sign mode so that different
 /// apps have a consistent version of this enum.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum SignMode {
     /// SIGN_MODE_UNSPECIFIED specifies an unknown signing mode and will be
@@ -126,5 +149,86 @@ impl SignMode {
             SignMode::Eip191 => "SIGN_MODE_EIP_191",
         }
     }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "SIGN_MODE_UNSPECIFIED" => Some(Self::Unspecified),
+            "SIGN_MODE_DIRECT" => Some(Self::Direct),
+            "SIGN_MODE_TEXTUAL" => Some(Self::Textual),
+            "SIGN_MODE_DIRECT_AUX" => Some(Self::DirectAux),
+            "SIGN_MODE_LEGACY_AMINO_JSON" => Some(Self::LegacyAminoJson),
+            "SIGN_MODE_EIP_191" => Some(Self::Eip191),
+            _ => None,
+        }
+    }
 }
-// @@protoc_insertion_point(module)
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTORS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors")]
+    impl ::prost_wkt::MessageSerde for SignatureDescriptors {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.signing.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignatureDescriptors"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors" , decoder : | buf : & [u8] | { let msg : SignatureDescriptors = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTOR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor")]
+    impl ::prost_wkt::MessageSerde for SignatureDescriptor {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.signing.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignatureDescriptor"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor" , decoder : | buf : & [u8] | { let msg : SignatureDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

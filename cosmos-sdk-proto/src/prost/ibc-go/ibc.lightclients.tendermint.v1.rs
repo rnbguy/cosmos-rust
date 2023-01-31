@@ -1,5 +1,6 @@
 /// ClientState from Tendermint tracks the current validator set, latest height,
 /// and a possible frozen height.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientState {
@@ -10,13 +11,13 @@ pub struct ClientState {
     /// duration of the period since the LastestTimestamp during which the
     /// submitted headers are valid for upgrade
     #[prost(message, optional, tag = "3")]
-    pub trusting_period: ::core::option::Option<::prost_types::Duration>,
+    pub trusting_period: ::core::option::Option<::prost_wkt_types::Duration>,
     /// duration of the staking unbonding period
     #[prost(message, optional, tag = "4")]
-    pub unbonding_period: ::core::option::Option<::prost_types::Duration>,
+    pub unbonding_period: ::core::option::Option<::prost_wkt_types::Duration>,
     /// defines how much new (untrusted) header's Time can drift into the future.
     #[prost(message, optional, tag = "5")]
-    pub max_clock_drift: ::core::option::Option<::prost_types::Duration>,
+    pub max_clock_drift: ::core::option::Option<::prost_wkt_types::Duration>,
     /// Block height when the client was frozen due to a misbehaviour
     #[prost(message, optional, tag = "6")]
     pub frozen_height: ::core::option::Option<super::super::super::core::client::v1::Height>,
@@ -45,13 +46,14 @@ pub struct ClientState {
     pub allow_update_after_misbehaviour: bool,
 }
 /// ConsensusState defines the consensus state from Tendermint.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConsensusState {
     /// timestamp that corresponds to the block height in which the ConsensusState
     /// was stored.
     #[prost(message, optional, tag = "1")]
-    pub timestamp: ::core::option::Option<::prost_types::Timestamp>,
+    pub timestamp: ::core::option::Option<::prost_wkt_types::Timestamp>,
     /// commitment root (i.e app hash)
     #[prost(message, optional, tag = "2")]
     pub root: ::core::option::Option<super::super::super::core::commitment::v1::MerkleRoot>,
@@ -60,6 +62,7 @@ pub struct ConsensusState {
 }
 /// Misbehaviour is a wrapper over two conflicting Headers
 /// that implements Misbehaviour interface expected by ICS-02
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Misbehaviour {
@@ -82,20 +85,22 @@ pub struct Misbehaviour {
 /// current time in order to correctly verify, and the TrustedValidators must
 /// hash to TrustedConsensusState.NextValidatorsHash since that is the last
 /// trusted validator set at the TrustedHeight.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Header {
     #[prost(message, optional, tag = "1")]
-    pub signed_header: ::core::option::Option<::tendermint_proto::types::SignedHeader>,
+    pub signed_header: ::core::option::Option<::tendermint_proto::v0_34::types::SignedHeader>,
     #[prost(message, optional, tag = "2")]
-    pub validator_set: ::core::option::Option<::tendermint_proto::types::ValidatorSet>,
+    pub validator_set: ::core::option::Option<::tendermint_proto::v0_34::types::ValidatorSet>,
     #[prost(message, optional, tag = "3")]
     pub trusted_height: ::core::option::Option<super::super::super::core::client::v1::Height>,
     #[prost(message, optional, tag = "4")]
-    pub trusted_validators: ::core::option::Option<::tendermint_proto::types::ValidatorSet>,
+    pub trusted_validators: ::core::option::Option<::tendermint_proto::v0_34::types::ValidatorSet>,
 }
 /// Fraction defines the protobuf message type for tmmath.Fraction that only
 /// supports positive values.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Fraction {
@@ -104,3 +109,178 @@ pub struct Fraction {
     #[prost(uint64, tag = "2")]
     pub denominator: u64,
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState")]
+    impl ::prost_wkt::MessageSerde for ClientState {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.tendermint.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState")]
+    impl ::prost_wkt::MessageSerde for ConsensusState {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.tendermint.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConsensusState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour")]
+    impl ::prost_wkt::MessageSerde for Misbehaviour {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.tendermint.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Misbehaviour"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Header")]
+    impl ::prost_wkt::MessageSerde for Header {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.tendermint.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Header"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.tendermint.v1.Header"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_FRACTION: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction")]
+    impl ::prost_wkt::MessageSerde for Fraction {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.tendermint.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Fraction"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction" , decoder : | buf : & [u8] | { let msg : Fraction = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

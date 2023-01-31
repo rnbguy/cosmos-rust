@@ -5,6 +5,7 @@
 ///           Foo some_parameter = 1;
 ///           PageRequest pagination = 2;
 ///   }
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PageRequest {
@@ -36,6 +37,7 @@ pub struct PageRequest {
 ///           repeated Bar results = 1;
 ///           PageResponse page = 2;
 ///   }
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PageResponse {
@@ -48,3 +50,73 @@ pub struct PageResponse {
     #[prost(uint64, tag = "2")]
     pub total: u64,
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PAGE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest")]
+    impl ::prost_wkt::MessageSerde for PageRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.base.query.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "PageRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest" , decoder : | buf : & [u8] | { let msg : PageRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PAGE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse")]
+    impl ::prost_wkt::MessageSerde for PageResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.base.query.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "PageResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse" , decoder : | buf : & [u8] | { let msg : PageResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

@@ -18,6 +18,7 @@
 /// With LengthOp this is tricker but not impossible. Which is why the "leafPrefixEqual" field
 /// in the ProofSpec is valuable to prevent this mutability. And why all trees should
 /// length-prefix the data before hashing it.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExistenceProof {
@@ -34,6 +35,7 @@ pub struct ExistenceProof {
 /// NonExistenceProof takes a proof of two neighbors, one left of the desired key,
 /// one right of the desired key. If both proofs are valid AND they are neighbors,
 /// then there is no valid proof for the given key.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NonExistenceProof {
@@ -47,6 +49,7 @@ pub struct NonExistenceProof {
 }
 ///
 /// CommitmentProof is either an ExistenceProof or a NonExistenceProof, or a Batch of such messages
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CommitmentProof {
@@ -55,6 +58,7 @@ pub struct CommitmentProof {
 }
 /// Nested message and enum types in `CommitmentProof`.
 pub mod commitment_proof {
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Proof {
@@ -83,6 +87,7 @@ pub mod commitment_proof {
 ///
 /// Then combine the bytes, and hash it
 /// output = hash(prefix || length(hkey) || hkey || length(hvalue) || hvalue)
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct LeafOp {
@@ -115,6 +120,7 @@ pub struct LeafOp {
 /// Any special data, like prepending child with the length, or prepending the entire operation with
 /// some value to differentiate from leaf nodes, should be included in prefix and suffix.
 /// If either of prefix or suffix is empty, we just treat it as an empty string
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InnerOp {
@@ -136,6 +142,7 @@ pub struct InnerOp {
 /// generate a given hash (by interpretting the preimage differently).
 /// We need this for proper security, requires client knows a priori what
 /// tree format server uses. But not in code, rather a configuration object.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProofSpec {
@@ -161,6 +168,7 @@ pub struct ProofSpec {
 /// isLeftMost(spec: InnerSpec, op: InnerOp)
 /// isRightMost(spec: InnerSpec, op: InnerOp)
 /// isLeftNeighbor(spec: InnerSpec, left: InnerOp, right: InnerOp)
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InnerSpec {
@@ -184,6 +192,7 @@ pub struct InnerSpec {
 }
 ///
 /// BatchProof is a group of multiple proof types than can be compressed
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchProof {
@@ -191,6 +200,7 @@ pub struct BatchProof {
     pub entries: ::prost::alloc::vec::Vec<BatchEntry>,
 }
 /// Use BatchEntry not CommitmentProof, to avoid recursion
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchEntry {
@@ -199,6 +209,7 @@ pub struct BatchEntry {
 }
 /// Nested message and enum types in `BatchEntry`.
 pub mod batch_entry {
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Proof {
@@ -208,6 +219,7 @@ pub mod batch_entry {
         Nonexist(super::NonExistenceProof),
     }
 }
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompressedBatchProof {
@@ -217,6 +229,7 @@ pub struct CompressedBatchProof {
     pub lookup_inners: ::prost::alloc::vec::Vec<InnerOp>,
 }
 /// Use BatchEntry not CommitmentProof, to avoid recursion
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompressedBatchEntry {
@@ -225,6 +238,7 @@ pub struct CompressedBatchEntry {
 }
 /// Nested message and enum types in `CompressedBatchEntry`.
 pub mod compressed_batch_entry {
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
     #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Proof {
@@ -234,6 +248,7 @@ pub mod compressed_batch_entry {
         Nonexist(super::CompressedNonExistenceProof),
     }
 }
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompressedExistenceProof {
@@ -247,6 +262,7 @@ pub struct CompressedExistenceProof {
     #[prost(int32, repeated, tag = "4")]
     pub path: ::prost::alloc::vec::Vec<i32>,
 }
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompressedNonExistenceProof {
@@ -258,7 +274,19 @@ pub struct CompressedNonExistenceProof {
     #[prost(message, optional, tag = "3")]
     pub right: ::core::option::Option<CompressedExistenceProof>,
 }
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum HashOp {
     /// NO_HASH is the default if no data passed. Note this is an illegal argument some places.
@@ -303,7 +331,19 @@ impl HashOp {
 /// to include length information. After encoding the length with the given
 /// algorithm, the length will be prepended to the key and value bytes.
 /// (Each one with it's own encoded length)
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum LengthOp {
     /// NO_PREFIX don't include any length info
@@ -359,3 +399,458 @@ impl LengthOp {
         }
     }
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_EXISTENCE_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.ExistenceProof")]
+    impl ::prost_wkt::MessageSerde for ExistenceProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "ExistenceProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.ExistenceProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.ExistenceProof" , decoder : | buf : & [u8] | { let msg : ExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_NON_EXISTENCE_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.NonExistenceProof")]
+    impl ::prost_wkt::MessageSerde for NonExistenceProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "NonExistenceProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.NonExistenceProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.NonExistenceProof" , decoder : | buf : & [u8] | { let msg : NonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COMMITMENT_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.CommitmentProof")]
+    impl ::prost_wkt::MessageSerde for CommitmentProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "CommitmentProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.CommitmentProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CommitmentProof" , decoder : | buf : & [u8] | { let msg : CommitmentProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_LEAF_OP: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.LeafOp")]
+    impl ::prost_wkt::MessageSerde for LeafOp {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "LeafOp"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.LeafOp"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.LeafOp" , decoder : | buf : & [u8] | { let msg : LeafOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_INNER_OP: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.InnerOp")]
+    impl ::prost_wkt::MessageSerde for InnerOp {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "InnerOp"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.InnerOp"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.InnerOp" , decoder : | buf : & [u8] | { let msg : InnerOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PROOF_SPEC: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.ProofSpec")]
+    impl ::prost_wkt::MessageSerde for ProofSpec {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "ProofSpec"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.ProofSpec"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.ProofSpec" , decoder : | buf : & [u8] | { let msg : ProofSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_INNER_SPEC: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.InnerSpec")]
+    impl ::prost_wkt::MessageSerde for InnerSpec {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "InnerSpec"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.InnerSpec"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.InnerSpec" , decoder : | buf : & [u8] | { let msg : InnerSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_BATCH_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.BatchProof")]
+    impl ::prost_wkt::MessageSerde for BatchProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "BatchProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.BatchProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.BatchProof" , decoder : | buf : & [u8] | { let msg : BatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_BATCH_ENTRY: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.BatchEntry")]
+    impl ::prost_wkt::MessageSerde for BatchEntry {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "BatchEntry"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.BatchEntry"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.BatchEntry" , decoder : | buf : & [u8] | { let msg : BatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedBatchProof")]
+    impl ::prost_wkt::MessageSerde for CompressedBatchProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "CompressedBatchProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.CompressedBatchProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedBatchProof" , decoder : | buf : & [u8] | { let msg : CompressedBatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_ENTRY: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedBatchEntry")]
+    impl ::prost_wkt::MessageSerde for CompressedBatchEntry {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "CompressedBatchEntry"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.CompressedBatchEntry"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedBatchEntry" , decoder : | buf : & [u8] | { let msg : CompressedBatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_EXISTENCE_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedExistenceProof")]
+    impl ::prost_wkt::MessageSerde for CompressedExistenceProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "CompressedExistenceProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.CompressedExistenceProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_NON_EXISTENCE_PROOF: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedNonExistenceProof")]
+    impl ::prost_wkt::MessageSerde for CompressedNonExistenceProof {
+        fn package_name(&self) -> &'static str {
+            "ics23"
+        }
+        fn message_name(&self) -> &'static str {
+            "CompressedNonExistenceProof"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ics23.CompressedNonExistenceProof"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedNonExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedNonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

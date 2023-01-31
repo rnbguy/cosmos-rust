@@ -1,6 +1,7 @@
-// @generated
 /// InterfaceDescriptor describes an interface type to be used with
 /// accepts_interface and implements_interface and declared by declare_interface.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InterfaceDescriptor {
     /// name is the name of the interface. It should be a short-name (without
@@ -21,6 +22,8 @@ pub struct InterfaceDescriptor {
 /// Scalars should ideally define an encoding such that there is only one
 /// valid syntactical representation for a given semantic meaning,
 /// i.e. the encoding should be deterministic.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ScalarDescriptor {
     /// name is the name of the scalar. It should be a short-name (without
@@ -41,7 +44,19 @@ pub struct ScalarDescriptor {
     #[prost(enumeration = "ScalarType", repeated, tag = "3")]
     pub field_type: ::prost::alloc::vec::Vec<i32>,
 }
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum ScalarType {
     Unspecified = 0,
@@ -60,5 +75,83 @@ impl ScalarType {
             ScalarType::Bytes => "SCALAR_TYPE_BYTES",
         }
     }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "SCALAR_TYPE_UNSPECIFIED" => Some(Self::Unspecified),
+            "SCALAR_TYPE_STRING" => Some(Self::String),
+            "SCALAR_TYPE_BYTES" => Some(Self::Bytes),
+            _ => None,
+        }
+    }
 }
-// @@protoc_insertion_point(module)
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos_proto.InterfaceDescriptor")]
+    impl ::prost_wkt::MessageSerde for InterfaceDescriptor {
+        fn package_name(&self) -> &'static str {
+            "cosmos_proto"
+        }
+        fn message_name(&self) -> &'static str {
+            "InterfaceDescriptor"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos_proto.InterfaceDescriptor"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos_proto.InterfaceDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SCALAR_DESCRIPTOR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos_proto.ScalarDescriptor")]
+    impl ::prost_wkt::MessageSerde for ScalarDescriptor {
+        fn package_name(&self) -> &'static str {
+            "cosmos_proto"
+        }
+        fn message_name(&self) -> &'static str {
+            "ScalarDescriptor"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos_proto.ScalarDescriptor"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos_proto.ScalarDescriptor" , decoder : | buf : & [u8] | { let msg : ScalarDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

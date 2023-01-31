@@ -1,5 +1,6 @@
-// @generated
 /// Tx is the standard type used for broadcasting transactions.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Tx {
     /// body is the processable content of the transaction
@@ -13,6 +14,7 @@ pub struct Tx {
     /// AuthInfo's signer_infos to allow connecting signature meta information like
     /// public key and signing mode by position.
     #[prost(bytes = "vec", repeated, tag = "3")]
+    #[serde(with = "serde_with::As::<Vec<serde_with::base64::Base64>>")]
     pub signatures: ::prost::alloc::vec::Vec<::prost::alloc::vec::Vec<u8>>,
 }
 /// TxRaw is a variant of Tx that pins the signer's exact binary representation
@@ -20,6 +22,8 @@ pub struct Tx {
 /// verification. The binary `serialize(tx: TxRaw)` is stored in Tendermint and
 /// the hash `sha256(serialize(tx: TxRaw))` becomes the "txhash", commonly used
 /// as the transaction ID.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TxRaw {
     /// body_bytes is a protobuf serialization of a TxBody that matches the
@@ -34,9 +38,12 @@ pub struct TxRaw {
     /// AuthInfo's signer_infos to allow connecting signature meta information like
     /// public key and signing mode by position.
     #[prost(bytes = "vec", repeated, tag = "3")]
+    #[serde(with = "serde_with::As::<Vec<serde_with::base64::Base64>>")]
     pub signatures: ::prost::alloc::vec::Vec<::prost::alloc::vec::Vec<u8>>,
 }
 /// SignDoc is the type used for generating sign bytes for SIGN_MODE_DIRECT.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignDoc {
     /// body_bytes is protobuf serialization of a TxBody that matches the
@@ -60,6 +67,8 @@ pub struct SignDoc {
 /// SIGN_MODE_DIRECT_AUX.
 ///
 /// Since: cosmos-sdk 0.46
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignDocDirectAux {
     /// body_bytes is protobuf serialization of a TxBody that matches the
@@ -68,7 +77,7 @@ pub struct SignDocDirectAux {
     pub body_bytes: ::prost::alloc::vec::Vec<u8>,
     /// public_key is the public key of the signing account.
     #[prost(message, optional, tag = "2")]
-    pub public_key: ::core::option::Option<::prost_types::Any>,
+    pub public_key: ::core::option::Option<::prost_wkt_types::Any>,
     /// chain_id is the identifier of the chain this transaction targets.
     /// It prevents signed transactions from being used on another chain by an
     /// attacker.
@@ -90,6 +99,8 @@ pub struct SignDocDirectAux {
     pub tip: ::core::option::Option<Tip>,
 }
 /// TxBody is the body of a transaction that all signers sign over.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TxBody {
     /// messages is a list of messages to be executed. The required signers of
@@ -100,7 +111,7 @@ pub struct TxBody {
     /// is referred to as the primary signer and pays the fee for the whole
     /// transaction.
     #[prost(message, repeated, tag = "1")]
-    pub messages: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub messages: ::prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// memo is any arbitrary note/comment to be added to the transaction.
     /// WARNING: in clients, any publicly exposed text should not be called memo,
     /// but should be called `note` instead (see <https://github.com/cosmos/cosmos-sdk/issues/9122>).
@@ -114,15 +125,17 @@ pub struct TxBody {
     /// when the default options are not sufficient. If any of these are present
     /// and can't be handled, the transaction will be rejected
     #[prost(message, repeated, tag = "1023")]
-    pub extension_options: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub extension_options: ::prost::alloc::vec::Vec<::prost_wkt_types::Any>,
     /// extension_options are arbitrary options that can be added by chains
     /// when the default options are not sufficient. If any of these are present
     /// and can't be handled, they will be ignored
     #[prost(message, repeated, tag = "2047")]
-    pub non_critical_extension_options: ::prost::alloc::vec::Vec<::prost_types::Any>,
+    pub non_critical_extension_options: ::prost::alloc::vec::Vec<::prost_wkt_types::Any>,
 }
 /// AuthInfo describes the fee and signer modes that are used to sign a
 /// transaction.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AuthInfo {
     /// signer_infos defines the signing modes for the required signers. The number
@@ -148,13 +161,15 @@ pub struct AuthInfo {
 }
 /// SignerInfo describes the public key and signing mode of a single top-level
 /// signer.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignerInfo {
     /// public_key is the public key of the signer. It is optional for accounts
     /// that already exist in state. If unset, the verifier can use the required \
     /// signer address for this position and lookup the public key.
     #[prost(message, optional, tag = "1")]
-    pub public_key: ::core::option::Option<::prost_types::Any>,
+    pub public_key: ::core::option::Option<::prost_wkt_types::Any>,
     /// mode_info describes the signing mode of the signer and is a nested
     /// structure to support nested multisig pubkey's
     #[prost(message, optional, tag = "2")]
@@ -166,6 +181,8 @@ pub struct SignerInfo {
     pub sequence: u64,
 }
 /// ModeInfo describes the signing mode of a single or nested multisig signer.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ModeInfo {
     /// sum is the oneof that specifies whether this represents a single or nested
@@ -178,6 +195,8 @@ pub mod mode_info {
     /// Single is the mode info for a single signer. It is structured as a message
     /// to allow for additional fields such as locale for SIGN_MODE_TEXTUAL in the
     /// future
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
+    #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Single {
         /// mode is the signing mode of the single signer
@@ -185,6 +204,8 @@ pub mod mode_info {
         pub mode: i32,
     }
     /// Multi is the mode info for a multisig public key
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
+    #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct Multi {
         /// bitarray specifies which keys within the multisig are signing
@@ -198,6 +219,8 @@ pub mod mode_info {
     }
     /// sum is the oneof that specifies whether this represents a single or nested
     /// multisig signer
+    #[derive(::serde::Serialize, ::serde::Deserialize)]
+    #[allow(clippy::derive_partial_eq_without_eq)]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Sum {
         /// single represents a single signer
@@ -211,6 +234,8 @@ pub mod mode_info {
 /// Fee includes the amount of coins paid in fees and the maximum
 /// gas to be used by the transaction. The ratio yields an effective "gasprice",
 /// which must be above some miminum to be accepted into the mempool.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Fee {
     /// amount is the amount of coins to be paid as a fee
@@ -234,6 +259,8 @@ pub struct Fee {
 /// Tip is the tip used for meta-transactions.
 ///
 /// Since: cosmos-sdk 0.46
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Tip {
     /// amount is the amount of the tip
@@ -249,6 +276,8 @@ pub struct Tip {
 /// by the node if sent directly as-is.
 ///
 /// Since: cosmos-sdk 0.46
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AuxSignerData {
     /// address is the bech32-encoded address of the auxiliary signer. If using
@@ -270,6 +299,8 @@ pub struct AuxSignerData {
 }
 /// GetTxsEventRequest is the request type for the Service.TxsByEvents
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTxsEventRequest {
     /// events is the list of transaction event type.
@@ -292,6 +323,8 @@ pub struct GetTxsEventRequest {
 }
 /// GetTxsEventResponse is the response type for the Service.TxsByEvents
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTxsEventResponse {
     /// txs is the list of queried transactions.
@@ -311,6 +344,8 @@ pub struct GetTxsEventResponse {
 }
 /// BroadcastTxRequest is the request type for the Service.BroadcastTxRequest
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BroadcastTxRequest {
     /// tx_bytes is the raw transaction.
@@ -321,6 +356,8 @@ pub struct BroadcastTxRequest {
 }
 /// BroadcastTxResponse is the response type for the
 /// Service.BroadcastTx method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BroadcastTxResponse {
     /// tx_response is the queried TxResponses.
@@ -329,6 +366,8 @@ pub struct BroadcastTxResponse {
 }
 /// SimulateRequest is the request type for the Service.Simulate
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SimulateRequest {
     /// tx is the transaction to simulate.
@@ -344,6 +383,8 @@ pub struct SimulateRequest {
 }
 /// SimulateResponse is the response type for the
 /// Service.SimulateRPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SimulateResponse {
     /// gas_info is the information about gas used in the simulation.
@@ -355,6 +396,8 @@ pub struct SimulateResponse {
 }
 /// GetTxRequest is the request type for the Service.GetTx
 /// RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTxRequest {
     /// hash is the tx hash to query, encoded as a hex string.
@@ -362,6 +405,8 @@ pub struct GetTxRequest {
     pub hash: ::prost::alloc::string::String,
 }
 /// GetTxResponse is the response type for the Service.GetTx method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTxResponse {
     /// tx is the queried transaction.
@@ -375,6 +420,8 @@ pub struct GetTxResponse {
 /// RPC method.
 ///
 /// Since: cosmos-sdk 0.45.2
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBlockWithTxsRequest {
     /// height is the height of the block to query.
@@ -387,21 +434,35 @@ pub struct GetBlockWithTxsRequest {
 /// GetBlockWithTxsResponse is the response type for the Service.GetBlockWithTxs method.
 ///
 /// Since: cosmos-sdk 0.45.2
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBlockWithTxsResponse {
     /// txs are the transactions in the block.
     #[prost(message, repeated, tag = "1")]
     pub txs: ::prost::alloc::vec::Vec<Tx>,
     #[prost(message, optional, tag = "2")]
-    pub block_id: ::core::option::Option<::tendermint_proto::types::BlockId>,
+    pub block_id: ::core::option::Option<::tendermint_proto::v0_34::types::BlockId>,
     #[prost(message, optional, tag = "3")]
-    pub block: ::core::option::Option<::tendermint_proto::types::Block>,
+    pub block: ::core::option::Option<::tendermint_proto::v0_34::types::Block>,
     /// pagination defines a pagination for the response.
     #[prost(message, optional, tag = "4")]
     pub pagination: ::core::option::Option<super::super::base::query::v1beta1::PageResponse>,
 }
 /// OrderBy defines the sorting order
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum OrderBy {
     /// ORDER_BY_UNSPECIFIED specifies an unknown sorting order. OrderBy defaults to ASC in this case.
@@ -423,9 +484,30 @@ impl OrderBy {
             OrderBy::Desc => "ORDER_BY_DESC",
         }
     }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "ORDER_BY_UNSPECIFIED" => Some(Self::Unspecified),
+            "ORDER_BY_ASC" => Some(Self::Asc),
+            "ORDER_BY_DESC" => Some(Self::Desc),
+            _ => None,
+        }
+    }
 }
 /// BroadcastMode specifies the broadcast mode for the TxService.Broadcast RPC method.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum BroadcastMode {
     /// zero-value for mode ordering
@@ -453,6 +535,1283 @@ impl BroadcastMode {
             BroadcastMode::Async => "BROADCAST_MODE_ASYNC",
         }
     }
+    /// Creates an enum from field names used in the ProtoBuf definition.
+    pub fn from_str_name(value: &str) -> ::core::option::Option<Self> {
+        match value {
+            "BROADCAST_MODE_UNSPECIFIED" => Some(Self::Unspecified),
+            "BROADCAST_MODE_BLOCK" => Some(Self::Block),
+            "BROADCAST_MODE_SYNC" => Some(Self::Sync),
+            "BROADCAST_MODE_ASYNC" => Some(Self::Async),
+            _ => None,
+        }
+    }
 }
-include!("cosmos.tx.v1beta1.tonic.rs");
-// @@protoc_insertion_point(module)
+/// Generated client implementations.
+#[cfg(feature = "grpc")]
+#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
+pub mod service_client {
+    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
+    use tonic::codegen::http::Uri;
+    use tonic::codegen::*;
+    /// Service defines a gRPC service for interacting with transactions.
+    #[derive(Debug, Clone)]
+    pub struct ServiceClient<T> {
+        inner: tonic::client::Grpc<T>,
+    }
+    #[cfg(feature = "grpc-transport")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "grpc-transport")))]
+    impl ServiceClient<tonic::transport::Channel> {
+        /// Attempt to create a new client by connecting to a given endpoint.
+        pub async fn connect<D>(dst: D) -> Result<Self, tonic::transport::Error>
+        where
+            D: TryInto<tonic::transport::Endpoint>,
+            D::Error: Into<StdError>,
+        {
+            let conn = tonic::transport::Endpoint::new(dst)?.connect().await?;
+            Ok(Self::new(conn))
+        }
+    }
+    impl<T> ServiceClient<T>
+    where
+        T: tonic::client::GrpcService<tonic::body::BoxBody>,
+        T::Error: Into<StdError>,
+        T::ResponseBody: Body<Data = Bytes> + Send + 'static,
+        <T::ResponseBody as Body>::Error: Into<StdError> + Send,
+    {
+        pub fn new(inner: T) -> Self {
+            let inner = tonic::client::Grpc::new(inner);
+            Self { inner }
+        }
+        pub fn with_origin(inner: T, origin: Uri) -> Self {
+            let inner = tonic::client::Grpc::with_origin(inner, origin);
+            Self { inner }
+        }
+        pub fn with_interceptor<F>(
+            inner: T,
+            interceptor: F,
+        ) -> ServiceClient<InterceptedService<T, F>>
+        where
+            F: tonic::service::Interceptor,
+            T::ResponseBody: Default,
+            T: tonic::codegen::Service<
+                http::Request<tonic::body::BoxBody>,
+                Response = http::Response<
+                    <T as tonic::client::GrpcService<tonic::body::BoxBody>>::ResponseBody,
+                >,
+            >,
+            <T as tonic::codegen::Service<http::Request<tonic::body::BoxBody>>>::Error:
+                Into<StdError> + Send + Sync,
+        {
+            ServiceClient::new(InterceptedService::new(inner, interceptor))
+        }
+        /// Compress requests with the given encoding.
+        ///
+        /// This requires the server to support it otherwise it might respond with an
+        /// error.
+        #[must_use]
+        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.send_compressed(encoding);
+            self
+        }
+        /// Enable decompressing responses.
+        #[must_use]
+        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.accept_compressed(encoding);
+            self
+        }
+        /// Limits the maximum size of a decoded message.
+        ///
+        /// Default: `4MB`
+        #[must_use]
+        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_decoding_message_size(limit);
+            self
+        }
+        /// Limits the maximum size of an encoded message.
+        ///
+        /// Default: `usize::MAX`
+        #[must_use]
+        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_encoding_message_size(limit);
+            self
+        }
+        /// Simulate simulates executing a transaction for estimating gas usage.
+        pub async fn simulate(
+            &mut self,
+            request: impl tonic::IntoRequest<super::SimulateRequest>,
+        ) -> std::result::Result<tonic::Response<super::SimulateResponse>, tonic::Status> {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static("/cosmos.tx.v1beta1.Service/Simulate");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("cosmos.tx.v1beta1.Service", "Simulate"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// GetTx fetches a tx by hash.
+        pub async fn get_tx(
+            &mut self,
+            request: impl tonic::IntoRequest<super::GetTxRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetTxResponse>, tonic::Status> {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static("/cosmos.tx.v1beta1.Service/GetTx");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("cosmos.tx.v1beta1.Service", "GetTx"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// BroadcastTx broadcast transaction.
+        pub async fn broadcast_tx(
+            &mut self,
+            request: impl tonic::IntoRequest<super::BroadcastTxRequest>,
+        ) -> std::result::Result<tonic::Response<super::BroadcastTxResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path =
+                http::uri::PathAndQuery::from_static("/cosmos.tx.v1beta1.Service/BroadcastTx");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("cosmos.tx.v1beta1.Service", "BroadcastTx"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// GetTxsEvent fetches txs by event.
+        pub async fn get_txs_event(
+            &mut self,
+            request: impl tonic::IntoRequest<super::GetTxsEventRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetTxsEventResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path =
+                http::uri::PathAndQuery::from_static("/cosmos.tx.v1beta1.Service/GetTxsEvent");
+            let mut req = request.into_request();
+            req.extensions_mut()
+                .insert(GrpcMethod::new("cosmos.tx.v1beta1.Service", "GetTxsEvent"));
+            self.inner.unary(req, path, codec).await
+        }
+        /// GetBlockWithTxs fetches a block with decoded txs.
+        ///
+        /// Since: cosmos-sdk 0.45.2
+        pub async fn get_block_with_txs(
+            &mut self,
+            request: impl tonic::IntoRequest<super::GetBlockWithTxsRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetBlockWithTxsResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path =
+                http::uri::PathAndQuery::from_static("/cosmos.tx.v1beta1.Service/GetBlockWithTxs");
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "cosmos.tx.v1beta1.Service",
+                "GetBlockWithTxs",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+    }
+}
+/// Generated server implementations.
+#[cfg(feature = "grpc")]
+#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
+pub mod service_server {
+    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
+    use tonic::codegen::*;
+    /// Generated trait containing gRPC methods that should be implemented for use with ServiceServer.
+    #[async_trait]
+    pub trait Service: Send + Sync + 'static {
+        /// Simulate simulates executing a transaction for estimating gas usage.
+        async fn simulate(
+            &self,
+            request: tonic::Request<super::SimulateRequest>,
+        ) -> std::result::Result<tonic::Response<super::SimulateResponse>, tonic::Status>;
+        /// GetTx fetches a tx by hash.
+        async fn get_tx(
+            &self,
+            request: tonic::Request<super::GetTxRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetTxResponse>, tonic::Status>;
+        /// BroadcastTx broadcast transaction.
+        async fn broadcast_tx(
+            &self,
+            request: tonic::Request<super::BroadcastTxRequest>,
+        ) -> std::result::Result<tonic::Response<super::BroadcastTxResponse>, tonic::Status>;
+        /// GetTxsEvent fetches txs by event.
+        async fn get_txs_event(
+            &self,
+            request: tonic::Request<super::GetTxsEventRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetTxsEventResponse>, tonic::Status>;
+        /// GetBlockWithTxs fetches a block with decoded txs.
+        ///
+        /// Since: cosmos-sdk 0.45.2
+        async fn get_block_with_txs(
+            &self,
+            request: tonic::Request<super::GetBlockWithTxsRequest>,
+        ) -> std::result::Result<tonic::Response<super::GetBlockWithTxsResponse>, tonic::Status>;
+    }
+    /// Service defines a gRPC service for interacting with transactions.
+    #[derive(Debug)]
+    pub struct ServiceServer<T: Service> {
+        inner: _Inner<T>,
+        accept_compression_encodings: EnabledCompressionEncodings,
+        send_compression_encodings: EnabledCompressionEncodings,
+        max_decoding_message_size: Option<usize>,
+        max_encoding_message_size: Option<usize>,
+    }
+    struct _Inner<T>(Arc<T>);
+    impl<T: Service> ServiceServer<T> {
+        pub fn new(inner: T) -> Self {
+            Self::from_arc(Arc::new(inner))
+        }
+        pub fn from_arc(inner: Arc<T>) -> Self {
+            let inner = _Inner(inner);
+            Self {
+                inner,
+                accept_compression_encodings: Default::default(),
+                send_compression_encodings: Default::default(),
+                max_decoding_message_size: None,
+                max_encoding_message_size: None,
+            }
+        }
+        pub fn with_interceptor<F>(inner: T, interceptor: F) -> InterceptedService<Self, F>
+        where
+            F: tonic::service::Interceptor,
+        {
+            InterceptedService::new(Self::new(inner), interceptor)
+        }
+        /// Enable decompressing requests with the given encoding.
+        #[must_use]
+        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.accept_compression_encodings.enable(encoding);
+            self
+        }
+        /// Compress responses with the given encoding, if the client supports it.
+        #[must_use]
+        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.send_compression_encodings.enable(encoding);
+            self
+        }
+        /// Limits the maximum size of a decoded message.
+        ///
+        /// Default: `4MB`
+        #[must_use]
+        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
+            self.max_decoding_message_size = Some(limit);
+            self
+        }
+        /// Limits the maximum size of an encoded message.
+        ///
+        /// Default: `usize::MAX`
+        #[must_use]
+        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
+            self.max_encoding_message_size = Some(limit);
+            self
+        }
+    }
+    impl<T, B> tonic::codegen::Service<http::Request<B>> for ServiceServer<T>
+    where
+        T: Service,
+        B: Body + Send + 'static,
+        B::Error: Into<StdError> + Send + 'static,
+    {
+        type Response = http::Response<tonic::body::BoxBody>;
+        type Error = std::convert::Infallible;
+        type Future = BoxFuture<Self::Response, Self::Error>;
+        fn poll_ready(
+            &mut self,
+            _cx: &mut Context<'_>,
+        ) -> Poll<std::result::Result<(), Self::Error>> {
+            Poll::Ready(Ok(()))
+        }
+        fn call(&mut self, req: http::Request<B>) -> Self::Future {
+            let inner = self.inner.clone();
+            match req.uri().path() {
+                "/cosmos.tx.v1beta1.Service/Simulate" => {
+                    #[allow(non_camel_case_types)]
+                    struct SimulateSvc<T: Service>(pub Arc<T>);
+                    impl<T: Service> tonic::server::UnaryService<super::SimulateRequest> for SimulateSvc<T> {
+                        type Response = super::SimulateResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::SimulateRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move { (*inner).simulate(request).await };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let inner = inner.0;
+                        let method = SimulateSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/cosmos.tx.v1beta1.Service/GetTx" => {
+                    #[allow(non_camel_case_types)]
+                    struct GetTxSvc<T: Service>(pub Arc<T>);
+                    impl<T: Service> tonic::server::UnaryService<super::GetTxRequest> for GetTxSvc<T> {
+                        type Response = super::GetTxResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::GetTxRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move { (*inner).get_tx(request).await };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let inner = inner.0;
+                        let method = GetTxSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/cosmos.tx.v1beta1.Service/BroadcastTx" => {
+                    #[allow(non_camel_case_types)]
+                    struct BroadcastTxSvc<T: Service>(pub Arc<T>);
+                    impl<T: Service> tonic::server::UnaryService<super::BroadcastTxRequest> for BroadcastTxSvc<T> {
+                        type Response = super::BroadcastTxResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::BroadcastTxRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move { (*inner).broadcast_tx(request).await };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let inner = inner.0;
+                        let method = BroadcastTxSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/cosmos.tx.v1beta1.Service/GetTxsEvent" => {
+                    #[allow(non_camel_case_types)]
+                    struct GetTxsEventSvc<T: Service>(pub Arc<T>);
+                    impl<T: Service> tonic::server::UnaryService<super::GetTxsEventRequest> for GetTxsEventSvc<T> {
+                        type Response = super::GetTxsEventResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::GetTxsEventRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move { (*inner).get_txs_event(request).await };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let inner = inner.0;
+                        let method = GetTxsEventSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                "/cosmos.tx.v1beta1.Service/GetBlockWithTxs" => {
+                    #[allow(non_camel_case_types)]
+                    struct GetBlockWithTxsSvc<T: Service>(pub Arc<T>);
+                    impl<T: Service> tonic::server::UnaryService<super::GetBlockWithTxsRequest>
+                        for GetBlockWithTxsSvc<T>
+                    {
+                        type Response = super::GetBlockWithTxsResponse;
+                        type Future = BoxFuture<tonic::Response<Self::Response>, tonic::Status>;
+                        fn call(
+                            &mut self,
+                            request: tonic::Request<super::GetBlockWithTxsRequest>,
+                        ) -> Self::Future {
+                            let inner = Arc::clone(&self.0);
+                            let fut = async move { (*inner).get_block_with_txs(request).await };
+                            Box::pin(fut)
+                        }
+                    }
+                    let accept_compression_encodings = self.accept_compression_encodings;
+                    let send_compression_encodings = self.send_compression_encodings;
+                    let max_decoding_message_size = self.max_decoding_message_size;
+                    let max_encoding_message_size = self.max_encoding_message_size;
+                    let inner = self.inner.clone();
+                    let fut = async move {
+                        let inner = inner.0;
+                        let method = GetBlockWithTxsSvc(inner);
+                        let codec = tonic::codec::ProstCodec::default();
+                        let mut grpc = tonic::server::Grpc::new(codec)
+                            .apply_compression_config(
+                                accept_compression_encodings,
+                                send_compression_encodings,
+                            )
+                            .apply_max_message_size_config(
+                                max_decoding_message_size,
+                                max_encoding_message_size,
+                            );
+                        let res = grpc.unary(method, req).await;
+                        Ok(res)
+                    };
+                    Box::pin(fut)
+                }
+                _ => Box::pin(async move {
+                    Ok(http::Response::builder()
+                        .status(200)
+                        .header("grpc-status", "12")
+                        .header("content-type", "application/grpc")
+                        .body(empty_body())
+                        .unwrap())
+                }),
+            }
+        }
+    }
+    impl<T: Service> Clone for ServiceServer<T> {
+        fn clone(&self) -> Self {
+            let inner = self.inner.clone();
+            Self {
+                inner,
+                accept_compression_encodings: self.accept_compression_encodings,
+                send_compression_encodings: self.send_compression_encodings,
+                max_decoding_message_size: self.max_decoding_message_size,
+                max_encoding_message_size: self.max_encoding_message_size,
+            }
+        }
+    }
+    impl<T: Service> Clone for _Inner<T> {
+        fn clone(&self) -> Self {
+            Self(Arc::clone(&self.0))
+        }
+    }
+    impl<T: std::fmt::Debug> std::fmt::Debug for _Inner<T> {
+        fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+            write!(f, "{:?}", self.0)
+        }
+    }
+    impl<T: Service> tonic::server::NamedService for ServiceServer<T> {
+        const NAME: &'static str = "cosmos.tx.v1beta1.Service";
+    }
+}
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_TX: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.Tx")]
+    impl ::prost_wkt::MessageSerde for Tx {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Tx"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.Tx"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.Tx" , decoder : | buf : & [u8] | { let msg : Tx = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_TX_RAW: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.TxRaw")]
+    impl ::prost_wkt::MessageSerde for TxRaw {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "TxRaw"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.TxRaw"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.TxRaw" , decoder : | buf : & [u8] | { let msg : TxRaw = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGN_DOC: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.SignDoc")]
+    impl ::prost_wkt::MessageSerde for SignDoc {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignDoc"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.SignDoc"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.SignDoc" , decoder : | buf : & [u8] | { let msg : SignDoc = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGN_DOC_DIRECT_AUX: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.SignDocDirectAux")]
+    impl ::prost_wkt::MessageSerde for SignDocDirectAux {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignDocDirectAux"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.SignDocDirectAux"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.SignDocDirectAux" , decoder : | buf : & [u8] | { let msg : SignDocDirectAux = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_TX_BODY: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.TxBody")]
+    impl ::prost_wkt::MessageSerde for TxBody {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "TxBody"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.TxBody"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.TxBody" , decoder : | buf : & [u8] | { let msg : TxBody = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_AUTH_INFO: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.AuthInfo")]
+    impl ::prost_wkt::MessageSerde for AuthInfo {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "AuthInfo"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.AuthInfo"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.AuthInfo" , decoder : | buf : & [u8] | { let msg : AuthInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGNER_INFO: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.SignerInfo")]
+    impl ::prost_wkt::MessageSerde for SignerInfo {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignerInfo"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.SignerInfo"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.SignerInfo" , decoder : | buf : & [u8] | { let msg : SignerInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MODE_INFO: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.ModeInfo")]
+    impl ::prost_wkt::MessageSerde for ModeInfo {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ModeInfo"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.ModeInfo"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.ModeInfo" , decoder : | buf : & [u8] | { let msg : ModeInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_FEE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.Fee")]
+    impl ::prost_wkt::MessageSerde for Fee {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Fee"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.Fee"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.Fee" , decoder : | buf : & [u8] | { let msg : Fee = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_TIP: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.Tip")]
+    impl ::prost_wkt::MessageSerde for Tip {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Tip"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.Tip"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.Tip" , decoder : | buf : & [u8] | { let msg : Tip = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_AUX_SIGNER_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.AuxSignerData")]
+    impl ::prost_wkt::MessageSerde for AuxSignerData {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "AuxSignerData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.AuxSignerData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.AuxSignerData" , decoder : | buf : & [u8] | { let msg : AuxSignerData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_TXS_EVENT_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventRequest")]
+    impl ::prost_wkt::MessageSerde for GetTxsEventRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetTxsEventRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventRequest" , decoder : | buf : & [u8] | { let msg : GetTxsEventRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_TXS_EVENT_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventResponse")]
+    impl ::prost_wkt::MessageSerde for GetTxsEventResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetTxsEventResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetTxsEventResponse" , decoder : | buf : & [u8] | { let msg : GetTxsEventResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_BROADCAST_TX_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxRequest")]
+    impl ::prost_wkt::MessageSerde for BroadcastTxRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "BroadcastTxRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxRequest" , decoder : | buf : & [u8] | { let msg : BroadcastTxRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_BROADCAST_TX_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxResponse")]
+    impl ::prost_wkt::MessageSerde for BroadcastTxResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "BroadcastTxResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.BroadcastTxResponse" , decoder : | buf : & [u8] | { let msg : BroadcastTxResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIMULATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.SimulateRequest")]
+    impl ::prost_wkt::MessageSerde for SimulateRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SimulateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.SimulateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.SimulateRequest" , decoder : | buf : & [u8] | { let msg : SimulateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIMULATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.SimulateResponse")]
+    impl ::prost_wkt::MessageSerde for SimulateResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SimulateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.SimulateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.SimulateResponse" , decoder : | buf : & [u8] | { let msg : SimulateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_TX_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetTxRequest")]
+    impl ::prost_wkt::MessageSerde for GetTxRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetTxRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetTxRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetTxRequest" , decoder : | buf : & [u8] | { let msg : GetTxRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_TX_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetTxResponse")]
+    impl ::prost_wkt::MessageSerde for GetTxResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetTxResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetTxResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetTxResponse" , decoder : | buf : & [u8] | { let msg : GetTxResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_WITH_TXS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsRequest")]
+    impl ::prost_wkt::MessageSerde for GetBlockWithTxsRequest {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetBlockWithTxsRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsRequest" , decoder : | buf : & [u8] | { let msg : GetBlockWithTxsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_WITH_TXS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsResponse")]
+    impl ::prost_wkt::MessageSerde for GetBlockWithTxsResponse {
+        fn package_name(&self) -> &'static str {
+            "cosmos.tx.v1beta1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GetBlockWithTxsResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.v1beta1.GetBlockWithTxsResponse" , decoder : | buf : & [u8] | { let msg : GetBlockWithTxsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

@@ -2,6 +2,7 @@
 /// separate one.
 /// NOTE: there must only be 2 defined ConnectionEnds to establish
 /// a connection between two chains.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConnectionEnd {
@@ -26,6 +27,7 @@ pub struct ConnectionEnd {
 }
 /// IdentifiedConnection defines a connection with additional connection
 /// identifier field.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IdentifiedConnection {
@@ -50,6 +52,7 @@ pub struct IdentifiedConnection {
     pub delay_period: u64,
 }
 /// Counterparty defines the counterparty chain associated with a connection end.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Counterparty {
@@ -66,6 +69,7 @@ pub struct Counterparty {
     pub prefix: ::core::option::Option<super::super::commitment::v1::MerklePrefix>,
 }
 /// ClientPaths define all the connection paths for a client state.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientPaths {
@@ -74,6 +78,7 @@ pub struct ClientPaths {
     pub paths: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
 /// ConnectionPaths define all the connection paths for a given client state.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConnectionPaths {
@@ -86,6 +91,7 @@ pub struct ConnectionPaths {
 }
 /// Version defines the versioning scheme used to negotiate the IBC verison in
 /// the connection handshake.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Version {
@@ -97,6 +103,7 @@ pub struct Version {
     pub features: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
 /// Params defines the set of Connection parameters.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Params {
@@ -108,7 +115,19 @@ pub struct Params {
 }
 /// State defines if a connection is in one of the following states:
 /// INIT, TRYOPEN, OPEN or UNINITIALIZED.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum State {
     /// Default State
@@ -145,306 +164,9 @@ impl State {
         }
     }
 }
-/// MsgConnectionOpenInit defines the msg sent by an account on Chain A to
-/// initialize a connection with Chain B.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenInit {
-    #[prost(string, tag = "1")]
-    pub client_id: ::prost::alloc::string::String,
-    #[prost(message, optional, tag = "2")]
-    pub counterparty: ::core::option::Option<Counterparty>,
-    #[prost(message, optional, tag = "3")]
-    pub version: ::core::option::Option<Version>,
-    #[prost(uint64, tag = "4")]
-    pub delay_period: u64,
-    #[prost(string, tag = "5")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgConnectionOpenInitResponse defines the Msg/ConnectionOpenInit response
-/// type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenInitResponse {}
-/// MsgConnectionOpenTry defines a msg sent by a Relayer to try to open a
-/// connection on Chain B.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenTry {
-    #[prost(string, tag = "1")]
-    pub client_id: ::prost::alloc::string::String,
-    /// in the case of crossing hello's, when both chains call OpenInit, we need
-    /// the connection identifier of the previous connection in state INIT
-    #[prost(string, tag = "2")]
-    pub previous_connection_id: ::prost::alloc::string::String,
-    #[prost(message, optional, tag = "3")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
-    #[prost(message, optional, tag = "4")]
-    pub counterparty: ::core::option::Option<Counterparty>,
-    #[prost(uint64, tag = "5")]
-    pub delay_period: u64,
-    #[prost(message, repeated, tag = "6")]
-    pub counterparty_versions: ::prost::alloc::vec::Vec<Version>,
-    #[prost(message, optional, tag = "7")]
-    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
-    /// proof of the initialization the connection on Chain A: `UNITIALIZED ->
-    /// INIT`
-    #[prost(bytes = "vec", tag = "8")]
-    pub proof_init: ::prost::alloc::vec::Vec<u8>,
-    /// proof of client state included in message
-    #[prost(bytes = "vec", tag = "9")]
-    pub proof_client: ::prost::alloc::vec::Vec<u8>,
-    /// proof of client consensus state
-    #[prost(bytes = "vec", tag = "10")]
-    pub proof_consensus: ::prost::alloc::vec::Vec<u8>,
-    #[prost(message, optional, tag = "11")]
-    pub consensus_height: ::core::option::Option<super::super::client::v1::Height>,
-    #[prost(string, tag = "12")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgConnectionOpenTryResponse defines the Msg/ConnectionOpenTry response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenTryResponse {}
-/// MsgConnectionOpenAck defines a msg sent by a Relayer to Chain A to
-/// acknowledge the change of connection state to TRYOPEN on Chain B.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenAck {
-    #[prost(string, tag = "1")]
-    pub connection_id: ::prost::alloc::string::String,
-    #[prost(string, tag = "2")]
-    pub counterparty_connection_id: ::prost::alloc::string::String,
-    #[prost(message, optional, tag = "3")]
-    pub version: ::core::option::Option<Version>,
-    #[prost(message, optional, tag = "4")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
-    #[prost(message, optional, tag = "5")]
-    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
-    /// proof of the initialization the connection on Chain B: `UNITIALIZED ->
-    /// TRYOPEN`
-    #[prost(bytes = "vec", tag = "6")]
-    pub proof_try: ::prost::alloc::vec::Vec<u8>,
-    /// proof of client state included in message
-    #[prost(bytes = "vec", tag = "7")]
-    pub proof_client: ::prost::alloc::vec::Vec<u8>,
-    /// proof of client consensus state
-    #[prost(bytes = "vec", tag = "8")]
-    pub proof_consensus: ::prost::alloc::vec::Vec<u8>,
-    #[prost(message, optional, tag = "9")]
-    pub consensus_height: ::core::option::Option<super::super::client::v1::Height>,
-    #[prost(string, tag = "10")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgConnectionOpenAckResponse defines the Msg/ConnectionOpenAck response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenAckResponse {}
-/// MsgConnectionOpenConfirm defines a msg sent by a Relayer to Chain B to
-/// acknowledge the change of connection state to OPEN on Chain A.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenConfirm {
-    #[prost(string, tag = "1")]
-    pub connection_id: ::prost::alloc::string::String,
-    /// proof for the change of the connection state on Chain A: `INIT -> OPEN`
-    #[prost(bytes = "vec", tag = "2")]
-    pub proof_ack: ::prost::alloc::vec::Vec<u8>,
-    #[prost(message, optional, tag = "3")]
-    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
-    #[prost(string, tag = "4")]
-    pub signer: ::prost::alloc::string::String,
-}
-/// MsgConnectionOpenConfirmResponse defines the Msg/ConnectionOpenConfirm
-/// response type.
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[derive(Clone, PartialEq, ::prost::Message)]
-pub struct MsgConnectionOpenConfirmResponse {}
-/// Generated client implementations.
-#[cfg(feature = "grpc")]
-#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
-pub mod msg_client {
-    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
-    use tonic::codegen::http::Uri;
-    use tonic::codegen::*;
-    /// Msg defines the ibc/connection Msg service.
-    #[derive(Debug, Clone)]
-    pub struct MsgClient<T> {
-        inner: tonic::client::Grpc<T>,
-    }
-    #[cfg(feature = "grpc-transport")]
-    #[cfg_attr(docsrs, doc(cfg(feature = "grpc-transport")))]
-    impl MsgClient<tonic::transport::Channel> {
-        /// Attempt to create a new client by connecting to a given endpoint.
-        pub async fn connect<D>(dst: D) -> Result<Self, tonic::transport::Error>
-        where
-            D: TryInto<tonic::transport::Endpoint>,
-            D::Error: Into<StdError>,
-        {
-            let conn = tonic::transport::Endpoint::new(dst)?.connect().await?;
-            Ok(Self::new(conn))
-        }
-    }
-    impl<T> MsgClient<T>
-    where
-        T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::Error: Into<StdError>,
-        T::ResponseBody: Body<Data = Bytes> + Send + 'static,
-        <T::ResponseBody as Body>::Error: Into<StdError> + Send,
-    {
-        pub fn new(inner: T) -> Self {
-            let inner = tonic::client::Grpc::new(inner);
-            Self { inner }
-        }
-        pub fn with_origin(inner: T, origin: Uri) -> Self {
-            let inner = tonic::client::Grpc::with_origin(inner, origin);
-            Self { inner }
-        }
-        pub fn with_interceptor<F>(inner: T, interceptor: F) -> MsgClient<InterceptedService<T, F>>
-        where
-            F: tonic::service::Interceptor,
-            T::ResponseBody: Default,
-            T: tonic::codegen::Service<
-                http::Request<tonic::body::BoxBody>,
-                Response = http::Response<
-                    <T as tonic::client::GrpcService<tonic::body::BoxBody>>::ResponseBody,
-                >,
-            >,
-            <T as tonic::codegen::Service<http::Request<tonic::body::BoxBody>>>::Error:
-                Into<StdError> + Send + Sync,
-        {
-            MsgClient::new(InterceptedService::new(inner, interceptor))
-        }
-        /// Compress requests with the given encoding.
-        ///
-        /// This requires the server to support it otherwise it might respond with an
-        /// error.
-        #[must_use]
-        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
-            self.inner = self.inner.send_compressed(encoding);
-            self
-        }
-        /// Enable decompressing responses.
-        #[must_use]
-        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
-            self.inner = self.inner.accept_compressed(encoding);
-            self
-        }
-        /// Limits the maximum size of a decoded message.
-        ///
-        /// Default: `4MB`
-        #[must_use]
-        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
-            self.inner = self.inner.max_decoding_message_size(limit);
-            self
-        }
-        /// Limits the maximum size of an encoded message.
-        ///
-        /// Default: `usize::MAX`
-        #[must_use]
-        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
-            self.inner = self.inner.max_encoding_message_size(limit);
-            self
-        }
-        /// ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
-        pub async fn connection_open_init(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgConnectionOpenInit>,
-        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenInitResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/ibc.core.connection.v1.Msg/ConnectionOpenInit",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut().insert(GrpcMethod::new(
-                "ibc.core.connection.v1.Msg",
-                "ConnectionOpenInit",
-            ));
-            self.inner.unary(req, path, codec).await
-        }
-        /// ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
-        pub async fn connection_open_try(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgConnectionOpenTry>,
-        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenTryResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/ibc.core.connection.v1.Msg/ConnectionOpenTry",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut().insert(GrpcMethod::new(
-                "ibc.core.connection.v1.Msg",
-                "ConnectionOpenTry",
-            ));
-            self.inner.unary(req, path, codec).await
-        }
-        /// ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
-        pub async fn connection_open_ack(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgConnectionOpenAck>,
-        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenAckResponse>, tonic::Status>
-        {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/ibc.core.connection.v1.Msg/ConnectionOpenAck",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut().insert(GrpcMethod::new(
-                "ibc.core.connection.v1.Msg",
-                "ConnectionOpenAck",
-            ));
-            self.inner.unary(req, path, codec).await
-        }
-        /// ConnectionOpenConfirm defines a rpc handler method for
-        /// MsgConnectionOpenConfirm.
-        pub async fn connection_open_confirm(
-            &mut self,
-            request: impl tonic::IntoRequest<super::MsgConnectionOpenConfirm>,
-        ) -> std::result::Result<
-            tonic::Response<super::MsgConnectionOpenConfirmResponse>,
-            tonic::Status,
-        > {
-            self.inner.ready().await.map_err(|e| {
-                tonic::Status::new(
-                    tonic::Code::Unknown,
-                    format!("Service was not ready: {}", e.into()),
-                )
-            })?;
-            let codec = tonic::codec::ProstCodec::default();
-            let path = http::uri::PathAndQuery::from_static(
-                "/ibc.core.connection.v1.Msg/ConnectionOpenConfirm",
-            );
-            let mut req = request.into_request();
-            req.extensions_mut().insert(GrpcMethod::new(
-                "ibc.core.connection.v1.Msg",
-                "ConnectionOpenConfirm",
-            ));
-            self.inner.unary(req, path, codec).await
-        }
-    }
-}
 /// QueryConnectionRequest is the request type for the Query/Connection RPC
 /// method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionRequest {
@@ -455,6 +177,7 @@ pub struct QueryConnectionRequest {
 /// QueryConnectionResponse is the response type for the Query/Connection RPC
 /// method. Besides the connection end, it includes a proof and the height from
 /// which the proof was retrieved.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionResponse {
@@ -470,6 +193,7 @@ pub struct QueryConnectionResponse {
 }
 /// QueryConnectionsRequest is the request type for the Query/Connections RPC
 /// method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionsRequest {
@@ -480,6 +204,7 @@ pub struct QueryConnectionsRequest {
 }
 /// QueryConnectionsResponse is the response type for the Query/Connections RPC
 /// method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionsResponse {
@@ -497,6 +222,7 @@ pub struct QueryConnectionsResponse {
 }
 /// QueryClientConnectionsRequest is the request type for the
 /// Query/ClientConnections RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientConnectionsRequest {
@@ -506,6 +232,7 @@ pub struct QueryClientConnectionsRequest {
 }
 /// QueryClientConnectionsResponse is the response type for the
 /// Query/ClientConnections RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryClientConnectionsResponse {
@@ -521,6 +248,7 @@ pub struct QueryClientConnectionsResponse {
 }
 /// QueryConnectionClientStateRequest is the request type for the
 /// Query/ConnectionClientState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionClientStateRequest {
@@ -530,6 +258,7 @@ pub struct QueryConnectionClientStateRequest {
 }
 /// QueryConnectionClientStateResponse is the response type for the
 /// Query/ConnectionClientState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionClientStateResponse {
@@ -546,6 +275,7 @@ pub struct QueryConnectionClientStateResponse {
 }
 /// QueryConnectionConsensusStateRequest is the request type for the
 /// Query/ConnectionConsensusState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionConsensusStateRequest {
@@ -559,12 +289,13 @@ pub struct QueryConnectionConsensusStateRequest {
 }
 /// QueryConnectionConsensusStateResponse is the response type for the
 /// Query/ConnectionConsensusState RPC method
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryConnectionConsensusStateResponse {
     /// consensus state associated with the channel
     #[prost(message, optional, tag = "1")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
     /// client ID associated with the consensus state
     #[prost(string, tag = "2")]
     pub client_id: ::prost::alloc::string::String,
@@ -788,7 +519,314 @@ pub mod query_client {
         }
     }
 }
+/// MsgConnectionOpenInit defines the msg sent by an account on Chain A to
+/// initialize a connection with Chain B.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenInit {
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    #[prost(message, optional, tag = "2")]
+    pub counterparty: ::core::option::Option<Counterparty>,
+    #[prost(message, optional, tag = "3")]
+    pub version: ::core::option::Option<Version>,
+    #[prost(uint64, tag = "4")]
+    pub delay_period: u64,
+    #[prost(string, tag = "5")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgConnectionOpenInitResponse defines the Msg/ConnectionOpenInit response
+/// type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenInitResponse {}
+/// MsgConnectionOpenTry defines a msg sent by a Relayer to try to open a
+/// connection on Chain B.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenTry {
+    #[prost(string, tag = "1")]
+    pub client_id: ::prost::alloc::string::String,
+    /// in the case of crossing hello's, when both chains call OpenInit, we need
+    /// the connection identifier of the previous connection in state INIT
+    #[prost(string, tag = "2")]
+    pub previous_connection_id: ::prost::alloc::string::String,
+    #[prost(message, optional, tag = "3")]
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
+    #[prost(message, optional, tag = "4")]
+    pub counterparty: ::core::option::Option<Counterparty>,
+    #[prost(uint64, tag = "5")]
+    pub delay_period: u64,
+    #[prost(message, repeated, tag = "6")]
+    pub counterparty_versions: ::prost::alloc::vec::Vec<Version>,
+    #[prost(message, optional, tag = "7")]
+    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
+    /// proof of the initialization the connection on Chain A: `UNITIALIZED ->
+    /// INIT`
+    #[prost(bytes = "vec", tag = "8")]
+    pub proof_init: ::prost::alloc::vec::Vec<u8>,
+    /// proof of client state included in message
+    #[prost(bytes = "vec", tag = "9")]
+    pub proof_client: ::prost::alloc::vec::Vec<u8>,
+    /// proof of client consensus state
+    #[prost(bytes = "vec", tag = "10")]
+    pub proof_consensus: ::prost::alloc::vec::Vec<u8>,
+    #[prost(message, optional, tag = "11")]
+    pub consensus_height: ::core::option::Option<super::super::client::v1::Height>,
+    #[prost(string, tag = "12")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgConnectionOpenTryResponse defines the Msg/ConnectionOpenTry response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenTryResponse {}
+/// MsgConnectionOpenAck defines a msg sent by a Relayer to Chain A to
+/// acknowledge the change of connection state to TRYOPEN on Chain B.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenAck {
+    #[prost(string, tag = "1")]
+    pub connection_id: ::prost::alloc::string::String,
+    #[prost(string, tag = "2")]
+    pub counterparty_connection_id: ::prost::alloc::string::String,
+    #[prost(message, optional, tag = "3")]
+    pub version: ::core::option::Option<Version>,
+    #[prost(message, optional, tag = "4")]
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
+    #[prost(message, optional, tag = "5")]
+    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
+    /// proof of the initialization the connection on Chain B: `UNITIALIZED ->
+    /// TRYOPEN`
+    #[prost(bytes = "vec", tag = "6")]
+    pub proof_try: ::prost::alloc::vec::Vec<u8>,
+    /// proof of client state included in message
+    #[prost(bytes = "vec", tag = "7")]
+    pub proof_client: ::prost::alloc::vec::Vec<u8>,
+    /// proof of client consensus state
+    #[prost(bytes = "vec", tag = "8")]
+    pub proof_consensus: ::prost::alloc::vec::Vec<u8>,
+    #[prost(message, optional, tag = "9")]
+    pub consensus_height: ::core::option::Option<super::super::client::v1::Height>,
+    #[prost(string, tag = "10")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgConnectionOpenAckResponse defines the Msg/ConnectionOpenAck response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenAckResponse {}
+/// MsgConnectionOpenConfirm defines a msg sent by a Relayer to Chain B to
+/// acknowledge the change of connection state to OPEN on Chain A.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenConfirm {
+    #[prost(string, tag = "1")]
+    pub connection_id: ::prost::alloc::string::String,
+    /// proof for the change of the connection state on Chain A: `INIT -> OPEN`
+    #[prost(bytes = "vec", tag = "2")]
+    pub proof_ack: ::prost::alloc::vec::Vec<u8>,
+    #[prost(message, optional, tag = "3")]
+    pub proof_height: ::core::option::Option<super::super::client::v1::Height>,
+    #[prost(string, tag = "4")]
+    pub signer: ::prost::alloc::string::String,
+}
+/// MsgConnectionOpenConfirmResponse defines the Msg/ConnectionOpenConfirm
+/// response type.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct MsgConnectionOpenConfirmResponse {}
+/// Generated client implementations.
+#[cfg(feature = "grpc")]
+#[cfg_attr(docsrs, doc(cfg(feature = "grpc")))]
+pub mod msg_client {
+    #![allow(unused_variables, dead_code, missing_docs, clippy::let_unit_value)]
+    use tonic::codegen::http::Uri;
+    use tonic::codegen::*;
+    /// Msg defines the ibc/connection Msg service.
+    #[derive(Debug, Clone)]
+    pub struct MsgClient<T> {
+        inner: tonic::client::Grpc<T>,
+    }
+    #[cfg(feature = "grpc-transport")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "grpc-transport")))]
+    impl MsgClient<tonic::transport::Channel> {
+        /// Attempt to create a new client by connecting to a given endpoint.
+        pub async fn connect<D>(dst: D) -> Result<Self, tonic::transport::Error>
+        where
+            D: TryInto<tonic::transport::Endpoint>,
+            D::Error: Into<StdError>,
+        {
+            let conn = tonic::transport::Endpoint::new(dst)?.connect().await?;
+            Ok(Self::new(conn))
+        }
+    }
+    impl<T> MsgClient<T>
+    where
+        T: tonic::client::GrpcService<tonic::body::BoxBody>,
+        T::Error: Into<StdError>,
+        T::ResponseBody: Body<Data = Bytes> + Send + 'static,
+        <T::ResponseBody as Body>::Error: Into<StdError> + Send,
+    {
+        pub fn new(inner: T) -> Self {
+            let inner = tonic::client::Grpc::new(inner);
+            Self { inner }
+        }
+        pub fn with_origin(inner: T, origin: Uri) -> Self {
+            let inner = tonic::client::Grpc::with_origin(inner, origin);
+            Self { inner }
+        }
+        pub fn with_interceptor<F>(inner: T, interceptor: F) -> MsgClient<InterceptedService<T, F>>
+        where
+            F: tonic::service::Interceptor,
+            T::ResponseBody: Default,
+            T: tonic::codegen::Service<
+                http::Request<tonic::body::BoxBody>,
+                Response = http::Response<
+                    <T as tonic::client::GrpcService<tonic::body::BoxBody>>::ResponseBody,
+                >,
+            >,
+            <T as tonic::codegen::Service<http::Request<tonic::body::BoxBody>>>::Error:
+                Into<StdError> + Send + Sync,
+        {
+            MsgClient::new(InterceptedService::new(inner, interceptor))
+        }
+        /// Compress requests with the given encoding.
+        ///
+        /// This requires the server to support it otherwise it might respond with an
+        /// error.
+        #[must_use]
+        pub fn send_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.send_compressed(encoding);
+            self
+        }
+        /// Enable decompressing responses.
+        #[must_use]
+        pub fn accept_compressed(mut self, encoding: CompressionEncoding) -> Self {
+            self.inner = self.inner.accept_compressed(encoding);
+            self
+        }
+        /// Limits the maximum size of a decoded message.
+        ///
+        /// Default: `4MB`
+        #[must_use]
+        pub fn max_decoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_decoding_message_size(limit);
+            self
+        }
+        /// Limits the maximum size of an encoded message.
+        ///
+        /// Default: `usize::MAX`
+        #[must_use]
+        pub fn max_encoding_message_size(mut self, limit: usize) -> Self {
+            self.inner = self.inner.max_encoding_message_size(limit);
+            self
+        }
+        /// ConnectionOpenInit defines a rpc handler method for MsgConnectionOpenInit.
+        pub async fn connection_open_init(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgConnectionOpenInit>,
+        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenInitResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/ibc.core.connection.v1.Msg/ConnectionOpenInit",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "ibc.core.connection.v1.Msg",
+                "ConnectionOpenInit",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+        /// ConnectionOpenTry defines a rpc handler method for MsgConnectionOpenTry.
+        pub async fn connection_open_try(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgConnectionOpenTry>,
+        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenTryResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/ibc.core.connection.v1.Msg/ConnectionOpenTry",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "ibc.core.connection.v1.Msg",
+                "ConnectionOpenTry",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+        /// ConnectionOpenAck defines a rpc handler method for MsgConnectionOpenAck.
+        pub async fn connection_open_ack(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgConnectionOpenAck>,
+        ) -> std::result::Result<tonic::Response<super::MsgConnectionOpenAckResponse>, tonic::Status>
+        {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/ibc.core.connection.v1.Msg/ConnectionOpenAck",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "ibc.core.connection.v1.Msg",
+                "ConnectionOpenAck",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+        /// ConnectionOpenConfirm defines a rpc handler method for
+        /// MsgConnectionOpenConfirm.
+        pub async fn connection_open_confirm(
+            &mut self,
+            request: impl tonic::IntoRequest<super::MsgConnectionOpenConfirm>,
+        ) -> std::result::Result<
+            tonic::Response<super::MsgConnectionOpenConfirmResponse>,
+            tonic::Status,
+        > {
+            self.inner.ready().await.map_err(|e| {
+                tonic::Status::new(
+                    tonic::Code::Unknown,
+                    format!("Service was not ready: {}", e.into()),
+                )
+            })?;
+            let codec = tonic::codec::ProstCodec::default();
+            let path = http::uri::PathAndQuery::from_static(
+                "/ibc.core.connection.v1.Msg/ConnectionOpenConfirm",
+            );
+            let mut req = request.into_request();
+            req.extensions_mut().insert(GrpcMethod::new(
+                "ibc.core.connection.v1.Msg",
+                "ConnectionOpenConfirm",
+            ));
+            self.inner.unary(req, path, codec).await
+        }
+    }
+}
 /// GenesisState defines the ibc connection submodule's genesis state.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenesisState {
@@ -802,3 +840,933 @@ pub struct GenesisState {
     #[prost(message, optional, tag = "4")]
     pub params: ::core::option::Option<Params>,
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONNECTION_END: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd")]
+    impl ::prost_wkt::MessageSerde for ConnectionEnd {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConnectionEnd"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd" , decoder : | buf : & [u8] | { let msg : ConnectionEnd = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CONNECTION: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection")]
+    impl ::prost_wkt::MessageSerde for IdentifiedConnection {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "IdentifiedConnection"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection" , decoder : | buf : & [u8] | { let msg : IdentifiedConnection = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Counterparty")]
+    impl ::prost_wkt::MessageSerde for Counterparty {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Counterparty"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.Counterparty"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Counterparty" , decoder : | buf : & [u8] | { let msg : Counterparty = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_PATHS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ClientPaths")]
+    impl ::prost_wkt::MessageSerde for ClientPaths {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientPaths"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.ClientPaths"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ClientPaths" , decoder : | buf : & [u8] | { let msg : ClientPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONNECTION_PATHS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths")]
+    impl ::prost_wkt::MessageSerde for ConnectionPaths {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConnectionPaths"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths" , decoder : | buf : & [u8] | { let msg : ConnectionPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_VERSION: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Version")]
+    impl ::prost_wkt::MessageSerde for Version {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Version"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.Version"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Version" , decoder : | buf : & [u8] | { let msg : Version = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Params")]
+    impl ::prost_wkt::MessageSerde for Params {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Params"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.Params"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest")]
+    impl ::prost_wkt::MessageSerde for QueryConnectionRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse")]
+    impl ::prost_wkt::MessageSerde for QueryConnectionResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest")]
+    impl ::prost_wkt::MessageSerde for QueryConnectionsRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionsRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse")]
+    impl ::prost_wkt::MessageSerde for QueryConnectionsResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionsResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryClientConnectionsRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientConnectionsRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryClientConnectionsResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryClientConnectionsResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryConnectionClientStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionClientStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryConnectionClientStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionClientStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryConnectionConsensusStateRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionConsensusStateRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryConnectionConsensusStateResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryConnectionConsensusStateResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit")]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenInit {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenInit"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenInitResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenInitResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry")]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenTry {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenTry"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenTryResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenTryResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck")]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenAck {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenAck"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAck = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenAckResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenAckResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAckResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm")]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenConfirm {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenConfirm"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for MsgConnectionOpenConfirmResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "MsgConnectionOpenConfirmResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.GenesisState")]
+    impl ::prost_wkt::MessageSerde for GenesisState {
+        fn package_name(&self) -> &'static str {
+            "ibc.core.connection.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "GenesisState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.core.connection.v1.GenesisState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

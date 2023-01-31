@@ -1,5 +1,6 @@
 /// ClientState defines a solo machine client that tracks the current consensus
 /// state and if the client is frozen.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientState {
@@ -19,12 +20,13 @@ pub struct ClientState {
 /// ConsensusState defines a solo machine consensus state. The sequence of a
 /// consensus state is contained in the "height" key used in storing the
 /// consensus state.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConsensusState {
     /// public key of the solo machine
     #[prost(message, optional, tag = "1")]
-    pub public_key: ::core::option::Option<::prost_types::Any>,
+    pub public_key: ::core::option::Option<::prost_wkt_types::Any>,
     /// diversifier allows the same public key to be re-used across different solo
     /// machine clients (potentially on different chains) without being considered
     /// misbehaviour.
@@ -34,6 +36,7 @@ pub struct ConsensusState {
     pub timestamp: u64,
 }
 /// Header defines a solo machine consensus header
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Header {
@@ -45,12 +48,13 @@ pub struct Header {
     #[prost(bytes = "vec", tag = "3")]
     pub signature: ::prost::alloc::vec::Vec<u8>,
     #[prost(message, optional, tag = "4")]
-    pub new_public_key: ::core::option::Option<::prost_types::Any>,
+    pub new_public_key: ::core::option::Option<::prost_wkt_types::Any>,
     #[prost(string, tag = "5")]
     pub new_diversifier: ::prost::alloc::string::String,
 }
 /// Misbehaviour defines misbehaviour for a solo machine which consists
 /// of a sequence and two signatures over different messages at that sequence.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Misbehaviour {
@@ -65,6 +69,7 @@ pub struct Misbehaviour {
 }
 /// SignatureAndData contains a signature and the data signed over to create that
 /// signature.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignatureAndData {
@@ -79,6 +84,7 @@ pub struct SignatureAndData {
 }
 /// TimestampedSignatureData contains the signature data and the timestamp of the
 /// signature.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TimestampedSignatureData {
@@ -88,6 +94,7 @@ pub struct TimestampedSignatureData {
     pub timestamp: u64,
 }
 /// SignBytes defines the signed bytes used for signature verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SignBytes {
@@ -105,37 +112,41 @@ pub struct SignBytes {
     pub data: ::prost::alloc::vec::Vec<u8>,
 }
 /// HeaderData returns the SignBytes data for update verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HeaderData {
     /// header public key
     #[prost(message, optional, tag = "1")]
-    pub new_pub_key: ::core::option::Option<::prost_types::Any>,
+    pub new_pub_key: ::core::option::Option<::prost_wkt_types::Any>,
     /// header diversifier
     #[prost(string, tag = "2")]
     pub new_diversifier: ::prost::alloc::string::String,
 }
 /// ClientStateData returns the SignBytes data for client state verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ClientStateData {
     #[prost(bytes = "vec", tag = "1")]
     pub path: ::prost::alloc::vec::Vec<u8>,
     #[prost(message, optional, tag = "2")]
-    pub client_state: ::core::option::Option<::prost_types::Any>,
+    pub client_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// ConsensusStateData returns the SignBytes data for consensus state
 /// verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConsensusStateData {
     #[prost(bytes = "vec", tag = "1")]
     pub path: ::prost::alloc::vec::Vec<u8>,
     #[prost(message, optional, tag = "2")]
-    pub consensus_state: ::core::option::Option<::prost_types::Any>,
+    pub consensus_state: ::core::option::Option<::prost_wkt_types::Any>,
 }
 /// ConnectionStateData returns the SignBytes data for connection state
 /// verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConnectionStateData {
@@ -147,6 +158,7 @@ pub struct ConnectionStateData {
 }
 /// ChannelStateData returns the SignBytes data for channel state
 /// verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ChannelStateData {
@@ -157,6 +169,7 @@ pub struct ChannelStateData {
 }
 /// PacketCommitmentData returns the SignBytes data for packet commitment
 /// verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PacketCommitmentData {
@@ -167,6 +180,7 @@ pub struct PacketCommitmentData {
 }
 /// PacketAcknowledgementData returns the SignBytes data for acknowledgement
 /// verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PacketAcknowledgementData {
@@ -177,6 +191,7 @@ pub struct PacketAcknowledgementData {
 }
 /// PacketReceiptAbsenceData returns the SignBytes data for
 /// packet receipt absence verification.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PacketReceiptAbsenceData {
@@ -185,6 +200,7 @@ pub struct PacketReceiptAbsenceData {
 }
 /// NextSequenceRecvData returns the SignBytes data for verification of the next
 /// sequence to be received.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NextSequenceRecvData {
@@ -195,7 +211,19 @@ pub struct NextSequenceRecvData {
 }
 /// DataType defines the type of solo machine proof being created. This is done
 /// to preserve uniqueness of different data sign byte encodings.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
+#[derive(
+    ::serde::Serialize,
+    ::serde::Deserialize,
+    Clone,
+    Copy,
+    Debug,
+    PartialEq,
+    Eq,
+    Hash,
+    PartialOrd,
+    Ord,
+    ::prost::Enumeration,
+)]
 #[repr(i32)]
 pub enum DataType {
     /// Default State
@@ -255,3 +283,577 @@ impl DataType {
         }
     }
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientState")]
+    impl ::prost_wkt::MessageSerde for ClientState {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusState")]
+    impl ::prost_wkt::MessageSerde for ConsensusState {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConsensusState"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusState"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.Header")]
+    impl ::prost_wkt::MessageSerde for Header {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Header"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.Header"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.Misbehaviour")]
+    impl ::prost_wkt::MessageSerde for Misbehaviour {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Misbehaviour"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.Misbehaviour"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_AND_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.SignatureAndData")]
+    impl ::prost_wkt::MessageSerde for SignatureAndData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignatureAndData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.SignatureAndData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.SignatureAndData" , decoder : | buf : & [u8] | { let msg : SignatureAndData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_TIMESTAMPED_SIGNATURE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.TimestampedSignatureData"
+    )]
+    impl ::prost_wkt::MessageSerde for TimestampedSignatureData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "TimestampedSignatureData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.TimestampedSignatureData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.TimestampedSignatureData" , decoder : | buf : & [u8] | { let msg : TimestampedSignatureData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_SIGN_BYTES: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.SignBytes")]
+    impl ::prost_wkt::MessageSerde for SignBytes {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "SignBytes"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.SignBytes"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.SignBytes" , decoder : | buf : & [u8] | { let msg : SignBytes = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_HEADER_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.HeaderData")]
+    impl ::prost_wkt::MessageSerde for HeaderData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "HeaderData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.HeaderData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.HeaderData" , decoder : | buf : & [u8] | { let msg : HeaderData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientStateData")]
+    impl ::prost_wkt::MessageSerde for ClientStateData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ClientStateData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientStateData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ClientStateData" , decoder : | buf : & [u8] | { let msg : ClientStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusStateData"
+    )]
+    impl ::prost_wkt::MessageSerde for ConsensusStateData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConsensusStateData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusStateData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ConsensusStateData" , decoder : | buf : & [u8] | { let msg : ConsensusStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CONNECTION_STATE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ConnectionStateData"
+    )]
+    impl ::prost_wkt::MessageSerde for ConnectionStateData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ConnectionStateData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ConnectionStateData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ConnectionStateData" , decoder : | buf : & [u8] | { let msg : ConnectionStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_CHANNEL_STATE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v1.ChannelStateData")]
+    impl ::prost_wkt::MessageSerde for ChannelStateData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "ChannelStateData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.ChannelStateData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.ChannelStateData" , decoder : | buf : & [u8] | { let msg : ChannelStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PACKET_COMMITMENT_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketCommitmentData"
+    )]
+    impl ::prost_wkt::MessageSerde for PacketCommitmentData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "PacketCommitmentData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketCommitmentData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketCommitmentData" , decoder : | buf : & [u8] | { let msg : PacketCommitmentData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PACKET_ACKNOWLEDGEMENT_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketAcknowledgementData"
+    )]
+    impl ::prost_wkt::MessageSerde for PacketAcknowledgementData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "PacketAcknowledgementData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketAcknowledgementData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketAcknowledgementData" , decoder : | buf : & [u8] | { let msg : PacketAcknowledgementData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PACKET_RECEIPT_ABSENCE_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData"
+    )]
+    impl ::prost_wkt::MessageSerde for PacketReceiptAbsenceData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "PacketReceiptAbsenceData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.PacketReceiptAbsenceData" , decoder : | buf : & [u8] | { let msg : PacketReceiptAbsenceData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_NEXT_SEQUENCE_RECV_DATA: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.lightclients.solomachine.v1.NextSequenceRecvData"
+    )]
+    impl ::prost_wkt::MessageSerde for NextSequenceRecvData {
+        fn package_name(&self) -> &'static str {
+            "ibc.lightclients.solomachine.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "NextSequenceRecvData"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.lightclients.solomachine.v1.NextSequenceRecvData"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v1.NextSequenceRecvData" , decoder : | buf : & [u8] | { let msg : NextSequenceRecvData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};

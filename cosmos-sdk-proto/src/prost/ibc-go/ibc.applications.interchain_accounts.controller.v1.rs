@@ -1,5 +1,6 @@
 /// Params defines the set of on-chain interchain accounts parameters.
 /// The following parameters may be used to disable the controller submodule.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Params {
@@ -8,10 +9,12 @@ pub struct Params {
     pub controller_enabled: bool,
 }
 /// QueryParamsRequest is the request type for the Query/Params RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsRequest {}
 /// QueryParamsResponse is the response type for the Query/Params RPC method.
+#[derive(::serde::Serialize, ::serde::Deserialize)]
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct QueryParamsResponse {
@@ -133,3 +136,114 @@ pub mod query_client {
         }
     }
 }
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.Params"
+    )]
+    impl ::prost_wkt::MessageSerde for Params {
+        fn package_name(&self) -> &'static str {
+            "ibc.applications.interchain_accounts.controller.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "Params"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.Params"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsRequest"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryParamsRequest {
+        fn package_name(&self) -> &'static str {
+            "ibc.applications.interchain_accounts.controller.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryParamsRequest"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsRequest"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
+
+#[allow(dead_code)]
+const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
+    use ::prost_wkt::typetag;
+    #[typetag::serde(
+        name = "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsResponse"
+    )]
+    impl ::prost_wkt::MessageSerde for QueryParamsResponse {
+        fn package_name(&self) -> &'static str {
+            "ibc.applications.interchain_accounts.controller.v1"
+        }
+        fn message_name(&self) -> &'static str {
+            "QueryParamsResponse"
+        }
+        fn type_url(&self) -> &'static str {
+            "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsResponse"
+        }
+        fn new_instance(
+            &self,
+            data: Vec<u8>,
+        ) -> ::std::result::Result<Box<dyn ::prost_wkt::MessageSerde>, ::prost::DecodeError>
+        {
+            let mut target = Self::default();
+            ::prost::Message::merge(&mut target, data.as_slice())?;
+            let erased: ::std::boxed::Box<dyn ::prost_wkt::MessageSerde> =
+                ::std::boxed::Box::new(target);
+            Ok(erased)
+        }
+        fn try_encoded(&self) -> ::std::result::Result<::std::vec::Vec<u8>, ::prost::EncodeError> {
+            let mut buf = ::std::vec::Vec::new();
+            buf.reserve(::prost::Message::encoded_len(self));
+            ::prost::Message::encode(self, &mut buf)?;
+            Ok(buf)
+        }
+    }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.controller.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+};
