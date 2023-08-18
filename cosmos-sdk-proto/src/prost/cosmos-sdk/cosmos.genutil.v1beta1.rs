@@ -11,7 +11,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.genutil.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.genutil.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.genutil.v1beta1"
@@ -20,7 +20,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.genutil.v1beta1.GenesisState"
+            "/cosmos.genutil.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -40,5 +40,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.genutil.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.genutil.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

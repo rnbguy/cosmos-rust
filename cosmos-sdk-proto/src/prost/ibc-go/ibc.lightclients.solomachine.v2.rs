@@ -287,7 +287,7 @@ impl DataType {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientState")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.ClientState")]
     impl ::prost_wkt::MessageSerde for ClientState {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -296,7 +296,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             "ClientState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientState"
+            "/ibc.lightclients.solomachine.v2.ClientState"
         }
         fn new_instance(
             &self,
@@ -316,13 +316,13 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusState")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.ConsensusState")]
     impl ::prost_wkt::MessageSerde for ConsensusState {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -331,7 +331,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
             "ConsensusState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusState"
+            "/ibc.lightclients.solomachine.v2.ConsensusState"
         }
         fn new_instance(
             &self,
@@ -351,13 +351,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.Header")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.Header")]
     impl ::prost_wkt::MessageSerde for Header {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -366,7 +366,7 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             "Header"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.Header"
+            "/ibc.lightclients.solomachine.v2.Header"
         }
         fn new_instance(
             &self,
@@ -386,13 +386,13 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.Misbehaviour")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.Misbehaviour")]
     impl ::prost_wkt::MessageSerde for Misbehaviour {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -401,7 +401,7 @@ const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
             "Misbehaviour"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.Misbehaviour"
+            "/ibc.lightclients.solomachine.v2.Misbehaviour"
         }
         fn new_instance(
             &self,
@@ -421,13 +421,13 @@ const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_AND_DATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.SignatureAndData")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.SignatureAndData")]
     impl ::prost_wkt::MessageSerde for SignatureAndData {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -436,7 +436,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_AND_DATA: () = {
             "SignatureAndData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.SignatureAndData"
+            "/ibc.lightclients.solomachine.v2.SignatureAndData"
         }
         fn new_instance(
             &self,
@@ -456,14 +456,14 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_AND_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.SignatureAndData" , decoder : | buf : & [u8] | { let msg : SignatureAndData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.SignatureAndData" , decoder : | buf : & [u8] | { let msg : SignatureAndData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_TIMESTAMPED_SIGNATURE_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.TimestampedSignatureData"
+        name = "/ibc.lightclients.solomachine.v2.TimestampedSignatureData"
     )]
     impl ::prost_wkt::MessageSerde for TimestampedSignatureData {
         fn package_name(&self) -> &'static str {
@@ -473,7 +473,7 @@ const IMPL_MESSAGE_SERDE_FOR_TIMESTAMPED_SIGNATURE_DATA: () = {
             "TimestampedSignatureData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.TimestampedSignatureData"
+            "/ibc.lightclients.solomachine.v2.TimestampedSignatureData"
         }
         fn new_instance(
             &self,
@@ -493,13 +493,13 @@ const IMPL_MESSAGE_SERDE_FOR_TIMESTAMPED_SIGNATURE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.TimestampedSignatureData" , decoder : | buf : & [u8] | { let msg : TimestampedSignatureData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.TimestampedSignatureData" , decoder : | buf : & [u8] | { let msg : TimestampedSignatureData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGN_BYTES: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.SignBytes")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.SignBytes")]
     impl ::prost_wkt::MessageSerde for SignBytes {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -508,7 +508,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGN_BYTES: () = {
             "SignBytes"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.SignBytes"
+            "/ibc.lightclients.solomachine.v2.SignBytes"
         }
         fn new_instance(
             &self,
@@ -528,13 +528,13 @@ const IMPL_MESSAGE_SERDE_FOR_SIGN_BYTES: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.SignBytes" , decoder : | buf : & [u8] | { let msg : SignBytes = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.SignBytes" , decoder : | buf : & [u8] | { let msg : SignBytes = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_HEADER_DATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.HeaderData")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.HeaderData")]
     impl ::prost_wkt::MessageSerde for HeaderData {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -543,7 +543,7 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER_DATA: () = {
             "HeaderData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.HeaderData"
+            "/ibc.lightclients.solomachine.v2.HeaderData"
         }
         fn new_instance(
             &self,
@@ -563,13 +563,13 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.HeaderData" , decoder : | buf : & [u8] | { let msg : HeaderData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.HeaderData" , decoder : | buf : & [u8] | { let msg : HeaderData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE_DATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientStateData")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.ClientStateData")]
     impl ::prost_wkt::MessageSerde for ClientStateData {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -578,7 +578,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE_DATA: () = {
             "ClientStateData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientStateData"
+            "/ibc.lightclients.solomachine.v2.ClientStateData"
         }
         fn new_instance(
             &self,
@@ -598,14 +598,14 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ClientStateData" , decoder : | buf : & [u8] | { let msg : ClientStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ClientStateData" , decoder : | buf : & [u8] | { let msg : ClientStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusStateData"
+        name = "/ibc.lightclients.solomachine.v2.ConsensusStateData"
     )]
     impl ::prost_wkt::MessageSerde for ConsensusStateData {
         fn package_name(&self) -> &'static str {
@@ -615,7 +615,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE_DATA: () = {
             "ConsensusStateData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusStateData"
+            "/ibc.lightclients.solomachine.v2.ConsensusStateData"
         }
         fn new_instance(
             &self,
@@ -635,14 +635,14 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ConsensusStateData" , decoder : | buf : & [u8] | { let msg : ConsensusStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ConsensusStateData" , decoder : | buf : & [u8] | { let msg : ConsensusStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONNECTION_STATE_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ConnectionStateData"
+        name = "/ibc.lightclients.solomachine.v2.ConnectionStateData"
     )]
     impl ::prost_wkt::MessageSerde for ConnectionStateData {
         fn package_name(&self) -> &'static str {
@@ -652,7 +652,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_STATE_DATA: () = {
             "ConnectionStateData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ConnectionStateData"
+            "/ibc.lightclients.solomachine.v2.ConnectionStateData"
         }
         fn new_instance(
             &self,
@@ -672,13 +672,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_STATE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ConnectionStateData" , decoder : | buf : & [u8] | { let msg : ConnectionStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ConnectionStateData" , decoder : | buf : & [u8] | { let msg : ConnectionStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CHANNEL_STATE_DATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.solomachine.v2.ChannelStateData")]
+    #[typetag::serde(name = "/ibc.lightclients.solomachine.v2.ChannelStateData")]
     impl ::prost_wkt::MessageSerde for ChannelStateData {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.solomachine.v2"
@@ -687,7 +687,7 @@ const IMPL_MESSAGE_SERDE_FOR_CHANNEL_STATE_DATA: () = {
             "ChannelStateData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.ChannelStateData"
+            "/ibc.lightclients.solomachine.v2.ChannelStateData"
         }
         fn new_instance(
             &self,
@@ -707,14 +707,14 @@ const IMPL_MESSAGE_SERDE_FOR_CHANNEL_STATE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.ChannelStateData" , decoder : | buf : & [u8] | { let msg : ChannelStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.ChannelStateData" , decoder : | buf : & [u8] | { let msg : ChannelStateData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET_COMMITMENT_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketCommitmentData"
+        name = "/ibc.lightclients.solomachine.v2.PacketCommitmentData"
     )]
     impl ::prost_wkt::MessageSerde for PacketCommitmentData {
         fn package_name(&self) -> &'static str {
@@ -724,7 +724,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_COMMITMENT_DATA: () = {
             "PacketCommitmentData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketCommitmentData"
+            "/ibc.lightclients.solomachine.v2.PacketCommitmentData"
         }
         fn new_instance(
             &self,
@@ -744,14 +744,14 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_COMMITMENT_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketCommitmentData" , decoder : | buf : & [u8] | { let msg : PacketCommitmentData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.PacketCommitmentData" , decoder : | buf : & [u8] | { let msg : PacketCommitmentData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET_ACKNOWLEDGEMENT_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketAcknowledgementData"
+        name = "/ibc.lightclients.solomachine.v2.PacketAcknowledgementData"
     )]
     impl ::prost_wkt::MessageSerde for PacketAcknowledgementData {
         fn package_name(&self) -> &'static str {
@@ -761,7 +761,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_ACKNOWLEDGEMENT_DATA: () = {
             "PacketAcknowledgementData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketAcknowledgementData"
+            "/ibc.lightclients.solomachine.v2.PacketAcknowledgementData"
         }
         fn new_instance(
             &self,
@@ -781,14 +781,14 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_ACKNOWLEDGEMENT_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketAcknowledgementData" , decoder : | buf : & [u8] | { let msg : PacketAcknowledgementData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.PacketAcknowledgementData" , decoder : | buf : & [u8] | { let msg : PacketAcknowledgementData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET_RECEIPT_ABSENCE_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData"
+        name = "/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData"
     )]
     impl ::prost_wkt::MessageSerde for PacketReceiptAbsenceData {
         fn package_name(&self) -> &'static str {
@@ -798,7 +798,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_RECEIPT_ABSENCE_DATA: () = {
             "PacketReceiptAbsenceData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData"
+            "/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData"
         }
         fn new_instance(
             &self,
@@ -818,14 +818,14 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_RECEIPT_ABSENCE_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData" , decoder : | buf : & [u8] | { let msg : PacketReceiptAbsenceData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.PacketReceiptAbsenceData" , decoder : | buf : & [u8] | { let msg : PacketReceiptAbsenceData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_NEXT_SEQUENCE_RECV_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.lightclients.solomachine.v2.NextSequenceRecvData"
+        name = "/ibc.lightclients.solomachine.v2.NextSequenceRecvData"
     )]
     impl ::prost_wkt::MessageSerde for NextSequenceRecvData {
         fn package_name(&self) -> &'static str {
@@ -835,7 +835,7 @@ const IMPL_MESSAGE_SERDE_FOR_NEXT_SEQUENCE_RECV_DATA: () = {
             "NextSequenceRecvData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.solomachine.v2.NextSequenceRecvData"
+            "/ibc.lightclients.solomachine.v2.NextSequenceRecvData"
         }
         fn new_instance(
             &self,
@@ -855,5 +855,5 @@ const IMPL_MESSAGE_SERDE_FOR_NEXT_SEQUENCE_RECV_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.solomachine.v2.NextSequenceRecvData" , decoder : | buf : & [u8] | { let msg : NextSequenceRecvData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.solomachine.v2.NextSequenceRecvData" , decoder : | buf : & [u8] | { let msg : NextSequenceRecvData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

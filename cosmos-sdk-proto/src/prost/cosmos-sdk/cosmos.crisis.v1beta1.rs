@@ -306,7 +306,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariant")]
+    #[typetag::serde(name = "/cosmos.crisis.v1beta1.MsgVerifyInvariant")]
     impl ::prost_wkt::MessageSerde for MsgVerifyInvariant {
         fn package_name(&self) -> &'static str {
             "cosmos.crisis.v1beta1"
@@ -315,7 +315,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT: () = {
             "MsgVerifyInvariant"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariant"
+            "/cosmos.crisis.v1beta1.MsgVerifyInvariant"
         }
         fn new_instance(
             &self,
@@ -335,13 +335,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariant" , decoder : | buf : & [u8] | { let msg : MsgVerifyInvariant = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crisis.v1beta1.MsgVerifyInvariant" , decoder : | buf : & [u8] | { let msg : MsgVerifyInvariant = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse")]
+    #[typetag::serde(name = "/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse")]
     impl ::prost_wkt::MessageSerde for MsgVerifyInvariantResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.crisis.v1beta1"
@@ -350,7 +350,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT_RESPONSE: () = {
             "MsgVerifyInvariantResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse"
+            "/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse"
         }
         fn new_instance(
             &self,
@@ -370,13 +370,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_VERIFY_INVARIANT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse" , decoder : | buf : & [u8] | { let msg : MsgVerifyInvariantResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crisis.v1beta1.MsgVerifyInvariantResponse" , decoder : | buf : & [u8] | { let msg : MsgVerifyInvariantResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crisis.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.crisis.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.crisis.v1beta1"
@@ -385,7 +385,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crisis.v1beta1.GenesisState"
+            "/cosmos.crisis.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -405,5 +405,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crisis.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crisis.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

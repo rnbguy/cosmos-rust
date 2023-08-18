@@ -144,7 +144,7 @@ pub mod query_client {
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.Params"
+        name = "/ibc.applications.interchain_accounts.host.v1.Params"
     )]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
@@ -154,7 +154,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.Params"
+            "/ibc.applications.interchain_accounts.host.v1.Params"
         }
         fn new_instance(
             &self,
@@ -174,14 +174,14 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.host.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest"
+        name = "/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
@@ -191,7 +191,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest"
+            "/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -211,14 +211,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.host.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse"
+        name = "/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
@@ -228,7 +228,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse"
+            "/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -248,5 +248,5 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.host.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

@@ -46,7 +46,7 @@ pub struct Params {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BASE_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.auth.v1beta1.BaseAccount")]
+    #[typetag::serde(name = "/cosmos.auth.v1beta1.BaseAccount")]
     impl ::prost_wkt::MessageSerde for BaseAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.auth.v1beta1"
@@ -55,7 +55,7 @@ const IMPL_MESSAGE_SERDE_FOR_BASE_ACCOUNT: () = {
             "BaseAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.auth.v1beta1.BaseAccount"
+            "/cosmos.auth.v1beta1.BaseAccount"
         }
         fn new_instance(
             &self,
@@ -75,13 +75,13 @@ const IMPL_MESSAGE_SERDE_FOR_BASE_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.auth.v1beta1.BaseAccount" , decoder : | buf : & [u8] | { let msg : BaseAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.auth.v1beta1.BaseAccount" , decoder : | buf : & [u8] | { let msg : BaseAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MODULE_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.auth.v1beta1.ModuleAccount")]
+    #[typetag::serde(name = "/cosmos.auth.v1beta1.ModuleAccount")]
     impl ::prost_wkt::MessageSerde for ModuleAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.auth.v1beta1"
@@ -90,7 +90,7 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE_ACCOUNT: () = {
             "ModuleAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.auth.v1beta1.ModuleAccount"
+            "/cosmos.auth.v1beta1.ModuleAccount"
         }
         fn new_instance(
             &self,
@@ -110,13 +110,13 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.auth.v1beta1.ModuleAccount" , decoder : | buf : & [u8] | { let msg : ModuleAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.auth.v1beta1.ModuleAccount" , decoder : | buf : & [u8] | { let msg : ModuleAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.auth.v1beta1.Params")]
+    #[typetag::serde(name = "/cosmos.auth.v1beta1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "cosmos.auth.v1beta1"
@@ -125,7 +125,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.auth.v1beta1.Params"
+            "/cosmos.auth.v1beta1.Params"
         }
         fn new_instance(
             &self,
@@ -145,5 +145,5 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.auth.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.auth.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

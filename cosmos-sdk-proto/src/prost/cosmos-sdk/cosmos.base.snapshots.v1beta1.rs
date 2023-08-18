@@ -131,7 +131,7 @@ pub struct SnapshotSchema {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.Snapshot")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.Snapshot")]
     impl ::prost_wkt::MessageSerde for Snapshot {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -140,7 +140,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT: () = {
             "Snapshot"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.Snapshot"
+            "/cosmos.base.snapshots.v1beta1.Snapshot"
         }
         fn new_instance(
             &self,
@@ -160,13 +160,13 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.Snapshot" , decoder : | buf : & [u8] | { let msg : Snapshot = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.Snapshot" , decoder : | buf : & [u8] | { let msg : Snapshot = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.Metadata")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.Metadata")]
     impl ::prost_wkt::MessageSerde for Metadata {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -175,7 +175,7 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             "Metadata"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.Metadata"
+            "/cosmos.base.snapshots.v1beta1.Metadata"
         }
         fn new_instance(
             &self,
@@ -195,13 +195,13 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_ITEM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotItem")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.SnapshotItem")]
     impl ::prost_wkt::MessageSerde for SnapshotItem {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -210,7 +210,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_ITEM: () = {
             "SnapshotItem"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotItem"
+            "/cosmos.base.snapshots.v1beta1.SnapshotItem"
         }
         fn new_instance(
             &self,
@@ -230,13 +230,13 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_ITEM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotItem" , decoder : | buf : & [u8] | { let msg : SnapshotItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotItem" , decoder : | buf : & [u8] | { let msg : SnapshotItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_STORE_ITEM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotStoreItem")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.SnapshotStoreItem")]
     impl ::prost_wkt::MessageSerde for SnapshotStoreItem {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -245,7 +245,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_STORE_ITEM: () = {
             "SnapshotStoreItem"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotStoreItem"
+            "/cosmos.base.snapshots.v1beta1.SnapshotStoreItem"
         }
         fn new_instance(
             &self,
@@ -265,13 +265,13 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_STORE_ITEM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotStoreItem" , decoder : | buf : & [u8] | { let msg : SnapshotStoreItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotStoreItem" , decoder : | buf : & [u8] | { let msg : SnapshotStoreItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_IAVL_ITEM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem")]
     impl ::prost_wkt::MessageSerde for SnapshotIavlItem {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -280,7 +280,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_IAVL_ITEM: () = {
             "SnapshotIAVLItem"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem"
+            "/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem"
         }
         fn new_instance(
             &self,
@@ -300,14 +300,14 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_IAVL_ITEM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem" , decoder : | buf : & [u8] | { let msg : SnapshotIavlItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotIAVLItem" , decoder : | buf : & [u8] | { let msg : SnapshotIavlItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_META: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta"
+        name = "/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta"
     )]
     impl ::prost_wkt::MessageSerde for SnapshotExtensionMeta {
         fn package_name(&self) -> &'static str {
@@ -317,7 +317,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_META: () = {
             "SnapshotExtensionMeta"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta"
+            "/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta"
         }
         fn new_instance(
             &self,
@@ -337,14 +337,14 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_META: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta" , decoder : | buf : & [u8] | { let msg : SnapshotExtensionMeta = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotExtensionMeta" , decoder : | buf : & [u8] | { let msg : SnapshotExtensionMeta = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_PAYLOAD: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload"
+        name = "/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload"
     )]
     impl ::prost_wkt::MessageSerde for SnapshotExtensionPayload {
         fn package_name(&self) -> &'static str {
@@ -354,7 +354,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_PAYLOAD: () = {
             "SnapshotExtensionPayload"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload"
+            "/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload"
         }
         fn new_instance(
             &self,
@@ -374,13 +374,13 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_EXTENSION_PAYLOAD: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload" , decoder : | buf : & [u8] | { let msg : SnapshotExtensionPayload = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotExtensionPayload" , decoder : | buf : & [u8] | { let msg : SnapshotExtensionPayload = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_KV_ITEM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotKVItem")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.SnapshotKVItem")]
     impl ::prost_wkt::MessageSerde for SnapshotKvItem {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -389,7 +389,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_KV_ITEM: () = {
             "SnapshotKVItem"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotKVItem"
+            "/cosmos.base.snapshots.v1beta1.SnapshotKVItem"
         }
         fn new_instance(
             &self,
@@ -409,13 +409,13 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_KV_ITEM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotKVItem" , decoder : | buf : & [u8] | { let msg : SnapshotKvItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotKVItem" , decoder : | buf : & [u8] | { let msg : SnapshotKvItem = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_SCHEMA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotSchema")]
+    #[typetag::serde(name = "/cosmos.base.snapshots.v1beta1.SnapshotSchema")]
     impl ::prost_wkt::MessageSerde for SnapshotSchema {
         fn package_name(&self) -> &'static str {
             "cosmos.base.snapshots.v1beta1"
@@ -424,7 +424,7 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_SCHEMA: () = {
             "SnapshotSchema"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotSchema"
+            "/cosmos.base.snapshots.v1beta1.SnapshotSchema"
         }
         fn new_instance(
             &self,
@@ -444,5 +444,5 @@ const IMPL_MESSAGE_SERDE_FOR_SNAPSHOT_SCHEMA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.snapshots.v1beta1.SnapshotSchema" , decoder : | buf : & [u8] | { let msg : SnapshotSchema = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.snapshots.v1beta1.SnapshotSchema" , decoder : | buf : & [u8] | { let msg : SnapshotSchema = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

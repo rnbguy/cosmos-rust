@@ -54,7 +54,7 @@ pub struct PageResponse {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PAGE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest")]
+    #[typetag::serde(name = "/cosmos.base.query.v1beta1.PageRequest")]
     impl ::prost_wkt::MessageSerde for PageRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.base.query.v1beta1"
@@ -63,7 +63,7 @@ const IMPL_MESSAGE_SERDE_FOR_PAGE_REQUEST: () = {
             "PageRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest"
+            "/cosmos.base.query.v1beta1.PageRequest"
         }
         fn new_instance(
             &self,
@@ -83,13 +83,13 @@ const IMPL_MESSAGE_SERDE_FOR_PAGE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.query.v1beta1.PageRequest" , decoder : | buf : & [u8] | { let msg : PageRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.query.v1beta1.PageRequest" , decoder : | buf : & [u8] | { let msg : PageRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PAGE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse")]
+    #[typetag::serde(name = "/cosmos.base.query.v1beta1.PageResponse")]
     impl ::prost_wkt::MessageSerde for PageResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.base.query.v1beta1"
@@ -98,7 +98,7 @@ const IMPL_MESSAGE_SERDE_FOR_PAGE_RESPONSE: () = {
             "PageResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse"
+            "/cosmos.base.query.v1beta1.PageResponse"
         }
         fn new_instance(
             &self,
@@ -118,5 +118,5 @@ const IMPL_MESSAGE_SERDE_FOR_PAGE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.query.v1beta1.PageResponse" , decoder : | buf : & [u8] | { let msg : PageResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.query.v1beta1.PageResponse" , decoder : | buf : & [u8] | { let msg : PageResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

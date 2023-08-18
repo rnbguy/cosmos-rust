@@ -15,7 +15,7 @@ pub struct ClientState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.localhost.v1.ClientState")]
+    #[typetag::serde(name = "/ibc.lightclients.localhost.v1.ClientState")]
     impl ::prost_wkt::MessageSerde for ClientState {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.localhost.v1"
@@ -24,7 +24,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             "ClientState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.localhost.v1.ClientState"
+            "/ibc.lightclients.localhost.v1.ClientState"
         }
         fn new_instance(
             &self,
@@ -44,5 +44,5 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.localhost.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.localhost.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

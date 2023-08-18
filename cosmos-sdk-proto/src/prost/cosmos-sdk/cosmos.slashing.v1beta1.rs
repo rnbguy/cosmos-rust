@@ -852,7 +852,7 @@ pub struct MissedBlock {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_SIGNING_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorSigningInfo")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.ValidatorSigningInfo")]
     impl ::prost_wkt::MessageSerde for ValidatorSigningInfo {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -861,7 +861,7 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_SIGNING_INFO: () = {
             "ValidatorSigningInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorSigningInfo"
+            "/cosmos.slashing.v1beta1.ValidatorSigningInfo"
         }
         fn new_instance(
             &self,
@@ -881,13 +881,13 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_SIGNING_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorSigningInfo" , decoder : | buf : & [u8] | { let msg : ValidatorSigningInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.ValidatorSigningInfo" , decoder : | buf : & [u8] | { let msg : ValidatorSigningInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.Params")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -896,7 +896,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.Params"
+            "/cosmos.slashing.v1beta1.Params"
         }
         fn new_instance(
             &self,
@@ -916,13 +916,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsRequest")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.QueryParamsRequest")]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -931,7 +931,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsRequest"
+            "/cosmos.slashing.v1beta1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -951,13 +951,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsResponse")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.QueryParamsResponse")]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -966,7 +966,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsResponse"
+            "/cosmos.slashing.v1beta1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -986,13 +986,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoRequest")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.QuerySigningInfoRequest")]
     impl ::prost_wkt::MessageSerde for QuerySigningInfoRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1001,7 +1001,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_REQUEST: () = {
             "QuerySigningInfoRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoRequest"
+            "/cosmos.slashing.v1beta1.QuerySigningInfoRequest"
         }
         fn new_instance(
             &self,
@@ -1021,13 +1021,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoRequest" , decoder : | buf : & [u8] | { let msg : QuerySigningInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QuerySigningInfoRequest" , decoder : | buf : & [u8] | { let msg : QuerySigningInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoResponse")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.QuerySigningInfoResponse")]
     impl ::prost_wkt::MessageSerde for QuerySigningInfoResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1036,7 +1036,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_RESPONSE: () = {
             "QuerySigningInfoResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoResponse"
+            "/cosmos.slashing.v1beta1.QuerySigningInfoResponse"
         }
         fn new_instance(
             &self,
@@ -1056,13 +1056,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFO_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfoResponse" , decoder : | buf : & [u8] | { let msg : QuerySigningInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QuerySigningInfoResponse" , decoder : | buf : & [u8] | { let msg : QuerySigningInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosRequest")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.QuerySigningInfosRequest")]
     impl ::prost_wkt::MessageSerde for QuerySigningInfosRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1071,7 +1071,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_REQUEST: () = {
             "QuerySigningInfosRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosRequest"
+            "/cosmos.slashing.v1beta1.QuerySigningInfosRequest"
         }
         fn new_instance(
             &self,
@@ -1091,14 +1091,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosRequest" , decoder : | buf : & [u8] | { let msg : QuerySigningInfosRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QuerySigningInfosRequest" , decoder : | buf : & [u8] | { let msg : QuerySigningInfosRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosResponse"
+        name = "/cosmos.slashing.v1beta1.QuerySigningInfosResponse"
     )]
     impl ::prost_wkt::MessageSerde for QuerySigningInfosResponse {
         fn package_name(&self) -> &'static str {
@@ -1108,7 +1108,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_RESPONSE: () = {
             "QuerySigningInfosResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosResponse"
+            "/cosmos.slashing.v1beta1.QuerySigningInfosResponse"
         }
         fn new_instance(
             &self,
@@ -1128,13 +1128,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SIGNING_INFOS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.QuerySigningInfosResponse" , decoder : | buf : & [u8] | { let msg : QuerySigningInfosResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.QuerySigningInfosResponse" , decoder : | buf : & [u8] | { let msg : QuerySigningInfosResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjail")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.MsgUnjail")]
     impl ::prost_wkt::MessageSerde for MsgUnjail {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1143,7 +1143,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL: () = {
             "MsgUnjail"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjail"
+            "/cosmos.slashing.v1beta1.MsgUnjail"
         }
         fn new_instance(
             &self,
@@ -1163,13 +1163,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjail" , decoder : | buf : & [u8] | { let msg : MsgUnjail = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.MsgUnjail" , decoder : | buf : & [u8] | { let msg : MsgUnjail = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjailResponse")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.MsgUnjailResponse")]
     impl ::prost_wkt::MessageSerde for MsgUnjailResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1178,7 +1178,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL_RESPONSE: () = {
             "MsgUnjailResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjailResponse"
+            "/cosmos.slashing.v1beta1.MsgUnjailResponse"
         }
         fn new_instance(
             &self,
@@ -1198,13 +1198,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UNJAIL_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.MsgUnjailResponse" , decoder : | buf : & [u8] | { let msg : MsgUnjailResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.MsgUnjailResponse" , decoder : | buf : & [u8] | { let msg : MsgUnjailResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1213,7 +1213,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.GenesisState"
+            "/cosmos.slashing.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -1233,13 +1233,13 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGNING_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.SigningInfo")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.SigningInfo")]
     impl ::prost_wkt::MessageSerde for SigningInfo {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1248,7 +1248,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNING_INFO: () = {
             "SigningInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.SigningInfo"
+            "/cosmos.slashing.v1beta1.SigningInfo"
         }
         fn new_instance(
             &self,
@@ -1268,13 +1268,13 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNING_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.SigningInfo" , decoder : | buf : & [u8] | { let msg : SigningInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.SigningInfo" , decoder : | buf : & [u8] | { let msg : SigningInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_MISSED_BLOCKS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorMissedBlocks")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.ValidatorMissedBlocks")]
     impl ::prost_wkt::MessageSerde for ValidatorMissedBlocks {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1283,7 +1283,7 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_MISSED_BLOCKS: () = {
             "ValidatorMissedBlocks"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorMissedBlocks"
+            "/cosmos.slashing.v1beta1.ValidatorMissedBlocks"
         }
         fn new_instance(
             &self,
@@ -1303,13 +1303,13 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR_MISSED_BLOCKS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.ValidatorMissedBlocks" , decoder : | buf : & [u8] | { let msg : ValidatorMissedBlocks = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.ValidatorMissedBlocks" , decoder : | buf : & [u8] | { let msg : ValidatorMissedBlocks = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MISSED_BLOCK: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.slashing.v1beta1.MissedBlock")]
+    #[typetag::serde(name = "/cosmos.slashing.v1beta1.MissedBlock")]
     impl ::prost_wkt::MessageSerde for MissedBlock {
         fn package_name(&self) -> &'static str {
             "cosmos.slashing.v1beta1"
@@ -1318,7 +1318,7 @@ const IMPL_MESSAGE_SERDE_FOR_MISSED_BLOCK: () = {
             "MissedBlock"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.slashing.v1beta1.MissedBlock"
+            "/cosmos.slashing.v1beta1.MissedBlock"
         }
         fn new_instance(
             &self,
@@ -1338,5 +1338,5 @@ const IMPL_MESSAGE_SERDE_FOR_MISSED_BLOCK: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.slashing.v1beta1.MissedBlock" , decoder : | buf : & [u8] | { let msg : MissedBlock = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.slashing.v1beta1.MissedBlock" , decoder : | buf : & [u8] | { let msg : MissedBlock = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

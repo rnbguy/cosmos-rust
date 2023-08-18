@@ -24,7 +24,7 @@ pub struct PrivKey {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PUB_KEY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.secp256k1.PubKey")]
+    #[typetag::serde(name = "/cosmos.crypto.secp256k1.PubKey")]
     impl ::prost_wkt::MessageSerde for PubKey {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.secp256k1"
@@ -33,7 +33,7 @@ const IMPL_MESSAGE_SERDE_FOR_PUB_KEY: () = {
             "PubKey"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.secp256k1.PubKey"
+            "/cosmos.crypto.secp256k1.PubKey"
         }
         fn new_instance(
             &self,
@@ -53,13 +53,13 @@ const IMPL_MESSAGE_SERDE_FOR_PUB_KEY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.secp256k1.PubKey" , decoder : | buf : & [u8] | { let msg : PubKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.secp256k1.PubKey" , decoder : | buf : & [u8] | { let msg : PubKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PRIV_KEY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.secp256k1.PrivKey")]
+    #[typetag::serde(name = "/cosmos.crypto.secp256k1.PrivKey")]
     impl ::prost_wkt::MessageSerde for PrivKey {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.secp256k1"
@@ -68,7 +68,7 @@ const IMPL_MESSAGE_SERDE_FOR_PRIV_KEY: () = {
             "PrivKey"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.secp256k1.PrivKey"
+            "/cosmos.crypto.secp256k1.PrivKey"
         }
         fn new_instance(
             &self,
@@ -88,5 +88,5 @@ const IMPL_MESSAGE_SERDE_FOR_PRIV_KEY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.secp256k1.PrivKey" , decoder : | buf : & [u8] | { let msg : PrivKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.secp256k1.PrivKey" , decoder : | buf : & [u8] | { let msg : PrivKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

@@ -403,7 +403,7 @@ impl LengthOp {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_EXISTENCE_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.ExistenceProof")]
+    #[typetag::serde(name = "/ics23.ExistenceProof")]
     impl ::prost_wkt::MessageSerde for ExistenceProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -412,7 +412,7 @@ const IMPL_MESSAGE_SERDE_FOR_EXISTENCE_PROOF: () = {
             "ExistenceProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.ExistenceProof"
+            "/ics23.ExistenceProof"
         }
         fn new_instance(
             &self,
@@ -432,13 +432,13 @@ const IMPL_MESSAGE_SERDE_FOR_EXISTENCE_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.ExistenceProof" , decoder : | buf : & [u8] | { let msg : ExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.ExistenceProof" , decoder : | buf : & [u8] | { let msg : ExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_NON_EXISTENCE_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.NonExistenceProof")]
+    #[typetag::serde(name = "/ics23.NonExistenceProof")]
     impl ::prost_wkt::MessageSerde for NonExistenceProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -447,7 +447,7 @@ const IMPL_MESSAGE_SERDE_FOR_NON_EXISTENCE_PROOF: () = {
             "NonExistenceProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.NonExistenceProof"
+            "/ics23.NonExistenceProof"
         }
         fn new_instance(
             &self,
@@ -467,13 +467,13 @@ const IMPL_MESSAGE_SERDE_FOR_NON_EXISTENCE_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.NonExistenceProof" , decoder : | buf : & [u8] | { let msg : NonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.NonExistenceProof" , decoder : | buf : & [u8] | { let msg : NonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMMITMENT_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.CommitmentProof")]
+    #[typetag::serde(name = "/ics23.CommitmentProof")]
     impl ::prost_wkt::MessageSerde for CommitmentProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -482,7 +482,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMMITMENT_PROOF: () = {
             "CommitmentProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.CommitmentProof"
+            "/ics23.CommitmentProof"
         }
         fn new_instance(
             &self,
@@ -502,13 +502,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMMITMENT_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CommitmentProof" , decoder : | buf : & [u8] | { let msg : CommitmentProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.CommitmentProof" , decoder : | buf : & [u8] | { let msg : CommitmentProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_LEAF_OP: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.LeafOp")]
+    #[typetag::serde(name = "/ics23.LeafOp")]
     impl ::prost_wkt::MessageSerde for LeafOp {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -517,7 +517,7 @@ const IMPL_MESSAGE_SERDE_FOR_LEAF_OP: () = {
             "LeafOp"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.LeafOp"
+            "/ics23.LeafOp"
         }
         fn new_instance(
             &self,
@@ -537,13 +537,13 @@ const IMPL_MESSAGE_SERDE_FOR_LEAF_OP: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.LeafOp" , decoder : | buf : & [u8] | { let msg : LeafOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.LeafOp" , decoder : | buf : & [u8] | { let msg : LeafOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INNER_OP: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.InnerOp")]
+    #[typetag::serde(name = "/ics23.InnerOp")]
     impl ::prost_wkt::MessageSerde for InnerOp {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -552,7 +552,7 @@ const IMPL_MESSAGE_SERDE_FOR_INNER_OP: () = {
             "InnerOp"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.InnerOp"
+            "/ics23.InnerOp"
         }
         fn new_instance(
             &self,
@@ -572,13 +572,13 @@ const IMPL_MESSAGE_SERDE_FOR_INNER_OP: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.InnerOp" , decoder : | buf : & [u8] | { let msg : InnerOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.InnerOp" , decoder : | buf : & [u8] | { let msg : InnerOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PROOF_SPEC: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.ProofSpec")]
+    #[typetag::serde(name = "/ics23.ProofSpec")]
     impl ::prost_wkt::MessageSerde for ProofSpec {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -587,7 +587,7 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_SPEC: () = {
             "ProofSpec"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.ProofSpec"
+            "/ics23.ProofSpec"
         }
         fn new_instance(
             &self,
@@ -607,13 +607,13 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_SPEC: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.ProofSpec" , decoder : | buf : & [u8] | { let msg : ProofSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.ProofSpec" , decoder : | buf : & [u8] | { let msg : ProofSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INNER_SPEC: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.InnerSpec")]
+    #[typetag::serde(name = "/ics23.InnerSpec")]
     impl ::prost_wkt::MessageSerde for InnerSpec {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -622,7 +622,7 @@ const IMPL_MESSAGE_SERDE_FOR_INNER_SPEC: () = {
             "InnerSpec"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.InnerSpec"
+            "/ics23.InnerSpec"
         }
         fn new_instance(
             &self,
@@ -642,13 +642,13 @@ const IMPL_MESSAGE_SERDE_FOR_INNER_SPEC: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.InnerSpec" , decoder : | buf : & [u8] | { let msg : InnerSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.InnerSpec" , decoder : | buf : & [u8] | { let msg : InnerSpec = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BATCH_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.BatchProof")]
+    #[typetag::serde(name = "/ics23.BatchProof")]
     impl ::prost_wkt::MessageSerde for BatchProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -657,7 +657,7 @@ const IMPL_MESSAGE_SERDE_FOR_BATCH_PROOF: () = {
             "BatchProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.BatchProof"
+            "/ics23.BatchProof"
         }
         fn new_instance(
             &self,
@@ -677,13 +677,13 @@ const IMPL_MESSAGE_SERDE_FOR_BATCH_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.BatchProof" , decoder : | buf : & [u8] | { let msg : BatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.BatchProof" , decoder : | buf : & [u8] | { let msg : BatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BATCH_ENTRY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.BatchEntry")]
+    #[typetag::serde(name = "/ics23.BatchEntry")]
     impl ::prost_wkt::MessageSerde for BatchEntry {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -692,7 +692,7 @@ const IMPL_MESSAGE_SERDE_FOR_BATCH_ENTRY: () = {
             "BatchEntry"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.BatchEntry"
+            "/ics23.BatchEntry"
         }
         fn new_instance(
             &self,
@@ -712,13 +712,13 @@ const IMPL_MESSAGE_SERDE_FOR_BATCH_ENTRY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.BatchEntry" , decoder : | buf : & [u8] | { let msg : BatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.BatchEntry" , decoder : | buf : & [u8] | { let msg : BatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedBatchProof")]
+    #[typetag::serde(name = "/ics23.CompressedBatchProof")]
     impl ::prost_wkt::MessageSerde for CompressedBatchProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -727,7 +727,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_PROOF: () = {
             "CompressedBatchProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.CompressedBatchProof"
+            "/ics23.CompressedBatchProof"
         }
         fn new_instance(
             &self,
@@ -747,13 +747,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedBatchProof" , decoder : | buf : & [u8] | { let msg : CompressedBatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.CompressedBatchProof" , decoder : | buf : & [u8] | { let msg : CompressedBatchProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_ENTRY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedBatchEntry")]
+    #[typetag::serde(name = "/ics23.CompressedBatchEntry")]
     impl ::prost_wkt::MessageSerde for CompressedBatchEntry {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -762,7 +762,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_ENTRY: () = {
             "CompressedBatchEntry"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.CompressedBatchEntry"
+            "/ics23.CompressedBatchEntry"
         }
         fn new_instance(
             &self,
@@ -782,13 +782,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_BATCH_ENTRY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedBatchEntry" , decoder : | buf : & [u8] | { let msg : CompressedBatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.CompressedBatchEntry" , decoder : | buf : & [u8] | { let msg : CompressedBatchEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_EXISTENCE_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedExistenceProof")]
+    #[typetag::serde(name = "/ics23.CompressedExistenceProof")]
     impl ::prost_wkt::MessageSerde for CompressedExistenceProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -797,7 +797,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_EXISTENCE_PROOF: () = {
             "CompressedExistenceProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.CompressedExistenceProof"
+            "/ics23.CompressedExistenceProof"
         }
         fn new_instance(
             &self,
@@ -817,13 +817,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_EXISTENCE_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.CompressedExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_NON_EXISTENCE_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ics23.CompressedNonExistenceProof")]
+    #[typetag::serde(name = "/ics23.CompressedNonExistenceProof")]
     impl ::prost_wkt::MessageSerde for CompressedNonExistenceProof {
         fn package_name(&self) -> &'static str {
             "ics23"
@@ -832,7 +832,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_NON_EXISTENCE_PROOF: () = {
             "CompressedNonExistenceProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ics23.CompressedNonExistenceProof"
+            "/ics23.CompressedNonExistenceProof"
         }
         fn new_instance(
             &self,
@@ -852,5 +852,5 @@ const IMPL_MESSAGE_SERDE_FOR_COMPRESSED_NON_EXISTENCE_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ics23.CompressedNonExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedNonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ics23.CompressedNonExistenceProof" , decoder : | buf : & [u8] | { let msg : CompressedNonExistenceProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

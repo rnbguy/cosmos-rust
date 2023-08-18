@@ -164,7 +164,7 @@ pub struct RegisteredInterchainAccount {
 const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT_PACKET_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData"
+        name = "/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData"
     )]
     impl ::prost_wkt::MessageSerde for InterchainAccountPacketData {
         fn package_name(&self) -> &'static str {
@@ -174,7 +174,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT_PACKET_DATA: () = {
             "InterchainAccountPacketData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData"
+            "/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData"
         }
         fn new_instance(
             &self,
@@ -194,13 +194,13 @@ const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT_PACKET_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData" , decoder : | buf : & [u8] | { let msg : InterchainAccountPacketData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.InterchainAccountPacketData" , decoder : | buf : & [u8] | { let msg : InterchainAccountPacketData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COSMOS_TX: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.CosmosTx")]
+    #[typetag::serde(name = "/ibc.applications.interchain_accounts.v1.CosmosTx")]
     impl ::prost_wkt::MessageSerde for CosmosTx {
         fn package_name(&self) -> &'static str {
             "ibc.applications.interchain_accounts.v1"
@@ -209,7 +209,7 @@ const IMPL_MESSAGE_SERDE_FOR_COSMOS_TX: () = {
             "CosmosTx"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.CosmosTx"
+            "/ibc.applications.interchain_accounts.v1.CosmosTx"
         }
         fn new_instance(
             &self,
@@ -229,14 +229,14 @@ const IMPL_MESSAGE_SERDE_FOR_COSMOS_TX: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.CosmosTx" , decoder : | buf : & [u8] | { let msg : CosmosTx = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.CosmosTx" , decoder : | buf : & [u8] | { let msg : CosmosTx = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccount"
+        name = "/ibc.applications.interchain_accounts.v1.InterchainAccount"
     )]
     impl ::prost_wkt::MessageSerde for InterchainAccount {
         fn package_name(&self) -> &'static str {
@@ -246,7 +246,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT: () = {
             "InterchainAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccount"
+            "/ibc.applications.interchain_accounts.v1.InterchainAccount"
         }
         fn new_instance(
             &self,
@@ -266,13 +266,13 @@ const IMPL_MESSAGE_SERDE_FOR_INTERCHAIN_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.InterchainAccount" , decoder : | buf : & [u8] | { let msg : InterchainAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.InterchainAccount" , decoder : | buf : & [u8] | { let msg : InterchainAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.Metadata")]
+    #[typetag::serde(name = "/ibc.applications.interchain_accounts.v1.Metadata")]
     impl ::prost_wkt::MessageSerde for Metadata {
         fn package_name(&self) -> &'static str {
             "ibc.applications.interchain_accounts.v1"
@@ -281,7 +281,7 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             "Metadata"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.Metadata"
+            "/ibc.applications.interchain_accounts.v1.Metadata"
         }
         fn new_instance(
             &self,
@@ -301,14 +301,14 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.GenesisState"
+        name = "/ibc.applications.interchain_accounts.v1.GenesisState"
     )]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
@@ -318,7 +318,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.GenesisState"
+            "/ibc.applications.interchain_accounts.v1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -338,14 +338,14 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONTROLLER_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.ControllerGenesisState"
+        name = "/ibc.applications.interchain_accounts.v1.ControllerGenesisState"
     )]
     impl ::prost_wkt::MessageSerde for ControllerGenesisState {
         fn package_name(&self) -> &'static str {
@@ -355,7 +355,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONTROLLER_GENESIS_STATE: () = {
             "ControllerGenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.ControllerGenesisState"
+            "/ibc.applications.interchain_accounts.v1.ControllerGenesisState"
         }
         fn new_instance(
             &self,
@@ -375,14 +375,14 @@ const IMPL_MESSAGE_SERDE_FOR_CONTROLLER_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.ControllerGenesisState" , decoder : | buf : & [u8] | { let msg : ControllerGenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.ControllerGenesisState" , decoder : | buf : & [u8] | { let msg : ControllerGenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_HOST_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.HostGenesisState"
+        name = "/ibc.applications.interchain_accounts.v1.HostGenesisState"
     )]
     impl ::prost_wkt::MessageSerde for HostGenesisState {
         fn package_name(&self) -> &'static str {
@@ -392,7 +392,7 @@ const IMPL_MESSAGE_SERDE_FOR_HOST_GENESIS_STATE: () = {
             "HostGenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.HostGenesisState"
+            "/ibc.applications.interchain_accounts.v1.HostGenesisState"
         }
         fn new_instance(
             &self,
@@ -412,14 +412,14 @@ const IMPL_MESSAGE_SERDE_FOR_HOST_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.HostGenesisState" , decoder : | buf : & [u8] | { let msg : HostGenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.HostGenesisState" , decoder : | buf : & [u8] | { let msg : HostGenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ACTIVE_CHANNEL: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.ActiveChannel"
+        name = "/ibc.applications.interchain_accounts.v1.ActiveChannel"
     )]
     impl ::prost_wkt::MessageSerde for ActiveChannel {
         fn package_name(&self) -> &'static str {
@@ -429,7 +429,7 @@ const IMPL_MESSAGE_SERDE_FOR_ACTIVE_CHANNEL: () = {
             "ActiveChannel"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.ActiveChannel"
+            "/ibc.applications.interchain_accounts.v1.ActiveChannel"
         }
         fn new_instance(
             &self,
@@ -449,14 +449,14 @@ const IMPL_MESSAGE_SERDE_FOR_ACTIVE_CHANNEL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.ActiveChannel" , decoder : | buf : & [u8] | { let msg : ActiveChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.ActiveChannel" , decoder : | buf : & [u8] | { let msg : ActiveChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_REGISTERED_INTERCHAIN_ACCOUNT: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount"
+        name = "/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount"
     )]
     impl ::prost_wkt::MessageSerde for RegisteredInterchainAccount {
         fn package_name(&self) -> &'static str {
@@ -466,7 +466,7 @@ const IMPL_MESSAGE_SERDE_FOR_REGISTERED_INTERCHAIN_ACCOUNT: () = {
             "RegisteredInterchainAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount"
+            "/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount"
         }
         fn new_instance(
             &self,
@@ -486,5 +486,5 @@ const IMPL_MESSAGE_SERDE_FOR_REGISTERED_INTERCHAIN_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount" , decoder : | buf : & [u8] | { let msg : RegisteredInterchainAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.interchain_accounts.v1.RegisteredInterchainAccount" , decoder : | buf : & [u8] | { let msg : RegisteredInterchainAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

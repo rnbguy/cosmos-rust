@@ -24,7 +24,7 @@ pub struct Bip44Params {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BIP44_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.hd.v1.BIP44Params")]
+    #[typetag::serde(name = "/cosmos.crypto.hd.v1.BIP44Params")]
     impl ::prost_wkt::MessageSerde for Bip44Params {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.hd.v1"
@@ -33,7 +33,7 @@ const IMPL_MESSAGE_SERDE_FOR_BIP44_PARAMS: () = {
             "BIP44Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.hd.v1.BIP44Params"
+            "/cosmos.crypto.hd.v1.BIP44Params"
         }
         fn new_instance(
             &self,
@@ -53,5 +53,5 @@ const IMPL_MESSAGE_SERDE_FOR_BIP44_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.hd.v1.BIP44Params" , decoder : | buf : & [u8] | { let msg : Bip44Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.hd.v1.BIP44Params" , decoder : | buf : & [u8] | { let msg : Bip44Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

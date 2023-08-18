@@ -1022,7 +1022,7 @@ pub mod service_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BLOCK: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.Block")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.Block")]
     impl ::prost_wkt::MessageSerde for Block {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1031,7 +1031,7 @@ const IMPL_MESSAGE_SERDE_FOR_BLOCK: () = {
             "Block"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.Block"
+            "/cosmos.base.tendermint.v1beta1.Block"
         }
         fn new_instance(
             &self,
@@ -1051,13 +1051,13 @@ const IMPL_MESSAGE_SERDE_FOR_BLOCK: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.Block" , decoder : | buf : & [u8] | { let msg : Block = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.Block" , decoder : | buf : & [u8] | { let msg : Block = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.Header")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.Header")]
     impl ::prost_wkt::MessageSerde for Header {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1066,7 +1066,7 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             "Header"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.Header"
+            "/cosmos.base.tendermint.v1beta1.Header"
         }
         fn new_instance(
             &self,
@@ -1086,14 +1086,14 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest"
+        name = "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetValidatorSetByHeightRequest {
         fn package_name(&self) -> &'static str {
@@ -1103,7 +1103,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_REQUEST: () = {
             "GetValidatorSetByHeightRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest"
+            "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest"
         }
         fn new_instance(
             &self,
@@ -1123,14 +1123,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest" , decoder : | buf : & [u8] | { let msg : GetValidatorSetByHeightRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest" , decoder : | buf : & [u8] | { let msg : GetValidatorSetByHeightRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetValidatorSetByHeightResponse {
         fn package_name(&self) -> &'static str {
@@ -1140,7 +1140,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_RESPONSE: () = {
             "GetValidatorSetByHeightResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse"
+            "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse"
         }
         fn new_instance(
             &self,
@@ -1160,14 +1160,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_VALIDATOR_SET_BY_HEIGHT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse" , decoder : | buf : & [u8] | { let msg : GetValidatorSetByHeightResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse" , decoder : | buf : & [u8] | { let msg : GetValidatorSetByHeightResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest"
+        name = "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetLatestValidatorSetRequest {
         fn package_name(&self) -> &'static str {
@@ -1177,7 +1177,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_REQUEST: () = {
             "GetLatestValidatorSetRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest"
+            "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest"
         }
         fn new_instance(
             &self,
@@ -1197,14 +1197,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest" , decoder : | buf : & [u8] | { let msg : GetLatestValidatorSetRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest" , decoder : | buf : & [u8] | { let msg : GetLatestValidatorSetRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetLatestValidatorSetResponse {
         fn package_name(&self) -> &'static str {
@@ -1214,7 +1214,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_RESPONSE: () = {
             "GetLatestValidatorSetResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse"
+            "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse"
         }
         fn new_instance(
             &self,
@@ -1234,13 +1234,13 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_VALIDATOR_SET_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse" , decoder : | buf : & [u8] | { let msg : GetLatestValidatorSetResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse" , decoder : | buf : & [u8] | { let msg : GetLatestValidatorSetResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_VALIDATOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.Validator")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.Validator")]
     impl ::prost_wkt::MessageSerde for Validator {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1249,7 +1249,7 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR: () = {
             "Validator"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.Validator"
+            "/cosmos.base.tendermint.v1beta1.Validator"
         }
         fn new_instance(
             &self,
@@ -1269,14 +1269,14 @@ const IMPL_MESSAGE_SERDE_FOR_VALIDATOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.Validator" , decoder : | buf : & [u8] | { let msg : Validator = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.Validator" , decoder : | buf : & [u8] | { let msg : Validator = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest"
+        name = "/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetBlockByHeightRequest {
         fn package_name(&self) -> &'static str {
@@ -1286,7 +1286,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_REQUEST: () = {
             "GetBlockByHeightRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest"
+            "/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest"
         }
         fn new_instance(
             &self,
@@ -1306,14 +1306,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest" , decoder : | buf : & [u8] | { let msg : GetBlockByHeightRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest" , decoder : | buf : & [u8] | { let msg : GetBlockByHeightRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetBlockByHeightResponse {
         fn package_name(&self) -> &'static str {
@@ -1323,7 +1323,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_RESPONSE: () = {
             "GetBlockByHeightResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse"
+            "/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse"
         }
         fn new_instance(
             &self,
@@ -1343,14 +1343,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_BLOCK_BY_HEIGHT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse" , decoder : | buf : & [u8] | { let msg : GetBlockByHeightResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse" , decoder : | buf : & [u8] | { let msg : GetBlockByHeightResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest"
+        name = "/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetLatestBlockRequest {
         fn package_name(&self) -> &'static str {
@@ -1360,7 +1360,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_REQUEST: () = {
             "GetLatestBlockRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest"
+            "/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest"
         }
         fn new_instance(
             &self,
@@ -1380,14 +1380,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest" , decoder : | buf : & [u8] | { let msg : GetLatestBlockRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetLatestBlockRequest" , decoder : | buf : & [u8] | { let msg : GetLatestBlockRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetLatestBlockResponse {
         fn package_name(&self) -> &'static str {
@@ -1397,7 +1397,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_RESPONSE: () = {
             "GetLatestBlockResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse"
+            "/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse"
         }
         fn new_instance(
             &self,
@@ -1417,13 +1417,13 @@ const IMPL_MESSAGE_SERDE_FOR_GET_LATEST_BLOCK_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse" , decoder : | buf : & [u8] | { let msg : GetLatestBlockResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetLatestBlockResponse" , decoder : | buf : & [u8] | { let msg : GetLatestBlockResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingRequest")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.GetSyncingRequest")]
     impl ::prost_wkt::MessageSerde for GetSyncingRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1432,7 +1432,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_REQUEST: () = {
             "GetSyncingRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingRequest"
+            "/cosmos.base.tendermint.v1beta1.GetSyncingRequest"
         }
         fn new_instance(
             &self,
@@ -1452,14 +1452,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingRequest" , decoder : | buf : & [u8] | { let msg : GetSyncingRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetSyncingRequest" , decoder : | buf : & [u8] | { let msg : GetSyncingRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetSyncingResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetSyncingResponse {
         fn package_name(&self) -> &'static str {
@@ -1469,7 +1469,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_RESPONSE: () = {
             "GetSyncingResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingResponse"
+            "/cosmos.base.tendermint.v1beta1.GetSyncingResponse"
         }
         fn new_instance(
             &self,
@@ -1489,14 +1489,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_SYNCING_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetSyncingResponse" , decoder : | buf : & [u8] | { let msg : GetSyncingResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetSyncingResponse" , decoder : | buf : & [u8] | { let msg : GetSyncingResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest"
+        name = "/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetNodeInfoRequest {
         fn package_name(&self) -> &'static str {
@@ -1506,7 +1506,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_REQUEST: () = {
             "GetNodeInfoRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest"
+            "/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest"
         }
         fn new_instance(
             &self,
@@ -1526,14 +1526,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest" , decoder : | buf : & [u8] | { let msg : GetNodeInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetNodeInfoRequest" , decoder : | buf : & [u8] | { let msg : GetNodeInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse"
+        name = "/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetNodeInfoResponse {
         fn package_name(&self) -> &'static str {
@@ -1543,7 +1543,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_RESPONSE: () = {
             "GetNodeInfoResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse"
+            "/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse"
         }
         fn new_instance(
             &self,
@@ -1563,13 +1563,13 @@ const IMPL_MESSAGE_SERDE_FOR_GET_NODE_INFO_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse" , decoder : | buf : & [u8] | { let msg : GetNodeInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.GetNodeInfoResponse" , decoder : | buf : & [u8] | { let msg : GetNodeInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_VERSION_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.VersionInfo")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.VersionInfo")]
     impl ::prost_wkt::MessageSerde for VersionInfo {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1578,7 +1578,7 @@ const IMPL_MESSAGE_SERDE_FOR_VERSION_INFO: () = {
             "VersionInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.VersionInfo"
+            "/cosmos.base.tendermint.v1beta1.VersionInfo"
         }
         fn new_instance(
             &self,
@@ -1598,13 +1598,13 @@ const IMPL_MESSAGE_SERDE_FOR_VERSION_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.VersionInfo" , decoder : | buf : & [u8] | { let msg : VersionInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.VersionInfo" , decoder : | buf : & [u8] | { let msg : VersionInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MODULE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.Module")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.Module")]
     impl ::prost_wkt::MessageSerde for Module {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1613,7 +1613,7 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE: () = {
             "Module"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.Module"
+            "/cosmos.base.tendermint.v1beta1.Module"
         }
         fn new_instance(
             &self,
@@ -1633,13 +1633,13 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.Module" , decoder : | buf : & [u8] | { let msg : Module = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.Module" , decoder : | buf : & [u8] | { let msg : Module = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryRequest")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.ABCIQueryRequest")]
     impl ::prost_wkt::MessageSerde for AbciQueryRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1648,7 +1648,7 @@ const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_REQUEST: () = {
             "ABCIQueryRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryRequest"
+            "/cosmos.base.tendermint.v1beta1.ABCIQueryRequest"
         }
         fn new_instance(
             &self,
@@ -1668,13 +1668,13 @@ const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryRequest" , decoder : | buf : & [u8] | { let msg : AbciQueryRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.ABCIQueryRequest" , decoder : | buf : & [u8] | { let msg : AbciQueryRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryResponse")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.ABCIQueryResponse")]
     impl ::prost_wkt::MessageSerde for AbciQueryResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1683,7 +1683,7 @@ const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_RESPONSE: () = {
             "ABCIQueryResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryResponse"
+            "/cosmos.base.tendermint.v1beta1.ABCIQueryResponse"
         }
         fn new_instance(
             &self,
@@ -1703,13 +1703,13 @@ const IMPL_MESSAGE_SERDE_FOR_ABCI_QUERY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.ABCIQueryResponse" , decoder : | buf : & [u8] | { let msg : AbciQueryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.ABCIQueryResponse" , decoder : | buf : & [u8] | { let msg : AbciQueryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PROOF_OP: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOp")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.ProofOp")]
     impl ::prost_wkt::MessageSerde for ProofOp {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1718,7 +1718,7 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_OP: () = {
             "ProofOp"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOp"
+            "/cosmos.base.tendermint.v1beta1.ProofOp"
         }
         fn new_instance(
             &self,
@@ -1738,13 +1738,13 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_OP: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOp" , decoder : | buf : & [u8] | { let msg : ProofOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.ProofOp" , decoder : | buf : & [u8] | { let msg : ProofOp = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PROOF_OPS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOps")]
+    #[typetag::serde(name = "/cosmos.base.tendermint.v1beta1.ProofOps")]
     impl ::prost_wkt::MessageSerde for ProofOps {
         fn package_name(&self) -> &'static str {
             "cosmos.base.tendermint.v1beta1"
@@ -1753,7 +1753,7 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_OPS: () = {
             "ProofOps"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOps"
+            "/cosmos.base.tendermint.v1beta1.ProofOps"
         }
         fn new_instance(
             &self,
@@ -1773,5 +1773,5 @@ const IMPL_MESSAGE_SERDE_FOR_PROOF_OPS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.tendermint.v1beta1.ProofOps" , decoder : | buf : & [u8] | { let msg : ProofOps = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.tendermint.v1beta1.ProofOps" , decoder : | buf : & [u8] | { let msg : ProofOps = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

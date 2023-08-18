@@ -393,7 +393,7 @@ pub mod reflection_service_server {
 const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest"
+        name = "/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest"
     )]
     impl ::prost_wkt::MessageSerde for ListAllInterfacesRequest {
         fn package_name(&self) -> &'static str {
@@ -403,7 +403,7 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_REQUEST: () = {
             "ListAllInterfacesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest"
+            "/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest"
         }
         fn new_instance(
             &self,
@@ -423,14 +423,14 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest" , decoder : | buf : & [u8] | { let msg : ListAllInterfacesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v1beta1.ListAllInterfacesRequest" , decoder : | buf : & [u8] | { let msg : ListAllInterfacesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse"
+        name = "/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse"
     )]
     impl ::prost_wkt::MessageSerde for ListAllInterfacesResponse {
         fn package_name(&self) -> &'static str {
@@ -440,7 +440,7 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_RESPONSE: () = {
             "ListAllInterfacesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse"
+            "/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse"
         }
         fn new_instance(
             &self,
@@ -460,14 +460,14 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_ALL_INTERFACES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse" , decoder : | buf : & [u8] | { let msg : ListAllInterfacesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v1beta1.ListAllInterfacesResponse" , decoder : | buf : & [u8] | { let msg : ListAllInterfacesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsRequest"
+        name = "/cosmos.base.reflection.v1beta1.ListImplementationsRequest"
     )]
     impl ::prost_wkt::MessageSerde for ListImplementationsRequest {
         fn package_name(&self) -> &'static str {
@@ -477,7 +477,7 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_REQUEST: () = {
             "ListImplementationsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsRequest"
+            "/cosmos.base.reflection.v1beta1.ListImplementationsRequest"
         }
         fn new_instance(
             &self,
@@ -497,14 +497,14 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsRequest" , decoder : | buf : & [u8] | { let msg : ListImplementationsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v1beta1.ListImplementationsRequest" , decoder : | buf : & [u8] | { let msg : ListImplementationsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsResponse"
+        name = "/cosmos.base.reflection.v1beta1.ListImplementationsResponse"
     )]
     impl ::prost_wkt::MessageSerde for ListImplementationsResponse {
         fn package_name(&self) -> &'static str {
@@ -514,7 +514,7 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_RESPONSE: () = {
             "ListImplementationsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsResponse"
+            "/cosmos.base.reflection.v1beta1.ListImplementationsResponse"
         }
         fn new_instance(
             &self,
@@ -534,5 +534,5 @@ const IMPL_MESSAGE_SERDE_FOR_LIST_IMPLEMENTATIONS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v1beta1.ListImplementationsResponse" , decoder : | buf : & [u8] | { let msg : ListImplementationsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v1beta1.ListImplementationsResponse" , decoder : | buf : & [u8] | { let msg : ListImplementationsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

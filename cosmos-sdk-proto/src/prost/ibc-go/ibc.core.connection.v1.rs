@@ -844,7 +844,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONNECTION_END: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.ConnectionEnd")]
     impl ::prost_wkt::MessageSerde for ConnectionEnd {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -853,7 +853,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_END: () = {
             "ConnectionEnd"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd"
+            "/ibc.core.connection.v1.ConnectionEnd"
         }
         fn new_instance(
             &self,
@@ -873,13 +873,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_END: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ConnectionEnd" , decoder : | buf : & [u8] | { let msg : ConnectionEnd = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.ConnectionEnd" , decoder : | buf : & [u8] | { let msg : ConnectionEnd = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CONNECTION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.IdentifiedConnection")]
     impl ::prost_wkt::MessageSerde for IdentifiedConnection {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -888,7 +888,7 @@ const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CONNECTION: () = {
             "IdentifiedConnection"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection"
+            "/ibc.core.connection.v1.IdentifiedConnection"
         }
         fn new_instance(
             &self,
@@ -908,13 +908,13 @@ const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CONNECTION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.IdentifiedConnection" , decoder : | buf : & [u8] | { let msg : IdentifiedConnection = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.IdentifiedConnection" , decoder : | buf : & [u8] | { let msg : IdentifiedConnection = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Counterparty")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.Counterparty")]
     impl ::prost_wkt::MessageSerde for Counterparty {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -923,7 +923,7 @@ const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
             "Counterparty"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.Counterparty"
+            "/ibc.core.connection.v1.Counterparty"
         }
         fn new_instance(
             &self,
@@ -943,13 +943,13 @@ const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Counterparty" , decoder : | buf : & [u8] | { let msg : Counterparty = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.Counterparty" , decoder : | buf : & [u8] | { let msg : Counterparty = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLIENT_PATHS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ClientPaths")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.ClientPaths")]
     impl ::prost_wkt::MessageSerde for ClientPaths {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -958,7 +958,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_PATHS: () = {
             "ClientPaths"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.ClientPaths"
+            "/ibc.core.connection.v1.ClientPaths"
         }
         fn new_instance(
             &self,
@@ -978,13 +978,13 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_PATHS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ClientPaths" , decoder : | buf : & [u8] | { let msg : ClientPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.ClientPaths" , decoder : | buf : & [u8] | { let msg : ClientPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONNECTION_PATHS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.ConnectionPaths")]
     impl ::prost_wkt::MessageSerde for ConnectionPaths {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -993,7 +993,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_PATHS: () = {
             "ConnectionPaths"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths"
+            "/ibc.core.connection.v1.ConnectionPaths"
         }
         fn new_instance(
             &self,
@@ -1013,13 +1013,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONNECTION_PATHS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.ConnectionPaths" , decoder : | buf : & [u8] | { let msg : ConnectionPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.ConnectionPaths" , decoder : | buf : & [u8] | { let msg : ConnectionPaths = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_VERSION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Version")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.Version")]
     impl ::prost_wkt::MessageSerde for Version {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1028,7 +1028,7 @@ const IMPL_MESSAGE_SERDE_FOR_VERSION: () = {
             "Version"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.Version"
+            "/ibc.core.connection.v1.Version"
         }
         fn new_instance(
             &self,
@@ -1048,13 +1048,13 @@ const IMPL_MESSAGE_SERDE_FOR_VERSION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Version" , decoder : | buf : & [u8] | { let msg : Version = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.Version" , decoder : | buf : & [u8] | { let msg : Version = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.Params")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1063,7 +1063,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.Params"
+            "/ibc.core.connection.v1.Params"
         }
         fn new_instance(
             &self,
@@ -1083,13 +1083,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.QueryConnectionRequest")]
     impl ::prost_wkt::MessageSerde for QueryConnectionRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1098,7 +1098,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_REQUEST: () = {
             "QueryConnectionRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest"
+            "/ibc.core.connection.v1.QueryConnectionRequest"
         }
         fn new_instance(
             &self,
@@ -1118,13 +1118,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.QueryConnectionResponse")]
     impl ::prost_wkt::MessageSerde for QueryConnectionResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1133,7 +1133,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_RESPONSE: () = {
             "QueryConnectionResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse"
+            "/ibc.core.connection.v1.QueryConnectionResponse"
         }
         fn new_instance(
             &self,
@@ -1153,13 +1153,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.QueryConnectionsRequest")]
     impl ::prost_wkt::MessageSerde for QueryConnectionsRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1168,7 +1168,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_REQUEST: () = {
             "QueryConnectionsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest"
+            "/ibc.core.connection.v1.QueryConnectionsRequest"
         }
         fn new_instance(
             &self,
@@ -1188,13 +1188,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.QueryConnectionsResponse")]
     impl ::prost_wkt::MessageSerde for QueryConnectionsResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1203,7 +1203,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_RESPONSE: () = {
             "QueryConnectionsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse"
+            "/ibc.core.connection.v1.QueryConnectionsResponse"
         }
         fn new_instance(
             &self,
@@ -1223,14 +1223,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTIONS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest"
+        name = "/ibc.core.connection.v1.QueryClientConnectionsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryClientConnectionsRequest {
         fn package_name(&self) -> &'static str {
@@ -1240,7 +1240,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_REQUEST: () = {
             "QueryClientConnectionsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest"
+            "/ibc.core.connection.v1.QueryClientConnectionsRequest"
         }
         fn new_instance(
             &self,
@@ -1260,14 +1260,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryClientConnectionsRequest" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse"
+        name = "/ibc.core.connection.v1.QueryClientConnectionsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryClientConnectionsResponse {
         fn package_name(&self) -> &'static str {
@@ -1277,7 +1277,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_RESPONSE: () = {
             "QueryClientConnectionsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse"
+            "/ibc.core.connection.v1.QueryClientConnectionsResponse"
         }
         fn new_instance(
             &self,
@@ -1297,14 +1297,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CLIENT_CONNECTIONS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryClientConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryClientConnectionsResponse" , decoder : | buf : & [u8] | { let msg : QueryClientConnectionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest"
+        name = "/ibc.core.connection.v1.QueryConnectionClientStateRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionClientStateRequest {
         fn package_name(&self) -> &'static str {
@@ -1314,7 +1314,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_REQUEST: () = {
             "QueryConnectionClientStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest"
+            "/ibc.core.connection.v1.QueryConnectionClientStateRequest"
         }
         fn new_instance(
             &self,
@@ -1334,14 +1334,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse"
+        name = "/ibc.core.connection.v1.QueryConnectionClientStateResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionClientStateResponse {
         fn package_name(&self) -> &'static str {
@@ -1351,7 +1351,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_RESPONSE: () = {
             "QueryConnectionClientStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse"
+            "/ibc.core.connection.v1.QueryConnectionClientStateResponse"
         }
         fn new_instance(
             &self,
@@ -1371,14 +1371,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CLIENT_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
+        name = "/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionConsensusStateRequest {
         fn package_name(&self) -> &'static str {
@@ -1388,7 +1388,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_REQUEST: () = {
             "QueryConnectionConsensusStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
+            "/ibc.core.connection.v1.QueryConnectionConsensusStateRequest"
         }
         fn new_instance(
             &self,
@@ -1408,14 +1408,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
+        name = "/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionConsensusStateResponse {
         fn package_name(&self) -> &'static str {
@@ -1425,7 +1425,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_RESPONSE: () = {
             "QueryConnectionConsensusStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
+            "/ibc.core.connection.v1.QueryConnectionConsensusStateResponse"
         }
         fn new_instance(
             &self,
@@ -1445,13 +1445,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CONSENSUS_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.QueryConnectionConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.QueryConnectionConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.MsgConnectionOpenInit")]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenInit {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1460,7 +1460,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT: () = {
             "MsgConnectionOpenInit"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit"
+            "/ibc.core.connection.v1.MsgConnectionOpenInit"
         }
         fn new_instance(
             &self,
@@ -1480,14 +1480,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInit" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenInit" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
+        name = "/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenInitResponse {
         fn package_name(&self) -> &'static str {
@@ -1497,7 +1497,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT_RESPONSE: () = {
             "MsgConnectionOpenInitResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
+            "/ibc.core.connection.v1.MsgConnectionOpenInitResponse"
         }
         fn new_instance(
             &self,
@@ -1517,13 +1517,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_INIT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenInitResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenInitResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.MsgConnectionOpenTry")]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenTry {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1532,7 +1532,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY: () = {
             "MsgConnectionOpenTry"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry"
+            "/ibc.core.connection.v1.MsgConnectionOpenTry"
         }
         fn new_instance(
             &self,
@@ -1552,14 +1552,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTry" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenTry" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
+        name = "/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenTryResponse {
         fn package_name(&self) -> &'static str {
@@ -1569,7 +1569,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY_RESPONSE: () = {
             "MsgConnectionOpenTryResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
+            "/ibc.core.connection.v1.MsgConnectionOpenTryResponse"
         }
         fn new_instance(
             &self,
@@ -1589,13 +1589,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_TRY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenTryResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenTryResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenTryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.MsgConnectionOpenAck")]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenAck {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1604,7 +1604,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK: () = {
             "MsgConnectionOpenAck"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck"
+            "/ibc.core.connection.v1.MsgConnectionOpenAck"
         }
         fn new_instance(
             &self,
@@ -1624,14 +1624,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAck" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAck = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenAck" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAck = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
+        name = "/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenAckResponse {
         fn package_name(&self) -> &'static str {
@@ -1641,7 +1641,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK_RESPONSE: () = {
             "MsgConnectionOpenAckResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
+            "/ibc.core.connection.v1.MsgConnectionOpenAckResponse"
         }
         fn new_instance(
             &self,
@@ -1661,13 +1661,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_ACK_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenAckResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAckResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenAckResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenAckResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.MsgConnectionOpenConfirm")]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenConfirm {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1676,7 +1676,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM: () = {
             "MsgConnectionOpenConfirm"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm"
+            "/ibc.core.connection.v1.MsgConnectionOpenConfirm"
         }
         fn new_instance(
             &self,
@@ -1696,14 +1696,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirm" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenConfirm" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
+        name = "/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgConnectionOpenConfirmResponse {
         fn package_name(&self) -> &'static str {
@@ -1713,7 +1713,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM_RESPONSE: () = {
             "MsgConnectionOpenConfirmResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
+            "/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse"
         }
         fn new_instance(
             &self,
@@ -1733,13 +1733,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CONNECTION_OPEN_CONFIRM_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.MsgConnectionOpenConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgConnectionOpenConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.connection.v1.GenesisState")]
+    #[typetag::serde(name = "/ibc.core.connection.v1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "ibc.core.connection.v1"
@@ -1748,7 +1748,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.connection.v1.GenesisState"
+            "/ibc.core.connection.v1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -1768,5 +1768,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.connection.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.connection.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

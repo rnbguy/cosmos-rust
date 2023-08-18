@@ -43,7 +43,7 @@ pub struct MerkleProof {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MERKLE_ROOT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.commitment.v1.MerkleRoot")]
+    #[typetag::serde(name = "/ibc.core.commitment.v1.MerkleRoot")]
     impl ::prost_wkt::MessageSerde for MerkleRoot {
         fn package_name(&self) -> &'static str {
             "ibc.core.commitment.v1"
@@ -52,7 +52,7 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_ROOT: () = {
             "MerkleRoot"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.commitment.v1.MerkleRoot"
+            "/ibc.core.commitment.v1.MerkleRoot"
         }
         fn new_instance(
             &self,
@@ -72,13 +72,13 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_ROOT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.commitment.v1.MerkleRoot" , decoder : | buf : & [u8] | { let msg : MerkleRoot = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.commitment.v1.MerkleRoot" , decoder : | buf : & [u8] | { let msg : MerkleRoot = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MERKLE_PREFIX: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.commitment.v1.MerklePrefix")]
+    #[typetag::serde(name = "/ibc.core.commitment.v1.MerklePrefix")]
     impl ::prost_wkt::MessageSerde for MerklePrefix {
         fn package_name(&self) -> &'static str {
             "ibc.core.commitment.v1"
@@ -87,7 +87,7 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PREFIX: () = {
             "MerklePrefix"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.commitment.v1.MerklePrefix"
+            "/ibc.core.commitment.v1.MerklePrefix"
         }
         fn new_instance(
             &self,
@@ -107,13 +107,13 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PREFIX: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.commitment.v1.MerklePrefix" , decoder : | buf : & [u8] | { let msg : MerklePrefix = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.commitment.v1.MerklePrefix" , decoder : | buf : & [u8] | { let msg : MerklePrefix = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MERKLE_PATH: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.commitment.v1.MerklePath")]
+    #[typetag::serde(name = "/ibc.core.commitment.v1.MerklePath")]
     impl ::prost_wkt::MessageSerde for MerklePath {
         fn package_name(&self) -> &'static str {
             "ibc.core.commitment.v1"
@@ -122,7 +122,7 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PATH: () = {
             "MerklePath"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.commitment.v1.MerklePath"
+            "/ibc.core.commitment.v1.MerklePath"
         }
         fn new_instance(
             &self,
@@ -142,13 +142,13 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PATH: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.commitment.v1.MerklePath" , decoder : | buf : & [u8] | { let msg : MerklePath = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.commitment.v1.MerklePath" , decoder : | buf : & [u8] | { let msg : MerklePath = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MERKLE_PROOF: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.commitment.v1.MerkleProof")]
+    #[typetag::serde(name = "/ibc.core.commitment.v1.MerkleProof")]
     impl ::prost_wkt::MessageSerde for MerkleProof {
         fn package_name(&self) -> &'static str {
             "ibc.core.commitment.v1"
@@ -157,7 +157,7 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PROOF: () = {
             "MerkleProof"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.commitment.v1.MerkleProof"
+            "/ibc.core.commitment.v1.MerkleProof"
         }
         fn new_instance(
             &self,
@@ -177,5 +177,5 @@ const IMPL_MESSAGE_SERDE_FOR_MERKLE_PROOF: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.commitment.v1.MerkleProof" , decoder : | buf : & [u8] | { let msg : MerkleProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.commitment.v1.MerkleProof" , decoder : | buf : & [u8] | { let msg : MerkleProof = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

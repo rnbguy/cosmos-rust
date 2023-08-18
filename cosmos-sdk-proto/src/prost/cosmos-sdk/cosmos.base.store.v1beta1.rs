@@ -97,7 +97,7 @@ pub mod block_metadata {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMMIT_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.store.v1beta1.CommitInfo")]
+    #[typetag::serde(name = "/cosmos.base.store.v1beta1.CommitInfo")]
     impl ::prost_wkt::MessageSerde for CommitInfo {
         fn package_name(&self) -> &'static str {
             "cosmos.base.store.v1beta1"
@@ -106,7 +106,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMMIT_INFO: () = {
             "CommitInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.store.v1beta1.CommitInfo"
+            "/cosmos.base.store.v1beta1.CommitInfo"
         }
         fn new_instance(
             &self,
@@ -126,13 +126,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMMIT_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.store.v1beta1.CommitInfo" , decoder : | buf : & [u8] | { let msg : CommitInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.store.v1beta1.CommitInfo" , decoder : | buf : & [u8] | { let msg : CommitInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_STORE_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.store.v1beta1.StoreInfo")]
+    #[typetag::serde(name = "/cosmos.base.store.v1beta1.StoreInfo")]
     impl ::prost_wkt::MessageSerde for StoreInfo {
         fn package_name(&self) -> &'static str {
             "cosmos.base.store.v1beta1"
@@ -141,7 +141,7 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_INFO: () = {
             "StoreInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.store.v1beta1.StoreInfo"
+            "/cosmos.base.store.v1beta1.StoreInfo"
         }
         fn new_instance(
             &self,
@@ -161,13 +161,13 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.store.v1beta1.StoreInfo" , decoder : | buf : & [u8] | { let msg : StoreInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.store.v1beta1.StoreInfo" , decoder : | buf : & [u8] | { let msg : StoreInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMMIT_ID: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.store.v1beta1.CommitID")]
+    #[typetag::serde(name = "/cosmos.base.store.v1beta1.CommitID")]
     impl ::prost_wkt::MessageSerde for CommitId {
         fn package_name(&self) -> &'static str {
             "cosmos.base.store.v1beta1"
@@ -176,7 +176,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMMIT_ID: () = {
             "CommitID"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.store.v1beta1.CommitID"
+            "/cosmos.base.store.v1beta1.CommitID"
         }
         fn new_instance(
             &self,
@@ -196,13 +196,13 @@ const IMPL_MESSAGE_SERDE_FOR_COMMIT_ID: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.store.v1beta1.CommitID" , decoder : | buf : & [u8] | { let msg : CommitId = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.store.v1beta1.CommitID" , decoder : | buf : & [u8] | { let msg : CommitId = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_STORE_KV_PAIR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.store.v1beta1.StoreKVPair")]
+    #[typetag::serde(name = "/cosmos.base.store.v1beta1.StoreKVPair")]
     impl ::prost_wkt::MessageSerde for StoreKvPair {
         fn package_name(&self) -> &'static str {
             "cosmos.base.store.v1beta1"
@@ -211,7 +211,7 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_KV_PAIR: () = {
             "StoreKVPair"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.store.v1beta1.StoreKVPair"
+            "/cosmos.base.store.v1beta1.StoreKVPair"
         }
         fn new_instance(
             &self,
@@ -231,13 +231,13 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_KV_PAIR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.store.v1beta1.StoreKVPair" , decoder : | buf : & [u8] | { let msg : StoreKvPair = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.store.v1beta1.StoreKVPair" , decoder : | buf : & [u8] | { let msg : StoreKvPair = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BLOCK_METADATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.store.v1beta1.BlockMetadata")]
+    #[typetag::serde(name = "/cosmos.base.store.v1beta1.BlockMetadata")]
     impl ::prost_wkt::MessageSerde for BlockMetadata {
         fn package_name(&self) -> &'static str {
             "cosmos.base.store.v1beta1"
@@ -246,7 +246,7 @@ const IMPL_MESSAGE_SERDE_FOR_BLOCK_METADATA: () = {
             "BlockMetadata"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.store.v1beta1.BlockMetadata"
+            "/cosmos.base.store.v1beta1.BlockMetadata"
         }
         fn new_instance(
             &self,
@@ -266,5 +266,5 @@ const IMPL_MESSAGE_SERDE_FOR_BLOCK_METADATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.store.v1beta1.BlockMetadata" , decoder : | buf : & [u8] | { let msg : BlockMetadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.store.v1beta1.BlockMetadata" , decoder : | buf : & [u8] | { let msg : BlockMetadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

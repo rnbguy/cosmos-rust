@@ -25,7 +25,7 @@ pub struct CompactBitArray {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MULTI_SIGNATURE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.multisig.v1beta1.MultiSignature")]
+    #[typetag::serde(name = "/cosmos.crypto.multisig.v1beta1.MultiSignature")]
     impl ::prost_wkt::MessageSerde for MultiSignature {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.multisig.v1beta1"
@@ -34,7 +34,7 @@ const IMPL_MESSAGE_SERDE_FOR_MULTI_SIGNATURE: () = {
             "MultiSignature"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.multisig.v1beta1.MultiSignature"
+            "/cosmos.crypto.multisig.v1beta1.MultiSignature"
         }
         fn new_instance(
             &self,
@@ -54,13 +54,13 @@ const IMPL_MESSAGE_SERDE_FOR_MULTI_SIGNATURE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.multisig.v1beta1.MultiSignature" , decoder : | buf : & [u8] | { let msg : MultiSignature = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.multisig.v1beta1.MultiSignature" , decoder : | buf : & [u8] | { let msg : MultiSignature = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COMPACT_BIT_ARRAY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.multisig.v1beta1.CompactBitArray")]
+    #[typetag::serde(name = "/cosmos.crypto.multisig.v1beta1.CompactBitArray")]
     impl ::prost_wkt::MessageSerde for CompactBitArray {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.multisig.v1beta1"
@@ -69,7 +69,7 @@ const IMPL_MESSAGE_SERDE_FOR_COMPACT_BIT_ARRAY: () = {
             "CompactBitArray"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.multisig.v1beta1.CompactBitArray"
+            "/cosmos.crypto.multisig.v1beta1.CompactBitArray"
         }
         fn new_instance(
             &self,
@@ -89,5 +89,5 @@ const IMPL_MESSAGE_SERDE_FOR_COMPACT_BIT_ARRAY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.multisig.v1beta1.CompactBitArray" , decoder : | buf : & [u8] | { let msg : CompactBitArray = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.multisig.v1beta1.CompactBitArray" , decoder : | buf : & [u8] | { let msg : CompactBitArray = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

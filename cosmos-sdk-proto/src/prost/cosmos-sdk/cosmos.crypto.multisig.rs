@@ -14,7 +14,7 @@ pub struct LegacyAminoPubKey {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_LEGACY_AMINO_PUB_KEY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.multisig.LegacyAminoPubKey")]
+    #[typetag::serde(name = "/cosmos.crypto.multisig.LegacyAminoPubKey")]
     impl ::prost_wkt::MessageSerde for LegacyAminoPubKey {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.multisig"
@@ -23,7 +23,7 @@ const IMPL_MESSAGE_SERDE_FOR_LEGACY_AMINO_PUB_KEY: () = {
             "LegacyAminoPubKey"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.multisig.LegacyAminoPubKey"
+            "/cosmos.crypto.multisig.LegacyAminoPubKey"
         }
         fn new_instance(
             &self,
@@ -43,5 +43,5 @@ const IMPL_MESSAGE_SERDE_FOR_LEGACY_AMINO_PUB_KEY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.multisig.LegacyAminoPubKey" , decoder : | buf : & [u8] | { let msg : LegacyAminoPubKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.multisig.LegacyAminoPubKey" , decoder : | buf : & [u8] | { let msg : LegacyAminoPubKey = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

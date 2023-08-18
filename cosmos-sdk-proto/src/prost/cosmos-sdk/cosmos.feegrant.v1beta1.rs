@@ -957,7 +957,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BASIC_ALLOWANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.BasicAllowance")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.BasicAllowance")]
     impl ::prost_wkt::MessageSerde for BasicAllowance {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -966,7 +966,7 @@ const IMPL_MESSAGE_SERDE_FOR_BASIC_ALLOWANCE: () = {
             "BasicAllowance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.BasicAllowance"
+            "/cosmos.feegrant.v1beta1.BasicAllowance"
         }
         fn new_instance(
             &self,
@@ -986,13 +986,13 @@ const IMPL_MESSAGE_SERDE_FOR_BASIC_ALLOWANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.BasicAllowance" , decoder : | buf : & [u8] | { let msg : BasicAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.BasicAllowance" , decoder : | buf : & [u8] | { let msg : BasicAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PERIODIC_ALLOWANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.PeriodicAllowance")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.PeriodicAllowance")]
     impl ::prost_wkt::MessageSerde for PeriodicAllowance {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1001,7 +1001,7 @@ const IMPL_MESSAGE_SERDE_FOR_PERIODIC_ALLOWANCE: () = {
             "PeriodicAllowance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.PeriodicAllowance"
+            "/cosmos.feegrant.v1beta1.PeriodicAllowance"
         }
         fn new_instance(
             &self,
@@ -1021,13 +1021,13 @@ const IMPL_MESSAGE_SERDE_FOR_PERIODIC_ALLOWANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.PeriodicAllowance" , decoder : | buf : & [u8] | { let msg : PeriodicAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.PeriodicAllowance" , decoder : | buf : & [u8] | { let msg : PeriodicAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ALLOWED_MSG_ALLOWANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.AllowedMsgAllowance")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.AllowedMsgAllowance")]
     impl ::prost_wkt::MessageSerde for AllowedMsgAllowance {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1036,7 +1036,7 @@ const IMPL_MESSAGE_SERDE_FOR_ALLOWED_MSG_ALLOWANCE: () = {
             "AllowedMsgAllowance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.AllowedMsgAllowance"
+            "/cosmos.feegrant.v1beta1.AllowedMsgAllowance"
         }
         fn new_instance(
             &self,
@@ -1056,13 +1056,13 @@ const IMPL_MESSAGE_SERDE_FOR_ALLOWED_MSG_ALLOWANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.AllowedMsgAllowance" , decoder : | buf : & [u8] | { let msg : AllowedMsgAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.AllowedMsgAllowance" , decoder : | buf : & [u8] | { let msg : AllowedMsgAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GRANT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.Grant")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.Grant")]
     impl ::prost_wkt::MessageSerde for Grant {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1071,7 +1071,7 @@ const IMPL_MESSAGE_SERDE_FOR_GRANT: () = {
             "Grant"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.Grant"
+            "/cosmos.feegrant.v1beta1.Grant"
         }
         fn new_instance(
             &self,
@@ -1091,13 +1091,13 @@ const IMPL_MESSAGE_SERDE_FOR_GRANT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.Grant" , decoder : | buf : & [u8] | { let msg : Grant = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.Grant" , decoder : | buf : & [u8] | { let msg : Grant = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceRequest")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.QueryAllowanceRequest")]
     impl ::prost_wkt::MessageSerde for QueryAllowanceRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1106,7 +1106,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_REQUEST: () = {
             "QueryAllowanceRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceRequest"
+            "/cosmos.feegrant.v1beta1.QueryAllowanceRequest"
         }
         fn new_instance(
             &self,
@@ -1126,13 +1126,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowanceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowanceRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowanceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceResponse")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.QueryAllowanceResponse")]
     impl ::prost_wkt::MessageSerde for QueryAllowanceResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1141,7 +1141,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_RESPONSE: () = {
             "QueryAllowanceResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceResponse"
+            "/cosmos.feegrant.v1beta1.QueryAllowanceResponse"
         }
         fn new_instance(
             &self,
@@ -1161,13 +1161,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowanceResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowanceResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesRequest")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.QueryAllowancesRequest")]
     impl ::prost_wkt::MessageSerde for QueryAllowancesRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1176,7 +1176,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_REQUEST: () = {
             "QueryAllowancesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesRequest"
+            "/cosmos.feegrant.v1beta1.QueryAllowancesRequest"
         }
         fn new_instance(
             &self,
@@ -1196,13 +1196,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowancesRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesResponse")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.QueryAllowancesResponse")]
     impl ::prost_wkt::MessageSerde for QueryAllowancesResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1211,7 +1211,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_RESPONSE: () = {
             "QueryAllowancesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesResponse"
+            "/cosmos.feegrant.v1beta1.QueryAllowancesResponse"
         }
         fn new_instance(
             &self,
@@ -1231,14 +1231,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowancesResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest"
+        name = "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryAllowancesByGranterRequest {
         fn package_name(&self) -> &'static str {
@@ -1248,7 +1248,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_REQUEST: () = {
             "QueryAllowancesByGranterRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest"
+            "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest"
         }
         fn new_instance(
             &self,
@@ -1268,14 +1268,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowancesByGranterRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest" , decoder : | buf : & [u8] | { let msg : QueryAllowancesByGranterRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse"
+        name = "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryAllowancesByGranterResponse {
         fn package_name(&self) -> &'static str {
@@ -1285,7 +1285,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_RESPONSE: () = {
             "QueryAllowancesByGranterResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse"
+            "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse"
         }
         fn new_instance(
             &self,
@@ -1305,13 +1305,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALLOWANCES_BY_GRANTER_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowancesByGranterResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse" , decoder : | buf : & [u8] | { let msg : QueryAllowancesByGranterResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowance")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.MsgGrantAllowance")]
     impl ::prost_wkt::MessageSerde for MsgGrantAllowance {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1320,7 +1320,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE: () = {
             "MsgGrantAllowance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowance"
+            "/cosmos.feegrant.v1beta1.MsgGrantAllowance"
         }
         fn new_instance(
             &self,
@@ -1340,14 +1340,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowance" , decoder : | buf : & [u8] | { let msg : MsgGrantAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.MsgGrantAllowance" , decoder : | buf : & [u8] | { let msg : MsgGrantAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse"
+        name = "/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgGrantAllowanceResponse {
         fn package_name(&self) -> &'static str {
@@ -1357,7 +1357,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE_RESPONSE: () = {
             "MsgGrantAllowanceResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse"
+            "/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse"
         }
         fn new_instance(
             &self,
@@ -1377,13 +1377,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_GRANT_ALLOWANCE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse" , decoder : | buf : & [u8] | { let msg : MsgGrantAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.MsgGrantAllowanceResponse" , decoder : | buf : & [u8] | { let msg : MsgGrantAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowance")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.MsgRevokeAllowance")]
     impl ::prost_wkt::MessageSerde for MsgRevokeAllowance {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1392,7 +1392,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE: () = {
             "MsgRevokeAllowance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowance"
+            "/cosmos.feegrant.v1beta1.MsgRevokeAllowance"
         }
         fn new_instance(
             &self,
@@ -1412,14 +1412,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowance" , decoder : | buf : & [u8] | { let msg : MsgRevokeAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.MsgRevokeAllowance" , decoder : | buf : & [u8] | { let msg : MsgRevokeAllowance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse"
+        name = "/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgRevokeAllowanceResponse {
         fn package_name(&self) -> &'static str {
@@ -1429,7 +1429,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE_RESPONSE: () = {
             "MsgRevokeAllowanceResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse"
+            "/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse"
         }
         fn new_instance(
             &self,
@@ -1449,13 +1449,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_REVOKE_ALLOWANCE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse" , decoder : | buf : & [u8] | { let msg : MsgRevokeAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.MsgRevokeAllowanceResponse" , decoder : | buf : & [u8] | { let msg : MsgRevokeAllowanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.feegrant.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.feegrant.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.feegrant.v1beta1"
@@ -1464,7 +1464,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.feegrant.v1beta1.GenesisState"
+            "/cosmos.feegrant.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -1484,5 +1484,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.feegrant.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.feegrant.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

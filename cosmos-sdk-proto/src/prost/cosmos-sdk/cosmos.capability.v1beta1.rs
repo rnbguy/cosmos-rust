@@ -56,7 +56,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CAPABILITY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.capability.v1beta1.Capability")]
+    #[typetag::serde(name = "/cosmos.capability.v1beta1.Capability")]
     impl ::prost_wkt::MessageSerde for Capability {
         fn package_name(&self) -> &'static str {
             "cosmos.capability.v1beta1"
@@ -65,7 +65,7 @@ const IMPL_MESSAGE_SERDE_FOR_CAPABILITY: () = {
             "Capability"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.capability.v1beta1.Capability"
+            "/cosmos.capability.v1beta1.Capability"
         }
         fn new_instance(
             &self,
@@ -85,13 +85,13 @@ const IMPL_MESSAGE_SERDE_FOR_CAPABILITY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.capability.v1beta1.Capability" , decoder : | buf : & [u8] | { let msg : Capability = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.capability.v1beta1.Capability" , decoder : | buf : & [u8] | { let msg : Capability = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_OWNER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.capability.v1beta1.Owner")]
+    #[typetag::serde(name = "/cosmos.capability.v1beta1.Owner")]
     impl ::prost_wkt::MessageSerde for Owner {
         fn package_name(&self) -> &'static str {
             "cosmos.capability.v1beta1"
@@ -100,7 +100,7 @@ const IMPL_MESSAGE_SERDE_FOR_OWNER: () = {
             "Owner"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.capability.v1beta1.Owner"
+            "/cosmos.capability.v1beta1.Owner"
         }
         fn new_instance(
             &self,
@@ -120,13 +120,13 @@ const IMPL_MESSAGE_SERDE_FOR_OWNER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.capability.v1beta1.Owner" , decoder : | buf : & [u8] | { let msg : Owner = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.capability.v1beta1.Owner" , decoder : | buf : & [u8] | { let msg : Owner = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CAPABILITY_OWNERS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.capability.v1beta1.CapabilityOwners")]
+    #[typetag::serde(name = "/cosmos.capability.v1beta1.CapabilityOwners")]
     impl ::prost_wkt::MessageSerde for CapabilityOwners {
         fn package_name(&self) -> &'static str {
             "cosmos.capability.v1beta1"
@@ -135,7 +135,7 @@ const IMPL_MESSAGE_SERDE_FOR_CAPABILITY_OWNERS: () = {
             "CapabilityOwners"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.capability.v1beta1.CapabilityOwners"
+            "/cosmos.capability.v1beta1.CapabilityOwners"
         }
         fn new_instance(
             &self,
@@ -155,13 +155,13 @@ const IMPL_MESSAGE_SERDE_FOR_CAPABILITY_OWNERS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.capability.v1beta1.CapabilityOwners" , decoder : | buf : & [u8] | { let msg : CapabilityOwners = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.capability.v1beta1.CapabilityOwners" , decoder : | buf : & [u8] | { let msg : CapabilityOwners = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_OWNERS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.capability.v1beta1.GenesisOwners")]
+    #[typetag::serde(name = "/cosmos.capability.v1beta1.GenesisOwners")]
     impl ::prost_wkt::MessageSerde for GenesisOwners {
         fn package_name(&self) -> &'static str {
             "cosmos.capability.v1beta1"
@@ -170,7 +170,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_OWNERS: () = {
             "GenesisOwners"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.capability.v1beta1.GenesisOwners"
+            "/cosmos.capability.v1beta1.GenesisOwners"
         }
         fn new_instance(
             &self,
@@ -190,13 +190,13 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_OWNERS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.capability.v1beta1.GenesisOwners" , decoder : | buf : & [u8] | { let msg : GenesisOwners = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.capability.v1beta1.GenesisOwners" , decoder : | buf : & [u8] | { let msg : GenesisOwners = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.capability.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.capability.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.capability.v1beta1"
@@ -205,7 +205,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.capability.v1beta1.GenesisState"
+            "/cosmos.capability.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -225,5 +225,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.capability.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.capability.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

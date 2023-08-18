@@ -23,7 +23,7 @@ pub struct FungibleTokenPacketData {
 const IMPL_MESSAGE_SERDE_FOR_FUNGIBLE_TOKEN_PACKET_DATA: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v2.FungibleTokenPacketData"
+        name = "/ibc.applications.transfer.v2.FungibleTokenPacketData"
     )]
     impl ::prost_wkt::MessageSerde for FungibleTokenPacketData {
         fn package_name(&self) -> &'static str {
@@ -33,7 +33,7 @@ const IMPL_MESSAGE_SERDE_FOR_FUNGIBLE_TOKEN_PACKET_DATA: () = {
             "FungibleTokenPacketData"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v2.FungibleTokenPacketData"
+            "/ibc.applications.transfer.v2.FungibleTokenPacketData"
         }
         fn new_instance(
             &self,
@@ -53,5 +53,5 @@ const IMPL_MESSAGE_SERDE_FOR_FUNGIBLE_TOKEN_PACKET_DATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v2.FungibleTokenPacketData" , decoder : | buf : & [u8] | { let msg : FungibleTokenPacketData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v2.FungibleTokenPacketData" , decoder : | buf : & [u8] | { let msg : FungibleTokenPacketData = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

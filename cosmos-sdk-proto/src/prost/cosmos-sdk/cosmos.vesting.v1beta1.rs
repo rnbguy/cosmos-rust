@@ -598,7 +598,7 @@ pub mod msg_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BASE_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.BaseVestingAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.BaseVestingAccount")]
     impl ::prost_wkt::MessageSerde for BaseVestingAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -607,7 +607,7 @@ const IMPL_MESSAGE_SERDE_FOR_BASE_VESTING_ACCOUNT: () = {
             "BaseVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.BaseVestingAccount"
+            "/cosmos.vesting.v1beta1.BaseVestingAccount"
         }
         fn new_instance(
             &self,
@@ -627,13 +627,13 @@ const IMPL_MESSAGE_SERDE_FOR_BASE_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.BaseVestingAccount" , decoder : | buf : & [u8] | { let msg : BaseVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.BaseVestingAccount" , decoder : | buf : & [u8] | { let msg : BaseVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONTINUOUS_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.ContinuousVestingAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.ContinuousVestingAccount")]
     impl ::prost_wkt::MessageSerde for ContinuousVestingAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -642,7 +642,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONTINUOUS_VESTING_ACCOUNT: () = {
             "ContinuousVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.ContinuousVestingAccount"
+            "/cosmos.vesting.v1beta1.ContinuousVestingAccount"
         }
         fn new_instance(
             &self,
@@ -662,13 +662,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONTINUOUS_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.ContinuousVestingAccount" , decoder : | buf : & [u8] | { let msg : ContinuousVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.ContinuousVestingAccount" , decoder : | buf : & [u8] | { let msg : ContinuousVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DELAYED_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.DelayedVestingAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.DelayedVestingAccount")]
     impl ::prost_wkt::MessageSerde for DelayedVestingAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -677,7 +677,7 @@ const IMPL_MESSAGE_SERDE_FOR_DELAYED_VESTING_ACCOUNT: () = {
             "DelayedVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.DelayedVestingAccount"
+            "/cosmos.vesting.v1beta1.DelayedVestingAccount"
         }
         fn new_instance(
             &self,
@@ -697,13 +697,13 @@ const IMPL_MESSAGE_SERDE_FOR_DELAYED_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.DelayedVestingAccount" , decoder : | buf : & [u8] | { let msg : DelayedVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.DelayedVestingAccount" , decoder : | buf : & [u8] | { let msg : DelayedVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PERIOD: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.Period")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.Period")]
     impl ::prost_wkt::MessageSerde for Period {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -712,7 +712,7 @@ const IMPL_MESSAGE_SERDE_FOR_PERIOD: () = {
             "Period"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.Period"
+            "/cosmos.vesting.v1beta1.Period"
         }
         fn new_instance(
             &self,
@@ -732,13 +732,13 @@ const IMPL_MESSAGE_SERDE_FOR_PERIOD: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.Period" , decoder : | buf : & [u8] | { let msg : Period = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.Period" , decoder : | buf : & [u8] | { let msg : Period = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PERIODIC_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.PeriodicVestingAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.PeriodicVestingAccount")]
     impl ::prost_wkt::MessageSerde for PeriodicVestingAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -747,7 +747,7 @@ const IMPL_MESSAGE_SERDE_FOR_PERIODIC_VESTING_ACCOUNT: () = {
             "PeriodicVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.PeriodicVestingAccount"
+            "/cosmos.vesting.v1beta1.PeriodicVestingAccount"
         }
         fn new_instance(
             &self,
@@ -767,13 +767,13 @@ const IMPL_MESSAGE_SERDE_FOR_PERIODIC_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.PeriodicVestingAccount" , decoder : | buf : & [u8] | { let msg : PeriodicVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.PeriodicVestingAccount" , decoder : | buf : & [u8] | { let msg : PeriodicVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PERMANENT_LOCKED_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.PermanentLockedAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.PermanentLockedAccount")]
     impl ::prost_wkt::MessageSerde for PermanentLockedAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -782,7 +782,7 @@ const IMPL_MESSAGE_SERDE_FOR_PERMANENT_LOCKED_ACCOUNT: () = {
             "PermanentLockedAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.PermanentLockedAccount"
+            "/cosmos.vesting.v1beta1.PermanentLockedAccount"
         }
         fn new_instance(
             &self,
@@ -802,13 +802,13 @@ const IMPL_MESSAGE_SERDE_FOR_PERMANENT_LOCKED_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.PermanentLockedAccount" , decoder : | buf : & [u8] | { let msg : PermanentLockedAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.PermanentLockedAccount" , decoder : | buf : & [u8] | { let msg : PermanentLockedAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccount")]
+    #[typetag::serde(name = "/cosmos.vesting.v1beta1.MsgCreateVestingAccount")]
     impl ::prost_wkt::MessageSerde for MsgCreateVestingAccount {
         fn package_name(&self) -> &'static str {
             "cosmos.vesting.v1beta1"
@@ -817,7 +817,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT: () = {
             "MsgCreateVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccount"
+            "/cosmos.vesting.v1beta1.MsgCreateVestingAccount"
         }
         fn new_instance(
             &self,
@@ -837,14 +837,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccount" , decoder : | buf : & [u8] | { let msg : MsgCreateVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreateVestingAccount" , decoder : | buf : & [u8] | { let msg : MsgCreateVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse"
+        name = "/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgCreateVestingAccountResponse {
         fn package_name(&self) -> &'static str {
@@ -854,7 +854,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT_RESPONSE: () = {
             "MsgCreateVestingAccountResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse"
+            "/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse"
         }
         fn new_instance(
             &self,
@@ -874,14 +874,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_VESTING_ACCOUNT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreateVestingAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreateVestingAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreateVestingAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount"
+        name = "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount"
     )]
     impl ::prost_wkt::MessageSerde for MsgCreatePermanentLockedAccount {
         fn package_name(&self) -> &'static str {
@@ -891,7 +891,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT: () = {
             "MsgCreatePermanentLockedAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount"
+            "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount"
         }
         fn new_instance(
             &self,
@@ -911,14 +911,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount" , decoder : | buf : & [u8] | { let msg : MsgCreatePermanentLockedAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount" , decoder : | buf : & [u8] | { let msg : MsgCreatePermanentLockedAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse"
+        name = "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgCreatePermanentLockedAccountResponse {
         fn package_name(&self) -> &'static str {
@@ -928,7 +928,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT_RESPONSE: () = 
             "MsgCreatePermanentLockedAccountResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse"
+            "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse"
         }
         fn new_instance(
             &self,
@@ -948,14 +948,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERMANENT_LOCKED_ACCOUNT_RESPONSE: () = 
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreatePermanentLockedAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreatePermanentLockedAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount"
+        name = "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount"
     )]
     impl ::prost_wkt::MessageSerde for MsgCreatePeriodicVestingAccount {
         fn package_name(&self) -> &'static str {
@@ -965,7 +965,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT: () = {
             "MsgCreatePeriodicVestingAccount"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount"
+            "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount"
         }
         fn new_instance(
             &self,
@@ -985,14 +985,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount" , decoder : | buf : & [u8] | { let msg : MsgCreatePeriodicVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount" , decoder : | buf : & [u8] | { let msg : MsgCreatePeriodicVestingAccount = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse"
+        name = "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgCreatePeriodicVestingAccountResponse {
         fn package_name(&self) -> &'static str {
@@ -1002,7 +1002,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT_RESPONSE: () = 
             "MsgCreatePeriodicVestingAccountResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse"
+            "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse"
         }
         fn new_instance(
             &self,
@@ -1022,5 +1022,5 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CREATE_PERIODIC_VESTING_ACCOUNT_RESPONSE: () = 
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreatePeriodicVestingAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccountResponse" , decoder : | buf : & [u8] | { let msg : MsgCreatePeriodicVestingAccountResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

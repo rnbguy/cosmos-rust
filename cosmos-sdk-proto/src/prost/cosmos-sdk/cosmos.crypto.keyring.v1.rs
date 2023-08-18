@@ -65,7 +65,7 @@ pub mod record {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_RECORD: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.crypto.keyring.v1.Record")]
+    #[typetag::serde(name = "/cosmos.crypto.keyring.v1.Record")]
     impl ::prost_wkt::MessageSerde for Record {
         fn package_name(&self) -> &'static str {
             "cosmos.crypto.keyring.v1"
@@ -74,7 +74,7 @@ const IMPL_MESSAGE_SERDE_FOR_RECORD: () = {
             "Record"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.crypto.keyring.v1.Record"
+            "/cosmos.crypto.keyring.v1.Record"
         }
         fn new_instance(
             &self,
@@ -94,5 +94,5 @@ const IMPL_MESSAGE_SERDE_FOR_RECORD: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.crypto.keyring.v1.Record" , decoder : | buf : & [u8] | { let msg : Record = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.crypto.keyring.v1.Record" , decoder : | buf : & [u8] | { let msg : Record = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

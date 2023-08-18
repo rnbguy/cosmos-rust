@@ -113,7 +113,7 @@ pub struct Fraction {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState")]
+    #[typetag::serde(name = "/ibc.lightclients.tendermint.v1.ClientState")]
     impl ::prost_wkt::MessageSerde for ClientState {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.tendermint.v1"
@@ -122,7 +122,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             "ClientState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState"
+            "/ibc.lightclients.tendermint.v1.ClientState"
         }
         fn new_instance(
             &self,
@@ -142,13 +142,13 @@ const IMPL_MESSAGE_SERDE_FOR_CLIENT_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.tendermint.v1.ClientState" , decoder : | buf : & [u8] | { let msg : ClientState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState")]
+    #[typetag::serde(name = "/ibc.lightclients.tendermint.v1.ConsensusState")]
     impl ::prost_wkt::MessageSerde for ConsensusState {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.tendermint.v1"
@@ -157,7 +157,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
             "ConsensusState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState"
+            "/ibc.lightclients.tendermint.v1.ConsensusState"
         }
         fn new_instance(
             &self,
@@ -177,13 +177,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONSENSUS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.tendermint.v1.ConsensusState" , decoder : | buf : & [u8] | { let msg : ConsensusState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour")]
+    #[typetag::serde(name = "/ibc.lightclients.tendermint.v1.Misbehaviour")]
     impl ::prost_wkt::MessageSerde for Misbehaviour {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.tendermint.v1"
@@ -192,7 +192,7 @@ const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
             "Misbehaviour"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour"
+            "/ibc.lightclients.tendermint.v1.Misbehaviour"
         }
         fn new_instance(
             &self,
@@ -212,13 +212,13 @@ const IMPL_MESSAGE_SERDE_FOR_MISBEHAVIOUR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.tendermint.v1.Misbehaviour" , decoder : | buf : & [u8] | { let msg : Misbehaviour = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Header")]
+    #[typetag::serde(name = "/ibc.lightclients.tendermint.v1.Header")]
     impl ::prost_wkt::MessageSerde for Header {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.tendermint.v1"
@@ -227,7 +227,7 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             "Header"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.tendermint.v1.Header"
+            "/ibc.lightclients.tendermint.v1.Header"
         }
         fn new_instance(
             &self,
@@ -247,13 +247,13 @@ const IMPL_MESSAGE_SERDE_FOR_HEADER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.tendermint.v1.Header" , decoder : | buf : & [u8] | { let msg : Header = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_FRACTION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction")]
+    #[typetag::serde(name = "/ibc.lightclients.tendermint.v1.Fraction")]
     impl ::prost_wkt::MessageSerde for Fraction {
         fn package_name(&self) -> &'static str {
             "ibc.lightclients.tendermint.v1"
@@ -262,7 +262,7 @@ const IMPL_MESSAGE_SERDE_FOR_FRACTION: () = {
             "Fraction"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction"
+            "/ibc.lightclients.tendermint.v1.Fraction"
         }
         fn new_instance(
             &self,
@@ -282,5 +282,5 @@ const IMPL_MESSAGE_SERDE_FOR_FRACTION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.lightclients.tendermint.v1.Fraction" , decoder : | buf : & [u8] | { let msg : Fraction = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.lightclients.tendermint.v1.Fraction" , decoder : | buf : & [u8] | { let msg : Fraction = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

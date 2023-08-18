@@ -89,7 +89,7 @@ impl ScalarType {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos_proto.InterfaceDescriptor")]
+    #[typetag::serde(name = "/cosmos_proto.InterfaceDescriptor")]
     impl ::prost_wkt::MessageSerde for InterfaceDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos_proto"
@@ -98,7 +98,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
             "InterfaceDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos_proto.InterfaceDescriptor"
+            "/cosmos_proto.InterfaceDescriptor"
         }
         fn new_instance(
             &self,
@@ -118,13 +118,13 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos_proto.InterfaceDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos_proto.InterfaceDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SCALAR_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos_proto.ScalarDescriptor")]
+    #[typetag::serde(name = "/cosmos_proto.ScalarDescriptor")]
     impl ::prost_wkt::MessageSerde for ScalarDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos_proto"
@@ -133,7 +133,7 @@ const IMPL_MESSAGE_SERDE_FOR_SCALAR_DESCRIPTOR: () = {
             "ScalarDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos_proto.ScalarDescriptor"
+            "/cosmos_proto.ScalarDescriptor"
         }
         fn new_instance(
             &self,
@@ -153,5 +153,5 @@ const IMPL_MESSAGE_SERDE_FOR_SCALAR_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos_proto.ScalarDescriptor" , decoder : | buf : & [u8] | { let msg : ScalarDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos_proto.ScalarDescriptor" , decoder : | buf : & [u8] | { let msg : ScalarDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

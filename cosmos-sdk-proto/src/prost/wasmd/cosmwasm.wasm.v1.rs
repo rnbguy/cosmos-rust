@@ -1530,7 +1530,7 @@ pub struct UpdateInstantiateConfigProposal {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ACCESS_TYPE_PARAM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.AccessTypeParam")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.AccessTypeParam")]
     impl ::prost_wkt::MessageSerde for AccessTypeParam {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1539,7 +1539,7 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_TYPE_PARAM: () = {
             "AccessTypeParam"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.AccessTypeParam"
+            "/cosmwasm.wasm.v1.AccessTypeParam"
         }
         fn new_instance(
             &self,
@@ -1559,13 +1559,13 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_TYPE_PARAM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.AccessTypeParam" , decoder : | buf : & [u8] | { let msg : AccessTypeParam = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.AccessTypeParam" , decoder : | buf : & [u8] | { let msg : AccessTypeParam = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.AccessConfig")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.AccessConfig")]
     impl ::prost_wkt::MessageSerde for AccessConfig {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1574,7 +1574,7 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG: () = {
             "AccessConfig"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.AccessConfig"
+            "/cosmwasm.wasm.v1.AccessConfig"
         }
         fn new_instance(
             &self,
@@ -1594,13 +1594,13 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.AccessConfig" , decoder : | buf : & [u8] | { let msg : AccessConfig = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.AccessConfig" , decoder : | buf : & [u8] | { let msg : AccessConfig = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.Params")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1609,7 +1609,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.Params"
+            "/cosmwasm.wasm.v1.Params"
         }
         fn new_instance(
             &self,
@@ -1629,13 +1629,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CODE_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.CodeInfo")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.CodeInfo")]
     impl ::prost_wkt::MessageSerde for CodeInfo {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1644,7 +1644,7 @@ const IMPL_MESSAGE_SERDE_FOR_CODE_INFO: () = {
             "CodeInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.CodeInfo"
+            "/cosmwasm.wasm.v1.CodeInfo"
         }
         fn new_instance(
             &self,
@@ -1664,13 +1664,13 @@ const IMPL_MESSAGE_SERDE_FOR_CODE_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.CodeInfo" , decoder : | buf : & [u8] | { let msg : CodeInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.CodeInfo" , decoder : | buf : & [u8] | { let msg : CodeInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONTRACT_INFO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.ContractInfo")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.ContractInfo")]
     impl ::prost_wkt::MessageSerde for ContractInfo {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1679,7 +1679,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT_INFO: () = {
             "ContractInfo"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.ContractInfo"
+            "/cosmwasm.wasm.v1.ContractInfo"
         }
         fn new_instance(
             &self,
@@ -1699,13 +1699,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT_INFO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.ContractInfo" , decoder : | buf : & [u8] | { let msg : ContractInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.ContractInfo" , decoder : | buf : & [u8] | { let msg : ContractInfo = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONTRACT_CODE_HISTORY_ENTRY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.ContractCodeHistoryEntry")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.ContractCodeHistoryEntry")]
     impl ::prost_wkt::MessageSerde for ContractCodeHistoryEntry {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1714,7 +1714,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT_CODE_HISTORY_ENTRY: () = {
             "ContractCodeHistoryEntry"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.ContractCodeHistoryEntry"
+            "/cosmwasm.wasm.v1.ContractCodeHistoryEntry"
         }
         fn new_instance(
             &self,
@@ -1734,13 +1734,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT_CODE_HISTORY_ENTRY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.ContractCodeHistoryEntry" , decoder : | buf : & [u8] | { let msg : ContractCodeHistoryEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.ContractCodeHistoryEntry" , decoder : | buf : & [u8] | { let msg : ContractCodeHistoryEntry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ABSOLUTE_TX_POSITION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.AbsoluteTxPosition")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.AbsoluteTxPosition")]
     impl ::prost_wkt::MessageSerde for AbsoluteTxPosition {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1749,7 +1749,7 @@ const IMPL_MESSAGE_SERDE_FOR_ABSOLUTE_TX_POSITION: () = {
             "AbsoluteTxPosition"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.AbsoluteTxPosition"
+            "/cosmwasm.wasm.v1.AbsoluteTxPosition"
         }
         fn new_instance(
             &self,
@@ -1769,13 +1769,13 @@ const IMPL_MESSAGE_SERDE_FOR_ABSOLUTE_TX_POSITION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.AbsoluteTxPosition" , decoder : | buf : & [u8] | { let msg : AbsoluteTxPosition = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.AbsoluteTxPosition" , decoder : | buf : & [u8] | { let msg : AbsoluteTxPosition = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MODEL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.Model")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.Model")]
     impl ::prost_wkt::MessageSerde for Model {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1784,7 +1784,7 @@ const IMPL_MESSAGE_SERDE_FOR_MODEL: () = {
             "Model"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.Model"
+            "/cosmwasm.wasm.v1.Model"
         }
         fn new_instance(
             &self,
@@ -1804,13 +1804,13 @@ const IMPL_MESSAGE_SERDE_FOR_MODEL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.Model" , decoder : | buf : & [u8] | { let msg : Model = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.Model" , decoder : | buf : & [u8] | { let msg : Model = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractInfoRequest")]
     impl ::prost_wkt::MessageSerde for QueryContractInfoRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1819,7 +1819,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_REQUEST: () = {
             "QueryContractInfoRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoRequest"
+            "/cosmwasm.wasm.v1.QueryContractInfoRequest"
         }
         fn new_instance(
             &self,
@@ -1839,13 +1839,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoRequest" , decoder : | buf : & [u8] | { let msg : QueryContractInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractInfoRequest" , decoder : | buf : & [u8] | { let msg : QueryContractInfoRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractInfoResponse")]
     impl ::prost_wkt::MessageSerde for QueryContractInfoResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1854,7 +1854,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_RESPONSE: () = {
             "QueryContractInfoResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoResponse"
+            "/cosmwasm.wasm.v1.QueryContractInfoResponse"
         }
         fn new_instance(
             &self,
@@ -1874,13 +1874,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_INFO_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractInfoResponse" , decoder : | buf : & [u8] | { let msg : QueryContractInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractInfoResponse" , decoder : | buf : & [u8] | { let msg : QueryContractInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractHistoryRequest")]
     impl ::prost_wkt::MessageSerde for QueryContractHistoryRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1889,7 +1889,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_REQUEST: () = {
             "QueryContractHistoryRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryRequest"
+            "/cosmwasm.wasm.v1.QueryContractHistoryRequest"
         }
         fn new_instance(
             &self,
@@ -1909,13 +1909,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryRequest" , decoder : | buf : & [u8] | { let msg : QueryContractHistoryRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractHistoryRequest" , decoder : | buf : & [u8] | { let msg : QueryContractHistoryRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractHistoryResponse")]
     impl ::prost_wkt::MessageSerde for QueryContractHistoryResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1924,7 +1924,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_RESPONSE: () = {
             "QueryContractHistoryResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryResponse"
+            "/cosmwasm.wasm.v1.QueryContractHistoryResponse"
         }
         fn new_instance(
             &self,
@@ -1944,13 +1944,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACT_HISTORY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractHistoryResponse" , decoder : | buf : & [u8] | { let msg : QueryContractHistoryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractHistoryResponse" , decoder : | buf : & [u8] | { let msg : QueryContractHistoryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractsByCodeRequest")]
     impl ::prost_wkt::MessageSerde for QueryContractsByCodeRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1959,7 +1959,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_REQUEST: () = {
             "QueryContractsByCodeRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeRequest"
+            "/cosmwasm.wasm.v1.QueryContractsByCodeRequest"
         }
         fn new_instance(
             &self,
@@ -1979,13 +1979,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeRequest" , decoder : | buf : & [u8] | { let msg : QueryContractsByCodeRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractsByCodeRequest" , decoder : | buf : & [u8] | { let msg : QueryContractsByCodeRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryContractsByCodeResponse")]
     impl ::prost_wkt::MessageSerde for QueryContractsByCodeResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -1994,7 +1994,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_RESPONSE: () = {
             "QueryContractsByCodeResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeResponse"
+            "/cosmwasm.wasm.v1.QueryContractsByCodeResponse"
         }
         fn new_instance(
             &self,
@@ -2014,13 +2014,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONTRACTS_BY_CODE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryContractsByCodeResponse" , decoder : | buf : & [u8] | { let msg : QueryContractsByCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryContractsByCodeResponse" , decoder : | buf : & [u8] | { let msg : QueryContractsByCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryAllContractStateRequest")]
     impl ::prost_wkt::MessageSerde for QueryAllContractStateRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2029,7 +2029,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_REQUEST: () = {
             "QueryAllContractStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateRequest"
+            "/cosmwasm.wasm.v1.QueryAllContractStateRequest"
         }
         fn new_instance(
             &self,
@@ -2049,13 +2049,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateRequest" , decoder : | buf : & [u8] | { let msg : QueryAllContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryAllContractStateRequest" , decoder : | buf : & [u8] | { let msg : QueryAllContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryAllContractStateResponse")]
     impl ::prost_wkt::MessageSerde for QueryAllContractStateResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2064,7 +2064,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_RESPONSE: () = {
             "QueryAllContractStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateResponse"
+            "/cosmwasm.wasm.v1.QueryAllContractStateResponse"
         }
         fn new_instance(
             &self,
@@ -2084,13 +2084,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_CONTRACT_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryAllContractStateResponse" , decoder : | buf : & [u8] | { let msg : QueryAllContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryAllContractStateResponse" , decoder : | buf : & [u8] | { let msg : QueryAllContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryRawContractStateRequest")]
     impl ::prost_wkt::MessageSerde for QueryRawContractStateRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2099,7 +2099,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_REQUEST: () = {
             "QueryRawContractStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateRequest"
+            "/cosmwasm.wasm.v1.QueryRawContractStateRequest"
         }
         fn new_instance(
             &self,
@@ -2119,13 +2119,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateRequest" , decoder : | buf : & [u8] | { let msg : QueryRawContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryRawContractStateRequest" , decoder : | buf : & [u8] | { let msg : QueryRawContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryRawContractStateResponse")]
     impl ::prost_wkt::MessageSerde for QueryRawContractStateResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2134,7 +2134,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_RESPONSE: () = {
             "QueryRawContractStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateResponse"
+            "/cosmwasm.wasm.v1.QueryRawContractStateResponse"
         }
         fn new_instance(
             &self,
@@ -2154,13 +2154,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_RAW_CONTRACT_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryRawContractStateResponse" , decoder : | buf : & [u8] | { let msg : QueryRawContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryRawContractStateResponse" , decoder : | buf : & [u8] | { let msg : QueryRawContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QuerySmartContractStateRequest")]
     impl ::prost_wkt::MessageSerde for QuerySmartContractStateRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2169,7 +2169,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_REQUEST: () = {
             "QuerySmartContractStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateRequest"
+            "/cosmwasm.wasm.v1.QuerySmartContractStateRequest"
         }
         fn new_instance(
             &self,
@@ -2189,13 +2189,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateRequest" , decoder : | buf : & [u8] | { let msg : QuerySmartContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QuerySmartContractStateRequest" , decoder : | buf : & [u8] | { let msg : QuerySmartContractStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QuerySmartContractStateResponse")]
     impl ::prost_wkt::MessageSerde for QuerySmartContractStateResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2204,7 +2204,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_RESPONSE: () = {
             "QuerySmartContractStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateResponse"
+            "/cosmwasm.wasm.v1.QuerySmartContractStateResponse"
         }
         fn new_instance(
             &self,
@@ -2224,13 +2224,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SMART_CONTRACT_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QuerySmartContractStateResponse" , decoder : | buf : & [u8] | { let msg : QuerySmartContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QuerySmartContractStateResponse" , decoder : | buf : & [u8] | { let msg : QuerySmartContractStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryCodeRequest")]
     impl ::prost_wkt::MessageSerde for QueryCodeRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2239,7 +2239,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_REQUEST: () = {
             "QueryCodeRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeRequest"
+            "/cosmwasm.wasm.v1.QueryCodeRequest"
         }
         fn new_instance(
             &self,
@@ -2259,13 +2259,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeRequest" , decoder : | buf : & [u8] | { let msg : QueryCodeRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryCodeRequest" , decoder : | buf : & [u8] | { let msg : QueryCodeRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CODE_INFO_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.CodeInfoResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.CodeInfoResponse")]
     impl ::prost_wkt::MessageSerde for CodeInfoResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2274,7 +2274,7 @@ const IMPL_MESSAGE_SERDE_FOR_CODE_INFO_RESPONSE: () = {
             "CodeInfoResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.CodeInfoResponse"
+            "/cosmwasm.wasm.v1.CodeInfoResponse"
         }
         fn new_instance(
             &self,
@@ -2294,13 +2294,13 @@ const IMPL_MESSAGE_SERDE_FOR_CODE_INFO_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.CodeInfoResponse" , decoder : | buf : & [u8] | { let msg : CodeInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.CodeInfoResponse" , decoder : | buf : & [u8] | { let msg : CodeInfoResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryCodeResponse")]
     impl ::prost_wkt::MessageSerde for QueryCodeResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2309,7 +2309,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_RESPONSE: () = {
             "QueryCodeResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeResponse"
+            "/cosmwasm.wasm.v1.QueryCodeResponse"
         }
         fn new_instance(
             &self,
@@ -2329,13 +2329,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryCodeResponse" , decoder : | buf : & [u8] | { let msg : QueryCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryCodeResponse" , decoder : | buf : & [u8] | { let msg : QueryCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryCodesRequest")]
     impl ::prost_wkt::MessageSerde for QueryCodesRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2344,7 +2344,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_REQUEST: () = {
             "QueryCodesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesRequest"
+            "/cosmwasm.wasm.v1.QueryCodesRequest"
         }
         fn new_instance(
             &self,
@@ -2364,13 +2364,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesRequest" , decoder : | buf : & [u8] | { let msg : QueryCodesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryCodesRequest" , decoder : | buf : & [u8] | { let msg : QueryCodesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryCodesResponse")]
     impl ::prost_wkt::MessageSerde for QueryCodesResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2379,7 +2379,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_RESPONSE: () = {
             "QueryCodesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesResponse"
+            "/cosmwasm.wasm.v1.QueryCodesResponse"
         }
         fn new_instance(
             &self,
@@ -2399,13 +2399,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CODES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryCodesResponse" , decoder : | buf : & [u8] | { let msg : QueryCodesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryCodesResponse" , decoder : | buf : & [u8] | { let msg : QueryCodesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryPinnedCodesRequest")]
     impl ::prost_wkt::MessageSerde for QueryPinnedCodesRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2414,7 +2414,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_REQUEST: () = {
             "QueryPinnedCodesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesRequest"
+            "/cosmwasm.wasm.v1.QueryPinnedCodesRequest"
         }
         fn new_instance(
             &self,
@@ -2434,13 +2434,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesRequest" , decoder : | buf : & [u8] | { let msg : QueryPinnedCodesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryPinnedCodesRequest" , decoder : | buf : & [u8] | { let msg : QueryPinnedCodesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryPinnedCodesResponse")]
     impl ::prost_wkt::MessageSerde for QueryPinnedCodesResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2449,7 +2449,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_RESPONSE: () = {
             "QueryPinnedCodesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesResponse"
+            "/cosmwasm.wasm.v1.QueryPinnedCodesResponse"
         }
         fn new_instance(
             &self,
@@ -2469,13 +2469,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PINNED_CODES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryPinnedCodesResponse" , decoder : | buf : & [u8] | { let msg : QueryPinnedCodesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryPinnedCodesResponse" , decoder : | buf : & [u8] | { let msg : QueryPinnedCodesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsRequest")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryParamsRequest")]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2484,7 +2484,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsRequest"
+            "/cosmwasm.wasm.v1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -2504,13 +2504,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.QueryParamsResponse")]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2519,7 +2519,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsResponse"
+            "/cosmwasm.wasm.v1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -2539,13 +2539,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCode")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgStoreCode")]
     impl ::prost_wkt::MessageSerde for MsgStoreCode {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2554,7 +2554,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE: () = {
             "MsgStoreCode"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCode"
+            "/cosmwasm.wasm.v1.MsgStoreCode"
         }
         fn new_instance(
             &self,
@@ -2574,13 +2574,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCode" , decoder : | buf : & [u8] | { let msg : MsgStoreCode = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgStoreCode" , decoder : | buf : & [u8] | { let msg : MsgStoreCode = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCodeResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgStoreCodeResponse")]
     impl ::prost_wkt::MessageSerde for MsgStoreCodeResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2589,7 +2589,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE_RESPONSE: () = {
             "MsgStoreCodeResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCodeResponse"
+            "/cosmwasm.wasm.v1.MsgStoreCodeResponse"
         }
         fn new_instance(
             &self,
@@ -2609,13 +2609,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_STORE_CODE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgStoreCodeResponse" , decoder : | buf : & [u8] | { let msg : MsgStoreCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgStoreCodeResponse" , decoder : | buf : & [u8] | { let msg : MsgStoreCodeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgInstantiateContract")]
     impl ::prost_wkt::MessageSerde for MsgInstantiateContract {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2624,7 +2624,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT: () = {
             "MsgInstantiateContract"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract"
+            "/cosmwasm.wasm.v1.MsgInstantiateContract"
         }
         fn new_instance(
             &self,
@@ -2644,13 +2644,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgInstantiateContract" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgInstantiateContract2")]
     impl ::prost_wkt::MessageSerde for MsgInstantiateContract2 {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2659,7 +2659,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2: () = {
             "MsgInstantiateContract2"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2"
+            "/cosmwasm.wasm.v1.MsgInstantiateContract2"
         }
         fn new_instance(
             &self,
@@ -2679,13 +2679,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract2 = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgInstantiateContract2" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract2 = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContractResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgInstantiateContractResponse")]
     impl ::prost_wkt::MessageSerde for MsgInstantiateContractResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2694,7 +2694,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT_RESPONSE: () = {
             "MsgInstantiateContractResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContractResponse"
+            "/cosmwasm.wasm.v1.MsgInstantiateContractResponse"
         }
         fn new_instance(
             &self,
@@ -2714,13 +2714,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContractResponse" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgInstantiateContractResponse" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2Response")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgInstantiateContract2Response")]
     impl ::prost_wkt::MessageSerde for MsgInstantiateContract2Response {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2729,7 +2729,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2_RESPONSE: () = {
             "MsgInstantiateContract2Response"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2Response"
+            "/cosmwasm.wasm.v1.MsgInstantiateContract2Response"
         }
         fn new_instance(
             &self,
@@ -2749,13 +2749,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_INSTANTIATE_CONTRACT2_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgInstantiateContract2Response" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract2Response = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgInstantiateContract2Response" , decoder : | buf : & [u8] | { let msg : MsgInstantiateContract2Response = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContract")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgExecuteContract")]
     impl ::prost_wkt::MessageSerde for MsgExecuteContract {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2764,7 +2764,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT: () = {
             "MsgExecuteContract"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContract"
+            "/cosmwasm.wasm.v1.MsgExecuteContract"
         }
         fn new_instance(
             &self,
@@ -2784,13 +2784,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContract" , decoder : | buf : & [u8] | { let msg : MsgExecuteContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgExecuteContract" , decoder : | buf : & [u8] | { let msg : MsgExecuteContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContractResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgExecuteContractResponse")]
     impl ::prost_wkt::MessageSerde for MsgExecuteContractResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2799,7 +2799,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT_RESPONSE: () = {
             "MsgExecuteContractResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContractResponse"
+            "/cosmwasm.wasm.v1.MsgExecuteContractResponse"
         }
         fn new_instance(
             &self,
@@ -2819,13 +2819,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_EXECUTE_CONTRACT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgExecuteContractResponse" , decoder : | buf : & [u8] | { let msg : MsgExecuteContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgExecuteContractResponse" , decoder : | buf : & [u8] | { let msg : MsgExecuteContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContract")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgMigrateContract")]
     impl ::prost_wkt::MessageSerde for MsgMigrateContract {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2834,7 +2834,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT: () = {
             "MsgMigrateContract"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContract"
+            "/cosmwasm.wasm.v1.MsgMigrateContract"
         }
         fn new_instance(
             &self,
@@ -2854,13 +2854,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContract" , decoder : | buf : & [u8] | { let msg : MsgMigrateContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgMigrateContract" , decoder : | buf : & [u8] | { let msg : MsgMigrateContract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContractResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgMigrateContractResponse")]
     impl ::prost_wkt::MessageSerde for MsgMigrateContractResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2869,7 +2869,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT_RESPONSE: () = {
             "MsgMigrateContractResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContractResponse"
+            "/cosmwasm.wasm.v1.MsgMigrateContractResponse"
         }
         fn new_instance(
             &self,
@@ -2889,13 +2889,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MIGRATE_CONTRACT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgMigrateContractResponse" , decoder : | buf : & [u8] | { let msg : MsgMigrateContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgMigrateContractResponse" , decoder : | buf : & [u8] | { let msg : MsgMigrateContractResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdmin")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgUpdateAdmin")]
     impl ::prost_wkt::MessageSerde for MsgUpdateAdmin {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2904,7 +2904,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN: () = {
             "MsgUpdateAdmin"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdmin"
+            "/cosmwasm.wasm.v1.MsgUpdateAdmin"
         }
         fn new_instance(
             &self,
@@ -2924,13 +2924,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdmin" , decoder : | buf : & [u8] | { let msg : MsgUpdateAdmin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgUpdateAdmin" , decoder : | buf : & [u8] | { let msg : MsgUpdateAdmin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdminResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgUpdateAdminResponse")]
     impl ::prost_wkt::MessageSerde for MsgUpdateAdminResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2939,7 +2939,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN_RESPONSE: () = {
             "MsgUpdateAdminResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdminResponse"
+            "/cosmwasm.wasm.v1.MsgUpdateAdminResponse"
         }
         fn new_instance(
             &self,
@@ -2959,13 +2959,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_UPDATE_ADMIN_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgUpdateAdminResponse" , decoder : | buf : & [u8] | { let msg : MsgUpdateAdminResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgUpdateAdminResponse" , decoder : | buf : & [u8] | { let msg : MsgUpdateAdminResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdmin")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgClearAdmin")]
     impl ::prost_wkt::MessageSerde for MsgClearAdmin {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -2974,7 +2974,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN: () = {
             "MsgClearAdmin"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdmin"
+            "/cosmwasm.wasm.v1.MsgClearAdmin"
         }
         fn new_instance(
             &self,
@@ -2994,13 +2994,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdmin" , decoder : | buf : & [u8] | { let msg : MsgClearAdmin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgClearAdmin" , decoder : | buf : & [u8] | { let msg : MsgClearAdmin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdminResponse")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgClearAdminResponse")]
     impl ::prost_wkt::MessageSerde for MsgClearAdminResponse {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3009,7 +3009,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN_RESPONSE: () = {
             "MsgClearAdminResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdminResponse"
+            "/cosmwasm.wasm.v1.MsgClearAdminResponse"
         }
         fn new_instance(
             &self,
@@ -3029,13 +3029,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CLEAR_ADMIN_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgClearAdminResponse" , decoder : | buf : & [u8] | { let msg : MsgClearAdminResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgClearAdminResponse" , decoder : | buf : & [u8] | { let msg : MsgClearAdminResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_SEND: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCSend")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgIBCSend")]
     impl ::prost_wkt::MessageSerde for MsgIbcSend {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3044,7 +3044,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_SEND: () = {
             "MsgIBCSend"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCSend"
+            "/cosmwasm.wasm.v1.MsgIBCSend"
         }
         fn new_instance(
             &self,
@@ -3064,13 +3064,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_SEND: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCSend" , decoder : | buf : & [u8] | { let msg : MsgIbcSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgIBCSend" , decoder : | buf : & [u8] | { let msg : MsgIbcSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_CLOSE_CHANNEL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCCloseChannel")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MsgIBCCloseChannel")]
     impl ::prost_wkt::MessageSerde for MsgIbcCloseChannel {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3079,7 +3079,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_CLOSE_CHANNEL: () = {
             "MsgIBCCloseChannel"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCCloseChannel"
+            "/cosmwasm.wasm.v1.MsgIBCCloseChannel"
         }
         fn new_instance(
             &self,
@@ -3099,13 +3099,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_IBC_CLOSE_CHANNEL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MsgIBCCloseChannel" , decoder : | buf : & [u8] | { let msg : MsgIbcCloseChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MsgIBCCloseChannel" , decoder : | buf : & [u8] | { let msg : MsgIbcCloseChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.GenesisState")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3114,7 +3114,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.GenesisState"
+            "/cosmwasm.wasm.v1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -3134,13 +3134,13 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CODE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.Code")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.Code")]
     impl ::prost_wkt::MessageSerde for Code {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3149,7 +3149,7 @@ const IMPL_MESSAGE_SERDE_FOR_CODE: () = {
             "Code"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.Code"
+            "/cosmwasm.wasm.v1.Code"
         }
         fn new_instance(
             &self,
@@ -3169,13 +3169,13 @@ const IMPL_MESSAGE_SERDE_FOR_CODE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.Code" , decoder : | buf : & [u8] | { let msg : Code = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.Code" , decoder : | buf : & [u8] | { let msg : Code = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONTRACT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.Contract")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.Contract")]
     impl ::prost_wkt::MessageSerde for Contract {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3184,7 +3184,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT: () = {
             "Contract"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.Contract"
+            "/cosmwasm.wasm.v1.Contract"
         }
         fn new_instance(
             &self,
@@ -3204,13 +3204,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONTRACT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.Contract" , decoder : | buf : & [u8] | { let msg : Contract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.Contract" , decoder : | buf : & [u8] | { let msg : Contract = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SEQUENCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.Sequence")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.Sequence")]
     impl ::prost_wkt::MessageSerde for Sequence {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3219,7 +3219,7 @@ const IMPL_MESSAGE_SERDE_FOR_SEQUENCE: () = {
             "Sequence"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.Sequence"
+            "/cosmwasm.wasm.v1.Sequence"
         }
         fn new_instance(
             &self,
@@ -3239,13 +3239,13 @@ const IMPL_MESSAGE_SERDE_FOR_SEQUENCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.Sequence" , decoder : | buf : & [u8] | { let msg : Sequence = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.Sequence" , decoder : | buf : & [u8] | { let msg : Sequence = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_STORE_CODE_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.StoreCodeProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.StoreCodeProposal")]
     impl ::prost_wkt::MessageSerde for StoreCodeProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3254,7 +3254,7 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_CODE_PROPOSAL: () = {
             "StoreCodeProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.StoreCodeProposal"
+            "/cosmwasm.wasm.v1.StoreCodeProposal"
         }
         fn new_instance(
             &self,
@@ -3274,13 +3274,13 @@ const IMPL_MESSAGE_SERDE_FOR_STORE_CODE_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.StoreCodeProposal" , decoder : | buf : & [u8] | { let msg : StoreCodeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.StoreCodeProposal" , decoder : | buf : & [u8] | { let msg : StoreCodeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INSTANTIATE_CONTRACT_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.InstantiateContractProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.InstantiateContractProposal")]
     impl ::prost_wkt::MessageSerde for InstantiateContractProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3289,7 +3289,7 @@ const IMPL_MESSAGE_SERDE_FOR_INSTANTIATE_CONTRACT_PROPOSAL: () = {
             "InstantiateContractProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.InstantiateContractProposal"
+            "/cosmwasm.wasm.v1.InstantiateContractProposal"
         }
         fn new_instance(
             &self,
@@ -3309,13 +3309,13 @@ const IMPL_MESSAGE_SERDE_FOR_INSTANTIATE_CONTRACT_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.InstantiateContractProposal" , decoder : | buf : & [u8] | { let msg : InstantiateContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.InstantiateContractProposal" , decoder : | buf : & [u8] | { let msg : InstantiateContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MIGRATE_CONTRACT_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.MigrateContractProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.MigrateContractProposal")]
     impl ::prost_wkt::MessageSerde for MigrateContractProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3324,7 +3324,7 @@ const IMPL_MESSAGE_SERDE_FOR_MIGRATE_CONTRACT_PROPOSAL: () = {
             "MigrateContractProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.MigrateContractProposal"
+            "/cosmwasm.wasm.v1.MigrateContractProposal"
         }
         fn new_instance(
             &self,
@@ -3344,13 +3344,13 @@ const IMPL_MESSAGE_SERDE_FOR_MIGRATE_CONTRACT_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.MigrateContractProposal" , decoder : | buf : & [u8] | { let msg : MigrateContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.MigrateContractProposal" , decoder : | buf : & [u8] | { let msg : MigrateContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SUDO_CONTRACT_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.SudoContractProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.SudoContractProposal")]
     impl ::prost_wkt::MessageSerde for SudoContractProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3359,7 +3359,7 @@ const IMPL_MESSAGE_SERDE_FOR_SUDO_CONTRACT_PROPOSAL: () = {
             "SudoContractProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.SudoContractProposal"
+            "/cosmwasm.wasm.v1.SudoContractProposal"
         }
         fn new_instance(
             &self,
@@ -3379,13 +3379,13 @@ const IMPL_MESSAGE_SERDE_FOR_SUDO_CONTRACT_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.SudoContractProposal" , decoder : | buf : & [u8] | { let msg : SudoContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.SudoContractProposal" , decoder : | buf : & [u8] | { let msg : SudoContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_EXECUTE_CONTRACT_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.ExecuteContractProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.ExecuteContractProposal")]
     impl ::prost_wkt::MessageSerde for ExecuteContractProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3394,7 +3394,7 @@ const IMPL_MESSAGE_SERDE_FOR_EXECUTE_CONTRACT_PROPOSAL: () = {
             "ExecuteContractProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.ExecuteContractProposal"
+            "/cosmwasm.wasm.v1.ExecuteContractProposal"
         }
         fn new_instance(
             &self,
@@ -3414,13 +3414,13 @@ const IMPL_MESSAGE_SERDE_FOR_EXECUTE_CONTRACT_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.ExecuteContractProposal" , decoder : | buf : & [u8] | { let msg : ExecuteContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.ExecuteContractProposal" , decoder : | buf : & [u8] | { let msg : ExecuteContractProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_UPDATE_ADMIN_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.UpdateAdminProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.UpdateAdminProposal")]
     impl ::prost_wkt::MessageSerde for UpdateAdminProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3429,7 +3429,7 @@ const IMPL_MESSAGE_SERDE_FOR_UPDATE_ADMIN_PROPOSAL: () = {
             "UpdateAdminProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.UpdateAdminProposal"
+            "/cosmwasm.wasm.v1.UpdateAdminProposal"
         }
         fn new_instance(
             &self,
@@ -3449,13 +3449,13 @@ const IMPL_MESSAGE_SERDE_FOR_UPDATE_ADMIN_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.UpdateAdminProposal" , decoder : | buf : & [u8] | { let msg : UpdateAdminProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.UpdateAdminProposal" , decoder : | buf : & [u8] | { let msg : UpdateAdminProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CLEAR_ADMIN_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.ClearAdminProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.ClearAdminProposal")]
     impl ::prost_wkt::MessageSerde for ClearAdminProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3464,7 +3464,7 @@ const IMPL_MESSAGE_SERDE_FOR_CLEAR_ADMIN_PROPOSAL: () = {
             "ClearAdminProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.ClearAdminProposal"
+            "/cosmwasm.wasm.v1.ClearAdminProposal"
         }
         fn new_instance(
             &self,
@@ -3484,13 +3484,13 @@ const IMPL_MESSAGE_SERDE_FOR_CLEAR_ADMIN_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.ClearAdminProposal" , decoder : | buf : & [u8] | { let msg : ClearAdminProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.ClearAdminProposal" , decoder : | buf : & [u8] | { let msg : ClearAdminProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PIN_CODES_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.PinCodesProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.PinCodesProposal")]
     impl ::prost_wkt::MessageSerde for PinCodesProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3499,7 +3499,7 @@ const IMPL_MESSAGE_SERDE_FOR_PIN_CODES_PROPOSAL: () = {
             "PinCodesProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.PinCodesProposal"
+            "/cosmwasm.wasm.v1.PinCodesProposal"
         }
         fn new_instance(
             &self,
@@ -3519,13 +3519,13 @@ const IMPL_MESSAGE_SERDE_FOR_PIN_CODES_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.PinCodesProposal" , decoder : | buf : & [u8] | { let msg : PinCodesProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.PinCodesProposal" , decoder : | buf : & [u8] | { let msg : PinCodesProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_UNPIN_CODES_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.UnpinCodesProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.UnpinCodesProposal")]
     impl ::prost_wkt::MessageSerde for UnpinCodesProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3534,7 +3534,7 @@ const IMPL_MESSAGE_SERDE_FOR_UNPIN_CODES_PROPOSAL: () = {
             "UnpinCodesProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.UnpinCodesProposal"
+            "/cosmwasm.wasm.v1.UnpinCodesProposal"
         }
         fn new_instance(
             &self,
@@ -3554,13 +3554,13 @@ const IMPL_MESSAGE_SERDE_FOR_UNPIN_CODES_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.UnpinCodesProposal" , decoder : | buf : & [u8] | { let msg : UnpinCodesProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.UnpinCodesProposal" , decoder : | buf : & [u8] | { let msg : UnpinCodesProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG_UPDATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.AccessConfigUpdate")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.AccessConfigUpdate")]
     impl ::prost_wkt::MessageSerde for AccessConfigUpdate {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3569,7 +3569,7 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG_UPDATE: () = {
             "AccessConfigUpdate"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.AccessConfigUpdate"
+            "/cosmwasm.wasm.v1.AccessConfigUpdate"
         }
         fn new_instance(
             &self,
@@ -3589,13 +3589,13 @@ const IMPL_MESSAGE_SERDE_FOR_ACCESS_CONFIG_UPDATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.AccessConfigUpdate" , decoder : | buf : & [u8] | { let msg : AccessConfigUpdate = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.AccessConfigUpdate" , decoder : | buf : & [u8] | { let msg : AccessConfigUpdate = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_UPDATE_INSTANTIATE_CONFIG_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal")]
+    #[typetag::serde(name = "/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal")]
     impl ::prost_wkt::MessageSerde for UpdateInstantiateConfigProposal {
         fn package_name(&self) -> &'static str {
             "cosmwasm.wasm.v1"
@@ -3604,7 +3604,7 @@ const IMPL_MESSAGE_SERDE_FOR_UPDATE_INSTANTIATE_CONFIG_PROPOSAL: () = {
             "UpdateInstantiateConfigProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal"
+            "/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal"
         }
         fn new_instance(
             &self,
@@ -3624,5 +3624,5 @@ const IMPL_MESSAGE_SERDE_FOR_UPDATE_INSTANTIATE_CONFIG_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal" , decoder : | buf : & [u8] | { let msg : UpdateInstantiateConfigProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal" , decoder : | buf : & [u8] | { let msg : UpdateInstantiateConfigProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

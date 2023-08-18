@@ -20,7 +20,7 @@ pub struct Pair {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PAIRS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.kv.v1beta1.Pairs")]
+    #[typetag::serde(name = "/cosmos.base.kv.v1beta1.Pairs")]
     impl ::prost_wkt::MessageSerde for Pairs {
         fn package_name(&self) -> &'static str {
             "cosmos.base.kv.v1beta1"
@@ -29,7 +29,7 @@ const IMPL_MESSAGE_SERDE_FOR_PAIRS: () = {
             "Pairs"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.kv.v1beta1.Pairs"
+            "/cosmos.base.kv.v1beta1.Pairs"
         }
         fn new_instance(
             &self,
@@ -49,13 +49,13 @@ const IMPL_MESSAGE_SERDE_FOR_PAIRS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.kv.v1beta1.Pairs" , decoder : | buf : & [u8] | { let msg : Pairs = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.kv.v1beta1.Pairs" , decoder : | buf : & [u8] | { let msg : Pairs = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PAIR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.kv.v1beta1.Pair")]
+    #[typetag::serde(name = "/cosmos.base.kv.v1beta1.Pair")]
     impl ::prost_wkt::MessageSerde for Pair {
         fn package_name(&self) -> &'static str {
             "cosmos.base.kv.v1beta1"
@@ -64,7 +64,7 @@ const IMPL_MESSAGE_SERDE_FOR_PAIR: () = {
             "Pair"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.kv.v1beta1.Pair"
+            "/cosmos.base.kv.v1beta1.Pair"
         }
         fn new_instance(
             &self,
@@ -84,5 +84,5 @@ const IMPL_MESSAGE_SERDE_FOR_PAIR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.kv.v1beta1.Pair" , decoder : | buf : & [u8] | { let msg : Pair = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.kv.v1beta1.Pair" , decoder : | buf : & [u8] | { let msg : Pair = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

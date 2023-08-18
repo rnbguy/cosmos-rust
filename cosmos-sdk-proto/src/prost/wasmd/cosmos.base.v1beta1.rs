@@ -44,7 +44,7 @@ pub struct DecProto {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COIN: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.v1beta1.Coin")]
+    #[typetag::serde(name = "/cosmos.base.v1beta1.Coin")]
     impl ::prost_wkt::MessageSerde for Coin {
         fn package_name(&self) -> &'static str {
             "cosmos.base.v1beta1"
@@ -53,7 +53,7 @@ const IMPL_MESSAGE_SERDE_FOR_COIN: () = {
             "Coin"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.v1beta1.Coin"
+            "/cosmos.base.v1beta1.Coin"
         }
         fn new_instance(
             &self,
@@ -73,13 +73,13 @@ const IMPL_MESSAGE_SERDE_FOR_COIN: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.v1beta1.Coin" , decoder : | buf : & [u8] | { let msg : Coin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.v1beta1.Coin" , decoder : | buf : & [u8] | { let msg : Coin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DEC_COIN: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.v1beta1.DecCoin")]
+    #[typetag::serde(name = "/cosmos.base.v1beta1.DecCoin")]
     impl ::prost_wkt::MessageSerde for DecCoin {
         fn package_name(&self) -> &'static str {
             "cosmos.base.v1beta1"
@@ -88,7 +88,7 @@ const IMPL_MESSAGE_SERDE_FOR_DEC_COIN: () = {
             "DecCoin"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.v1beta1.DecCoin"
+            "/cosmos.base.v1beta1.DecCoin"
         }
         fn new_instance(
             &self,
@@ -108,13 +108,13 @@ const IMPL_MESSAGE_SERDE_FOR_DEC_COIN: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.v1beta1.DecCoin" , decoder : | buf : & [u8] | { let msg : DecCoin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.v1beta1.DecCoin" , decoder : | buf : & [u8] | { let msg : DecCoin = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INT_PROTO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.v1beta1.IntProto")]
+    #[typetag::serde(name = "/cosmos.base.v1beta1.IntProto")]
     impl ::prost_wkt::MessageSerde for IntProto {
         fn package_name(&self) -> &'static str {
             "cosmos.base.v1beta1"
@@ -123,7 +123,7 @@ const IMPL_MESSAGE_SERDE_FOR_INT_PROTO: () = {
             "IntProto"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.v1beta1.IntProto"
+            "/cosmos.base.v1beta1.IntProto"
         }
         fn new_instance(
             &self,
@@ -143,13 +143,13 @@ const IMPL_MESSAGE_SERDE_FOR_INT_PROTO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.v1beta1.IntProto" , decoder : | buf : & [u8] | { let msg : IntProto = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.v1beta1.IntProto" , decoder : | buf : & [u8] | { let msg : IntProto = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DEC_PROTO: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.v1beta1.DecProto")]
+    #[typetag::serde(name = "/cosmos.base.v1beta1.DecProto")]
     impl ::prost_wkt::MessageSerde for DecProto {
         fn package_name(&self) -> &'static str {
             "cosmos.base.v1beta1"
@@ -158,7 +158,7 @@ const IMPL_MESSAGE_SERDE_FOR_DEC_PROTO: () = {
             "DecProto"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.v1beta1.DecProto"
+            "/cosmos.base.v1beta1.DecProto"
         }
         fn new_instance(
             &self,
@@ -178,5 +178,5 @@ const IMPL_MESSAGE_SERDE_FOR_DEC_PROTO: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.v1beta1.DecProto" , decoder : | buf : & [u8] | { let msg : DecProto = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.v1beta1.DecProto" , decoder : | buf : & [u8] | { let msg : DecProto = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

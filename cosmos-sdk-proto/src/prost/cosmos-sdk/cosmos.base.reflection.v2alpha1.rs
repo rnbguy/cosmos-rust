@@ -922,7 +922,7 @@ pub mod reflection_service_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_APP_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.AppDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.AppDescriptor")]
     impl ::prost_wkt::MessageSerde for AppDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -931,7 +931,7 @@ const IMPL_MESSAGE_SERDE_FOR_APP_DESCRIPTOR: () = {
             "AppDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.AppDescriptor"
+            "/cosmos.base.reflection.v2alpha1.AppDescriptor"
         }
         fn new_instance(
             &self,
@@ -951,13 +951,13 @@ const IMPL_MESSAGE_SERDE_FOR_APP_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.AppDescriptor" , decoder : | buf : & [u8] | { let msg : AppDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.AppDescriptor" , decoder : | buf : & [u8] | { let msg : AppDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_TX_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.TxDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.TxDescriptor")]
     impl ::prost_wkt::MessageSerde for TxDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -966,7 +966,7 @@ const IMPL_MESSAGE_SERDE_FOR_TX_DESCRIPTOR: () = {
             "TxDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.TxDescriptor"
+            "/cosmos.base.reflection.v2alpha1.TxDescriptor"
         }
         fn new_instance(
             &self,
@@ -986,13 +986,13 @@ const IMPL_MESSAGE_SERDE_FOR_TX_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.TxDescriptor" , decoder : | buf : & [u8] | { let msg : TxDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.TxDescriptor" , decoder : | buf : & [u8] | { let msg : TxDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_AUTHN_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.AuthnDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.AuthnDescriptor")]
     impl ::prost_wkt::MessageSerde for AuthnDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -1001,7 +1001,7 @@ const IMPL_MESSAGE_SERDE_FOR_AUTHN_DESCRIPTOR: () = {
             "AuthnDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.AuthnDescriptor"
+            "/cosmos.base.reflection.v2alpha1.AuthnDescriptor"
         }
         fn new_instance(
             &self,
@@ -1021,14 +1021,14 @@ const IMPL_MESSAGE_SERDE_FOR_AUTHN_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.AuthnDescriptor" , decoder : | buf : & [u8] | { let msg : AuthnDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.AuthnDescriptor" , decoder : | buf : & [u8] | { let msg : AuthnDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGNING_MODE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.SigningModeDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.SigningModeDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for SigningModeDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1038,7 +1038,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNING_MODE_DESCRIPTOR: () = {
             "SigningModeDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.SigningModeDescriptor"
+            "/cosmos.base.reflection.v2alpha1.SigningModeDescriptor"
         }
         fn new_instance(
             &self,
@@ -1058,13 +1058,13 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNING_MODE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.SigningModeDescriptor" , decoder : | buf : & [u8] | { let msg : SigningModeDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.SigningModeDescriptor" , decoder : | buf : & [u8] | { let msg : SigningModeDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CHAIN_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.ChainDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.ChainDescriptor")]
     impl ::prost_wkt::MessageSerde for ChainDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -1073,7 +1073,7 @@ const IMPL_MESSAGE_SERDE_FOR_CHAIN_DESCRIPTOR: () = {
             "ChainDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.ChainDescriptor"
+            "/cosmos.base.reflection.v2alpha1.ChainDescriptor"
         }
         fn new_instance(
             &self,
@@ -1093,13 +1093,13 @@ const IMPL_MESSAGE_SERDE_FOR_CHAIN_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.ChainDescriptor" , decoder : | buf : & [u8] | { let msg : ChainDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.ChainDescriptor" , decoder : | buf : & [u8] | { let msg : ChainDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CODEC_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.CodecDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.CodecDescriptor")]
     impl ::prost_wkt::MessageSerde for CodecDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -1108,7 +1108,7 @@ const IMPL_MESSAGE_SERDE_FOR_CODEC_DESCRIPTOR: () = {
             "CodecDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.CodecDescriptor"
+            "/cosmos.base.reflection.v2alpha1.CodecDescriptor"
         }
         fn new_instance(
             &self,
@@ -1128,14 +1128,14 @@ const IMPL_MESSAGE_SERDE_FOR_CODEC_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.CodecDescriptor" , decoder : | buf : & [u8] | { let msg : CodecDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.CodecDescriptor" , decoder : | buf : & [u8] | { let msg : CodecDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.InterfaceDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for InterfaceDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1145,7 +1145,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
             "InterfaceDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceDescriptor"
+            "/cosmos.base.reflection.v2alpha1.InterfaceDescriptor"
         }
         fn new_instance(
             &self,
@@ -1165,14 +1165,14 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.InterfaceDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INTERFACE_IMPLEMENTER_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for InterfaceImplementerDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1182,7 +1182,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_IMPLEMENTER_DESCRIPTOR: () = {
             "InterfaceImplementerDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor"
+            "/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor"
         }
         fn new_instance(
             &self,
@@ -1202,14 +1202,14 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_IMPLEMENTER_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceImplementerDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.InterfaceImplementerDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceImplementerDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INTERFACE_ACCEPTING_MESSAGE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for InterfaceAcceptingMessageDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1219,7 +1219,7 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_ACCEPTING_MESSAGE_DESCRIPTOR: () = {
             "InterfaceAcceptingMessageDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor"
+            "/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor"
         }
         fn new_instance(
             &self,
@@ -1239,14 +1239,14 @@ const IMPL_MESSAGE_SERDE_FOR_INTERFACE_ACCEPTING_MESSAGE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceAcceptingMessageDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.InterfaceAcceptingMessageDescriptor" , decoder : | buf : & [u8] | { let msg : InterfaceAcceptingMessageDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONFIGURATION_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for ConfigurationDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1256,7 +1256,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIGURATION_DESCRIPTOR: () = {
             "ConfigurationDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor"
+            "/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor"
         }
         fn new_instance(
             &self,
@@ -1276,13 +1276,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIGURATION_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor" , decoder : | buf : & [u8] | { let msg : ConfigurationDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.ConfigurationDescriptor" , decoder : | buf : & [u8] | { let msg : ConfigurationDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.MsgDescriptor")]
+    #[typetag::serde(name = "/cosmos.base.reflection.v2alpha1.MsgDescriptor")]
     impl ::prost_wkt::MessageSerde for MsgDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.base.reflection.v2alpha1"
@@ -1291,7 +1291,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_DESCRIPTOR: () = {
             "MsgDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.MsgDescriptor"
+            "/cosmos.base.reflection.v2alpha1.MsgDescriptor"
         }
         fn new_instance(
             &self,
@@ -1311,14 +1311,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.MsgDescriptor" , decoder : | buf : & [u8] | { let msg : MsgDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.MsgDescriptor" , decoder : | buf : & [u8] | { let msg : MsgDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetAuthnDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1328,7 +1328,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_REQUEST: () = {
             "GetAuthnDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1348,14 +1348,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetAuthnDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetAuthnDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetAuthnDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1365,7 +1365,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_RESPONSE: () = {
             "GetAuthnDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1385,14 +1385,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_AUTHN_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetAuthnDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetAuthnDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetChainDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1402,7 +1402,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_REQUEST: () = {
             "GetChainDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1422,14 +1422,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetChainDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetChainDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetChainDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1439,7 +1439,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_RESPONSE: () = {
             "GetChainDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1459,14 +1459,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CHAIN_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetChainDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetChainDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetCodecDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1476,7 +1476,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_REQUEST: () = {
             "GetCodecDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1496,14 +1496,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetCodecDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetCodecDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetCodecDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1513,7 +1513,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_RESPONSE: () = {
             "GetCodecDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1533,14 +1533,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CODEC_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetCodecDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetCodecDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetConfigurationDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1550,7 +1550,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_REQUEST: () = {
             "GetConfigurationDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1570,14 +1570,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetConfigurationDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetConfigurationDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetConfigurationDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1587,7 +1587,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_RESPONSE: () = {
             "GetConfigurationDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1607,14 +1607,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_CONFIGURATION_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetConfigurationDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetConfigurationDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetQueryServicesDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1624,7 +1624,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_REQUEST: () = {
             "GetQueryServicesDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1644,14 +1644,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetQueryServicesDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetQueryServicesDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetQueryServicesDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1661,7 +1661,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_RESPONSE: () = {
             "GetQueryServicesDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1681,14 +1681,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_QUERY_SERVICES_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetQueryServicesDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetQueryServicesDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest"
+        name = "/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest"
     )]
     impl ::prost_wkt::MessageSerde for GetTxDescriptorRequest {
         fn package_name(&self) -> &'static str {
@@ -1698,7 +1698,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_REQUEST: () = {
             "GetTxDescriptorRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest"
+            "/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest"
         }
         fn new_instance(
             &self,
@@ -1718,14 +1718,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetTxDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest" , decoder : | buf : & [u8] | { let msg : GetTxDescriptorRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse"
+        name = "/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse"
     )]
     impl ::prost_wkt::MessageSerde for GetTxDescriptorResponse {
         fn package_name(&self) -> &'static str {
@@ -1735,7 +1735,7 @@ const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_RESPONSE: () = {
             "GetTxDescriptorResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse"
+            "/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse"
         }
         fn new_instance(
             &self,
@@ -1755,14 +1755,14 @@ const IMPL_MESSAGE_SERDE_FOR_GET_TX_DESCRIPTOR_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetTxDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse" , decoder : | buf : & [u8] | { let msg : GetTxDescriptorResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICES_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for QueryServicesDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1772,7 +1772,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICES_DESCRIPTOR: () = {
             "QueryServicesDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor"
+            "/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor"
         }
         fn new_instance(
             &self,
@@ -1792,14 +1792,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICES_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor" , decoder : | buf : & [u8] | { let msg : QueryServicesDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.QueryServicesDescriptor" , decoder : | buf : & [u8] | { let msg : QueryServicesDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for QueryServiceDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1809,7 +1809,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICE_DESCRIPTOR: () = {
             "QueryServiceDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor"
+            "/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor"
         }
         fn new_instance(
             &self,
@@ -1829,14 +1829,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SERVICE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor" , decoder : | buf : & [u8] | { let msg : QueryServiceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.QueryServiceDescriptor" , decoder : | buf : & [u8] | { let msg : QueryServiceDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_METHOD_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor"
+        name = "/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor"
     )]
     impl ::prost_wkt::MessageSerde for QueryMethodDescriptor {
         fn package_name(&self) -> &'static str {
@@ -1846,7 +1846,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_METHOD_DESCRIPTOR: () = {
             "QueryMethodDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor"
+            "/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor"
         }
         fn new_instance(
             &self,
@@ -1866,5 +1866,5 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_METHOD_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor" , decoder : | buf : & [u8] | { let msg : QueryMethodDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.reflection.v2alpha1.QueryMethodDescriptor" , decoder : | buf : & [u8] | { let msg : QueryMethodDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

@@ -1139,7 +1139,7 @@ pub mod msg_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PLAN: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.Plan")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.Plan")]
     impl ::prost_wkt::MessageSerde for Plan {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1148,7 +1148,7 @@ const IMPL_MESSAGE_SERDE_FOR_PLAN: () = {
             "Plan"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.Plan"
+            "/cosmos.upgrade.v1beta1.Plan"
         }
         fn new_instance(
             &self,
@@ -1168,13 +1168,13 @@ const IMPL_MESSAGE_SERDE_FOR_PLAN: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.Plan" , decoder : | buf : & [u8] | { let msg : Plan = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.Plan" , decoder : | buf : & [u8] | { let msg : Plan = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SOFTWARE_UPGRADE_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal")]
     impl ::prost_wkt::MessageSerde for SoftwareUpgradeProposal {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1183,7 +1183,7 @@ const IMPL_MESSAGE_SERDE_FOR_SOFTWARE_UPGRADE_PROPOSAL: () = {
             "SoftwareUpgradeProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal"
+            "/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal"
         }
         fn new_instance(
             &self,
@@ -1203,14 +1203,14 @@ const IMPL_MESSAGE_SERDE_FOR_SOFTWARE_UPGRADE_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal" , decoder : | buf : & [u8] | { let msg : SoftwareUpgradeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal" , decoder : | buf : & [u8] | { let msg : SoftwareUpgradeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CANCEL_SOFTWARE_UPGRADE_PROPOSAL: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal"
+        name = "/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal"
     )]
     impl ::prost_wkt::MessageSerde for CancelSoftwareUpgradeProposal {
         fn package_name(&self) -> &'static str {
@@ -1220,7 +1220,7 @@ const IMPL_MESSAGE_SERDE_FOR_CANCEL_SOFTWARE_UPGRADE_PROPOSAL: () = {
             "CancelSoftwareUpgradeProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal"
+            "/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal"
         }
         fn new_instance(
             &self,
@@ -1240,13 +1240,13 @@ const IMPL_MESSAGE_SERDE_FOR_CANCEL_SOFTWARE_UPGRADE_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal" , decoder : | buf : & [u8] | { let msg : CancelSoftwareUpgradeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal" , decoder : | buf : & [u8] | { let msg : CancelSoftwareUpgradeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MODULE_VERSION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.ModuleVersion")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.ModuleVersion")]
     impl ::prost_wkt::MessageSerde for ModuleVersion {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1255,7 +1255,7 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE_VERSION: () = {
             "ModuleVersion"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.ModuleVersion"
+            "/cosmos.upgrade.v1beta1.ModuleVersion"
         }
         fn new_instance(
             &self,
@@ -1275,13 +1275,13 @@ const IMPL_MESSAGE_SERDE_FOR_MODULE_VERSION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.ModuleVersion" , decoder : | buf : & [u8] | { let msg : ModuleVersion = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.ModuleVersion" , decoder : | buf : & [u8] | { let msg : ModuleVersion = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest")]
     impl ::prost_wkt::MessageSerde for QueryCurrentPlanRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1290,7 +1290,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_REQUEST: () = {
             "QueryCurrentPlanRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest"
+            "/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest"
         }
         fn new_instance(
             &self,
@@ -1310,13 +1310,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest" , decoder : | buf : & [u8] | { let msg : QueryCurrentPlanRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryCurrentPlanRequest" , decoder : | buf : & [u8] | { let msg : QueryCurrentPlanRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse")]
     impl ::prost_wkt::MessageSerde for QueryCurrentPlanResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1325,7 +1325,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_RESPONSE: () = {
             "QueryCurrentPlanResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse"
+            "/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse"
         }
         fn new_instance(
             &self,
@@ -1345,13 +1345,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CURRENT_PLAN_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse" , decoder : | buf : & [u8] | { let msg : QueryCurrentPlanResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryCurrentPlanResponse" , decoder : | buf : & [u8] | { let msg : QueryCurrentPlanResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest")]
     impl ::prost_wkt::MessageSerde for QueryAppliedPlanRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1360,7 +1360,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_REQUEST: () = {
             "QueryAppliedPlanRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest"
+            "/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest"
         }
         fn new_instance(
             &self,
@@ -1380,13 +1380,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest" , decoder : | buf : & [u8] | { let msg : QueryAppliedPlanRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryAppliedPlanRequest" , decoder : | buf : & [u8] | { let msg : QueryAppliedPlanRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse")]
     impl ::prost_wkt::MessageSerde for QueryAppliedPlanResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1395,7 +1395,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_RESPONSE: () = {
             "QueryAppliedPlanResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse"
+            "/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse"
         }
         fn new_instance(
             &self,
@@ -1415,14 +1415,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_APPLIED_PLAN_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse" , decoder : | buf : & [u8] | { let msg : QueryAppliedPlanResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryAppliedPlanResponse" , decoder : | buf : & [u8] | { let msg : QueryAppliedPlanResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest"
+        name = "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryUpgradedConsensusStateRequest {
         fn package_name(&self) -> &'static str {
@@ -1432,7 +1432,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_REQUEST: () = {
             "QueryUpgradedConsensusStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest"
+            "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest"
         }
         fn new_instance(
             &self,
@@ -1452,14 +1452,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse"
+        name = "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryUpgradedConsensusStateResponse {
         fn package_name(&self) -> &'static str {
@@ -1469,7 +1469,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_RESPONSE: () = {
             "QueryUpgradedConsensusStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse"
+            "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse"
         }
         fn new_instance(
             &self,
@@ -1489,14 +1489,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UPGRADED_CONSENSUS_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryUpgradedConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest"
+        name = "/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryModuleVersionsRequest {
         fn package_name(&self) -> &'static str {
@@ -1506,7 +1506,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_REQUEST: () = {
             "QueryModuleVersionsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest"
+            "/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest"
         }
         fn new_instance(
             &self,
@@ -1526,14 +1526,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest" , decoder : | buf : & [u8] | { let msg : QueryModuleVersionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryModuleVersionsRequest" , decoder : | buf : & [u8] | { let msg : QueryModuleVersionsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse"
+        name = "/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryModuleVersionsResponse {
         fn package_name(&self) -> &'static str {
@@ -1543,7 +1543,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_RESPONSE: () = {
             "QueryModuleVersionsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse"
+            "/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse"
         }
         fn new_instance(
             &self,
@@ -1563,13 +1563,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_MODULE_VERSIONS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse" , decoder : | buf : & [u8] | { let msg : QueryModuleVersionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryModuleVersionsResponse" , decoder : | buf : & [u8] | { let msg : QueryModuleVersionsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityRequest")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryAuthorityRequest")]
     impl ::prost_wkt::MessageSerde for QueryAuthorityRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1578,7 +1578,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_REQUEST: () = {
             "QueryAuthorityRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityRequest"
+            "/cosmos.upgrade.v1beta1.QueryAuthorityRequest"
         }
         fn new_instance(
             &self,
@@ -1598,13 +1598,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityRequest" , decoder : | buf : & [u8] | { let msg : QueryAuthorityRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryAuthorityRequest" , decoder : | buf : & [u8] | { let msg : QueryAuthorityRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityResponse")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.QueryAuthorityResponse")]
     impl ::prost_wkt::MessageSerde for QueryAuthorityResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1613,7 +1613,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_RESPONSE: () = {
             "QueryAuthorityResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityResponse"
+            "/cosmos.upgrade.v1beta1.QueryAuthorityResponse"
         }
         fn new_instance(
             &self,
@@ -1633,13 +1633,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_AUTHORITY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.QueryAuthorityResponse" , decoder : | buf : & [u8] | { let msg : QueryAuthorityResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.QueryAuthorityResponse" , decoder : | buf : & [u8] | { let msg : QueryAuthorityResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade")]
     impl ::prost_wkt::MessageSerde for MsgSoftwareUpgrade {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1648,7 +1648,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE: () = {
             "MsgSoftwareUpgrade"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade"
+            "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade"
         }
         fn new_instance(
             &self,
@@ -1668,14 +1668,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade" , decoder : | buf : & [u8] | { let msg : MsgSoftwareUpgrade = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade" , decoder : | buf : & [u8] | { let msg : MsgSoftwareUpgrade = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse"
+        name = "/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgSoftwareUpgradeResponse {
         fn package_name(&self) -> &'static str {
@@ -1685,7 +1685,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE_RESPONSE: () = {
             "MsgSoftwareUpgradeResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse"
+            "/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse"
         }
         fn new_instance(
             &self,
@@ -1705,13 +1705,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SOFTWARE_UPGRADE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse" , decoder : | buf : & [u8] | { let msg : MsgSoftwareUpgradeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.MsgSoftwareUpgradeResponse" , decoder : | buf : & [u8] | { let msg : MsgSoftwareUpgradeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgrade")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.MsgCancelUpgrade")]
     impl ::prost_wkt::MessageSerde for MsgCancelUpgrade {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1720,7 +1720,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE: () = {
             "MsgCancelUpgrade"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgrade"
+            "/cosmos.upgrade.v1beta1.MsgCancelUpgrade"
         }
         fn new_instance(
             &self,
@@ -1740,13 +1740,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgrade" , decoder : | buf : & [u8] | { let msg : MsgCancelUpgrade = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.MsgCancelUpgrade" , decoder : | buf : & [u8] | { let msg : MsgCancelUpgrade = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse")]
+    #[typetag::serde(name = "/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse")]
     impl ::prost_wkt::MessageSerde for MsgCancelUpgradeResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.upgrade.v1beta1"
@@ -1755,7 +1755,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE_RESPONSE: () = {
             "MsgCancelUpgradeResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse"
+            "/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse"
         }
         fn new_instance(
             &self,
@@ -1775,5 +1775,5 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CANCEL_UPGRADE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse" , decoder : | buf : & [u8] | { let msg : MsgCancelUpgradeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.upgrade.v1beta1.MsgCancelUpgradeResponse" , decoder : | buf : & [u8] | { let msg : MsgCancelUpgradeResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

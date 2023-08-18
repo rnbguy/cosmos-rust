@@ -294,7 +294,7 @@ pub mod service_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONFIG_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.node.v1beta1.ConfigRequest")]
+    #[typetag::serde(name = "/cosmos.base.node.v1beta1.ConfigRequest")]
     impl ::prost_wkt::MessageSerde for ConfigRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.base.node.v1beta1"
@@ -303,7 +303,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIG_REQUEST: () = {
             "ConfigRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.node.v1beta1.ConfigRequest"
+            "/cosmos.base.node.v1beta1.ConfigRequest"
         }
         fn new_instance(
             &self,
@@ -323,13 +323,13 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIG_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.node.v1beta1.ConfigRequest" , decoder : | buf : & [u8] | { let msg : ConfigRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.node.v1beta1.ConfigRequest" , decoder : | buf : & [u8] | { let msg : ConfigRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CONFIG_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.base.node.v1beta1.ConfigResponse")]
+    #[typetag::serde(name = "/cosmos.base.node.v1beta1.ConfigResponse")]
     impl ::prost_wkt::MessageSerde for ConfigResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.base.node.v1beta1"
@@ -338,7 +338,7 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIG_RESPONSE: () = {
             "ConfigResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.base.node.v1beta1.ConfigResponse"
+            "/cosmos.base.node.v1beta1.ConfigResponse"
         }
         fn new_instance(
             &self,
@@ -358,5 +358,5 @@ const IMPL_MESSAGE_SERDE_FOR_CONFIG_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.base.node.v1beta1.ConfigResponse" , decoder : | buf : & [u8] | { let msg : ConfigResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.base.node.v1beta1.ConfigResponse" , decoder : | buf : & [u8] | { let msg : ConfigResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

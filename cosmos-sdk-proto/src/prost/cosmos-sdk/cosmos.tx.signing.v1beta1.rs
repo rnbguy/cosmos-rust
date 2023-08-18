@@ -166,7 +166,7 @@ impl SignMode {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTORS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors")]
+    #[typetag::serde(name = "/cosmos.tx.signing.v1beta1.SignatureDescriptors")]
     impl ::prost_wkt::MessageSerde for SignatureDescriptors {
         fn package_name(&self) -> &'static str {
             "cosmos.tx.signing.v1beta1"
@@ -175,7 +175,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTORS: () = {
             "SignatureDescriptors"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors"
+            "/cosmos.tx.signing.v1beta1.SignatureDescriptors"
         }
         fn new_instance(
             &self,
@@ -195,13 +195,13 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTORS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptors" , decoder : | buf : & [u8] | { let msg : SignatureDescriptors = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.tx.signing.v1beta1.SignatureDescriptors" , decoder : | buf : & [u8] | { let msg : SignatureDescriptors = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTOR: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor")]
+    #[typetag::serde(name = "/cosmos.tx.signing.v1beta1.SignatureDescriptor")]
     impl ::prost_wkt::MessageSerde for SignatureDescriptor {
         fn package_name(&self) -> &'static str {
             "cosmos.tx.signing.v1beta1"
@@ -210,7 +210,7 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTOR: () = {
             "SignatureDescriptor"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor"
+            "/cosmos.tx.signing.v1beta1.SignatureDescriptor"
         }
         fn new_instance(
             &self,
@@ -230,5 +230,5 @@ const IMPL_MESSAGE_SERDE_FOR_SIGNATURE_DESCRIPTOR: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.tx.signing.v1beta1.SignatureDescriptor" , decoder : | buf : & [u8] | { let msg : SignatureDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.tx.signing.v1beta1.SignatureDescriptor" , decoder : | buf : & [u8] | { let msg : SignatureDescriptor = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

@@ -1553,7 +1553,7 @@ pub struct Balance {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Params")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1562,7 +1562,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Params"
+            "/cosmos.bank.v1beta1.Params"
         }
         fn new_instance(
             &self,
@@ -1582,13 +1582,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SEND_ENABLED: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.SendEnabled")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.SendEnabled")]
     impl ::prost_wkt::MessageSerde for SendEnabled {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1597,7 +1597,7 @@ const IMPL_MESSAGE_SERDE_FOR_SEND_ENABLED: () = {
             "SendEnabled"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.SendEnabled"
+            "/cosmos.bank.v1beta1.SendEnabled"
         }
         fn new_instance(
             &self,
@@ -1617,13 +1617,13 @@ const IMPL_MESSAGE_SERDE_FOR_SEND_ENABLED: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.SendEnabled" , decoder : | buf : & [u8] | { let msg : SendEnabled = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.SendEnabled" , decoder : | buf : & [u8] | { let msg : SendEnabled = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_INPUT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Input")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Input")]
     impl ::prost_wkt::MessageSerde for Input {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1632,7 +1632,7 @@ const IMPL_MESSAGE_SERDE_FOR_INPUT: () = {
             "Input"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Input"
+            "/cosmos.bank.v1beta1.Input"
         }
         fn new_instance(
             &self,
@@ -1652,13 +1652,13 @@ const IMPL_MESSAGE_SERDE_FOR_INPUT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Input" , decoder : | buf : & [u8] | { let msg : Input = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Input" , decoder : | buf : & [u8] | { let msg : Input = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_OUTPUT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Output")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Output")]
     impl ::prost_wkt::MessageSerde for Output {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1667,7 +1667,7 @@ const IMPL_MESSAGE_SERDE_FOR_OUTPUT: () = {
             "Output"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Output"
+            "/cosmos.bank.v1beta1.Output"
         }
         fn new_instance(
             &self,
@@ -1687,13 +1687,13 @@ const IMPL_MESSAGE_SERDE_FOR_OUTPUT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Output" , decoder : | buf : & [u8] | { let msg : Output = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Output" , decoder : | buf : & [u8] | { let msg : Output = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SUPPLY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Supply")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Supply")]
     impl ::prost_wkt::MessageSerde for Supply {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1702,7 +1702,7 @@ const IMPL_MESSAGE_SERDE_FOR_SUPPLY: () = {
             "Supply"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Supply"
+            "/cosmos.bank.v1beta1.Supply"
         }
         fn new_instance(
             &self,
@@ -1722,13 +1722,13 @@ const IMPL_MESSAGE_SERDE_FOR_SUPPLY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Supply" , decoder : | buf : & [u8] | { let msg : Supply = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Supply" , decoder : | buf : & [u8] | { let msg : Supply = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DENOM_UNIT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.DenomUnit")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.DenomUnit")]
     impl ::prost_wkt::MessageSerde for DenomUnit {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1737,7 +1737,7 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_UNIT: () = {
             "DenomUnit"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.DenomUnit"
+            "/cosmos.bank.v1beta1.DenomUnit"
         }
         fn new_instance(
             &self,
@@ -1757,13 +1757,13 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_UNIT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.DenomUnit" , decoder : | buf : & [u8] | { let msg : DenomUnit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.DenomUnit" , decoder : | buf : & [u8] | { let msg : DenomUnit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Metadata")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Metadata")]
     impl ::prost_wkt::MessageSerde for Metadata {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1772,7 +1772,7 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             "Metadata"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Metadata"
+            "/cosmos.bank.v1beta1.Metadata"
         }
         fn new_instance(
             &self,
@@ -1792,13 +1792,13 @@ const IMPL_MESSAGE_SERDE_FOR_METADATA: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Metadata" , decoder : | buf : & [u8] | { let msg : Metadata = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SEND_AUTHORIZATION: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.SendAuthorization")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.SendAuthorization")]
     impl ::prost_wkt::MessageSerde for SendAuthorization {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1807,7 +1807,7 @@ const IMPL_MESSAGE_SERDE_FOR_SEND_AUTHORIZATION: () = {
             "SendAuthorization"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.SendAuthorization"
+            "/cosmos.bank.v1beta1.SendAuthorization"
         }
         fn new_instance(
             &self,
@@ -1827,13 +1827,13 @@ const IMPL_MESSAGE_SERDE_FOR_SEND_AUTHORIZATION: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.SendAuthorization" , decoder : | buf : & [u8] | { let msg : SendAuthorization = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.SendAuthorization" , decoder : | buf : & [u8] | { let msg : SendAuthorization = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryBalanceRequest")]
     impl ::prost_wkt::MessageSerde for QueryBalanceRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1842,7 +1842,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_REQUEST: () = {
             "QueryBalanceRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceRequest"
+            "/cosmos.bank.v1beta1.QueryBalanceRequest"
         }
         fn new_instance(
             &self,
@@ -1862,13 +1862,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceRequest" , decoder : | buf : & [u8] | { let msg : QueryBalanceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryBalanceRequest" , decoder : | buf : & [u8] | { let msg : QueryBalanceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryBalanceResponse")]
     impl ::prost_wkt::MessageSerde for QueryBalanceResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1877,7 +1877,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_RESPONSE: () = {
             "QueryBalanceResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceResponse"
+            "/cosmos.bank.v1beta1.QueryBalanceResponse"
         }
         fn new_instance(
             &self,
@@ -1897,13 +1897,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_BALANCE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryBalanceResponse" , decoder : | buf : & [u8] | { let msg : QueryBalanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryBalanceResponse" , decoder : | buf : & [u8] | { let msg : QueryBalanceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryAllBalancesRequest")]
     impl ::prost_wkt::MessageSerde for QueryAllBalancesRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1912,7 +1912,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_REQUEST: () = {
             "QueryAllBalancesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesRequest"
+            "/cosmos.bank.v1beta1.QueryAllBalancesRequest"
         }
         fn new_instance(
             &self,
@@ -1932,13 +1932,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesRequest" , decoder : | buf : & [u8] | { let msg : QueryAllBalancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryAllBalancesRequest" , decoder : | buf : & [u8] | { let msg : QueryAllBalancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryAllBalancesResponse")]
     impl ::prost_wkt::MessageSerde for QueryAllBalancesResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -1947,7 +1947,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_RESPONSE: () = {
             "QueryAllBalancesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesResponse"
+            "/cosmos.bank.v1beta1.QueryAllBalancesResponse"
         }
         fn new_instance(
             &self,
@@ -1967,14 +1967,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_ALL_BALANCES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryAllBalancesResponse" , decoder : | buf : & [u8] | { let msg : QueryAllBalancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryAllBalancesResponse" , decoder : | buf : & [u8] | { let msg : QueryAllBalancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesRequest"
+        name = "/cosmos.bank.v1beta1.QuerySpendableBalancesRequest"
     )]
     impl ::prost_wkt::MessageSerde for QuerySpendableBalancesRequest {
         fn package_name(&self) -> &'static str {
@@ -1984,7 +1984,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_REQUEST: () = {
             "QuerySpendableBalancesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesRequest"
+            "/cosmos.bank.v1beta1.QuerySpendableBalancesRequest"
         }
         fn new_instance(
             &self,
@@ -2004,14 +2004,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesRequest" , decoder : | buf : & [u8] | { let msg : QuerySpendableBalancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QuerySpendableBalancesRequest" , decoder : | buf : & [u8] | { let msg : QuerySpendableBalancesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesResponse"
+        name = "/cosmos.bank.v1beta1.QuerySpendableBalancesResponse"
     )]
     impl ::prost_wkt::MessageSerde for QuerySpendableBalancesResponse {
         fn package_name(&self) -> &'static str {
@@ -2021,7 +2021,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_RESPONSE: () = {
             "QuerySpendableBalancesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesResponse"
+            "/cosmos.bank.v1beta1.QuerySpendableBalancesResponse"
         }
         fn new_instance(
             &self,
@@ -2041,13 +2041,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SPENDABLE_BALANCES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QuerySpendableBalancesResponse" , decoder : | buf : & [u8] | { let msg : QuerySpendableBalancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QuerySpendableBalancesResponse" , decoder : | buf : & [u8] | { let msg : QuerySpendableBalancesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryTotalSupplyRequest")]
     impl ::prost_wkt::MessageSerde for QueryTotalSupplyRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2056,7 +2056,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_REQUEST: () = {
             "QueryTotalSupplyRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyRequest"
+            "/cosmos.bank.v1beta1.QueryTotalSupplyRequest"
         }
         fn new_instance(
             &self,
@@ -2076,13 +2076,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyRequest" , decoder : | buf : & [u8] | { let msg : QueryTotalSupplyRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryTotalSupplyRequest" , decoder : | buf : & [u8] | { let msg : QueryTotalSupplyRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryTotalSupplyResponse")]
     impl ::prost_wkt::MessageSerde for QueryTotalSupplyResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2091,7 +2091,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_RESPONSE: () = {
             "QueryTotalSupplyResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyResponse"
+            "/cosmos.bank.v1beta1.QueryTotalSupplyResponse"
         }
         fn new_instance(
             &self,
@@ -2111,13 +2111,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_TOTAL_SUPPLY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryTotalSupplyResponse" , decoder : | buf : & [u8] | { let msg : QueryTotalSupplyResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryTotalSupplyResponse" , decoder : | buf : & [u8] | { let msg : QueryTotalSupplyResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QuerySupplyOfRequest")]
     impl ::prost_wkt::MessageSerde for QuerySupplyOfRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2126,7 +2126,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_REQUEST: () = {
             "QuerySupplyOfRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfRequest"
+            "/cosmos.bank.v1beta1.QuerySupplyOfRequest"
         }
         fn new_instance(
             &self,
@@ -2146,13 +2146,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfRequest" , decoder : | buf : & [u8] | { let msg : QuerySupplyOfRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QuerySupplyOfRequest" , decoder : | buf : & [u8] | { let msg : QuerySupplyOfRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QuerySupplyOfResponse")]
     impl ::prost_wkt::MessageSerde for QuerySupplyOfResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2161,7 +2161,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_RESPONSE: () = {
             "QuerySupplyOfResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfResponse"
+            "/cosmos.bank.v1beta1.QuerySupplyOfResponse"
         }
         fn new_instance(
             &self,
@@ -2181,13 +2181,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUPPLY_OF_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QuerySupplyOfResponse" , decoder : | buf : & [u8] | { let msg : QuerySupplyOfResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QuerySupplyOfResponse" , decoder : | buf : & [u8] | { let msg : QuerySupplyOfResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryParamsRequest")]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2196,7 +2196,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsRequest"
+            "/cosmos.bank.v1beta1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -2216,13 +2216,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryParamsResponse")]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2231,7 +2231,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsResponse"
+            "/cosmos.bank.v1beta1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -2251,13 +2251,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomsMetadataRequest")]
     impl ::prost_wkt::MessageSerde for QueryDenomsMetadataRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2266,7 +2266,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_REQUEST: () = {
             "QueryDenomsMetadataRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataRequest"
+            "/cosmos.bank.v1beta1.QueryDenomsMetadataRequest"
         }
         fn new_instance(
             &self,
@@ -2286,13 +2286,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomsMetadataRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomsMetadataRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomsMetadataRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomsMetadataResponse")]
     impl ::prost_wkt::MessageSerde for QueryDenomsMetadataResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2301,7 +2301,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_RESPONSE: () = {
             "QueryDenomsMetadataResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataResponse"
+            "/cosmos.bank.v1beta1.QueryDenomsMetadataResponse"
         }
         fn new_instance(
             &self,
@@ -2321,13 +2321,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOMS_METADATA_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomsMetadataResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomsMetadataResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomsMetadataResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomsMetadataResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomMetadataRequest")]
     impl ::prost_wkt::MessageSerde for QueryDenomMetadataRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2336,7 +2336,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_REQUEST: () = {
             "QueryDenomMetadataRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataRequest"
+            "/cosmos.bank.v1beta1.QueryDenomMetadataRequest"
         }
         fn new_instance(
             &self,
@@ -2356,13 +2356,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomMetadataRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomMetadataRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomMetadataRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomMetadataResponse")]
     impl ::prost_wkt::MessageSerde for QueryDenomMetadataResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2371,7 +2371,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_RESPONSE: () = {
             "QueryDenomMetadataResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataResponse"
+            "/cosmos.bank.v1beta1.QueryDenomMetadataResponse"
         }
         fn new_instance(
             &self,
@@ -2391,13 +2391,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_METADATA_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomMetadataResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomMetadataResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomMetadataResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomMetadataResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersRequest")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomOwnersRequest")]
     impl ::prost_wkt::MessageSerde for QueryDenomOwnersRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2406,7 +2406,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_REQUEST: () = {
             "QueryDenomOwnersRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersRequest"
+            "/cosmos.bank.v1beta1.QueryDenomOwnersRequest"
         }
         fn new_instance(
             &self,
@@ -2426,13 +2426,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomOwnersRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomOwnersRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomOwnersRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DENOM_OWNER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.DenomOwner")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.DenomOwner")]
     impl ::prost_wkt::MessageSerde for DenomOwner {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2441,7 +2441,7 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_OWNER: () = {
             "DenomOwner"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.DenomOwner"
+            "/cosmos.bank.v1beta1.DenomOwner"
         }
         fn new_instance(
             &self,
@@ -2461,13 +2461,13 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_OWNER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.DenomOwner" , decoder : | buf : & [u8] | { let msg : DenomOwner = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.DenomOwner" , decoder : | buf : & [u8] | { let msg : DenomOwner = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.QueryDenomOwnersResponse")]
     impl ::prost_wkt::MessageSerde for QueryDenomOwnersResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2476,7 +2476,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_RESPONSE: () = {
             "QueryDenomOwnersResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersResponse"
+            "/cosmos.bank.v1beta1.QueryDenomOwnersResponse"
         }
         fn new_instance(
             &self,
@@ -2496,13 +2496,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_OWNERS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.QueryDenomOwnersResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomOwnersResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.QueryDenomOwnersResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomOwnersResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_SEND: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.MsgSend")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.MsgSend")]
     impl ::prost_wkt::MessageSerde for MsgSend {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2511,7 +2511,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SEND: () = {
             "MsgSend"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.MsgSend"
+            "/cosmos.bank.v1beta1.MsgSend"
         }
         fn new_instance(
             &self,
@@ -2531,13 +2531,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SEND: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.MsgSend" , decoder : | buf : & [u8] | { let msg : MsgSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.MsgSend" , decoder : | buf : & [u8] | { let msg : MsgSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_SEND_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.MsgSendResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.MsgSendResponse")]
     impl ::prost_wkt::MessageSerde for MsgSendResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2546,7 +2546,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SEND_RESPONSE: () = {
             "MsgSendResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.MsgSendResponse"
+            "/cosmos.bank.v1beta1.MsgSendResponse"
         }
         fn new_instance(
             &self,
@@ -2566,13 +2566,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_SEND_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.MsgSendResponse" , decoder : | buf : & [u8] | { let msg : MsgSendResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.MsgSendResponse" , decoder : | buf : & [u8] | { let msg : MsgSendResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSend")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.MsgMultiSend")]
     impl ::prost_wkt::MessageSerde for MsgMultiSend {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2581,7 +2581,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND: () = {
             "MsgMultiSend"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSend"
+            "/cosmos.bank.v1beta1.MsgMultiSend"
         }
         fn new_instance(
             &self,
@@ -2601,13 +2601,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSend" , decoder : | buf : & [u8] | { let msg : MsgMultiSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.MsgMultiSend" , decoder : | buf : & [u8] | { let msg : MsgMultiSend = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSendResponse")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.MsgMultiSendResponse")]
     impl ::prost_wkt::MessageSerde for MsgMultiSendResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2616,7 +2616,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND_RESPONSE: () = {
             "MsgMultiSendResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSendResponse"
+            "/cosmos.bank.v1beta1.MsgMultiSendResponse"
         }
         fn new_instance(
             &self,
@@ -2636,13 +2636,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_MULTI_SEND_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.MsgMultiSendResponse" , decoder : | buf : & [u8] | { let msg : MsgMultiSendResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.MsgMultiSendResponse" , decoder : | buf : & [u8] | { let msg : MsgMultiSendResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.GenesisState")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2651,7 +2651,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.GenesisState"
+            "/cosmos.bank.v1beta1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -2671,13 +2671,13 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_BALANCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.bank.v1beta1.Balance")]
+    #[typetag::serde(name = "/cosmos.bank.v1beta1.Balance")]
     impl ::prost_wkt::MessageSerde for Balance {
         fn package_name(&self) -> &'static str {
             "cosmos.bank.v1beta1"
@@ -2686,7 +2686,7 @@ const IMPL_MESSAGE_SERDE_FOR_BALANCE: () = {
             "Balance"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.bank.v1beta1.Balance"
+            "/cosmos.bank.v1beta1.Balance"
         }
         fn new_instance(
             &self,
@@ -2706,5 +2706,5 @@ const IMPL_MESSAGE_SERDE_FOR_BALANCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.bank.v1beta1.Balance" , decoder : | buf : & [u8] | { let msg : Balance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.bank.v1beta1.Balance" , decoder : | buf : & [u8] | { let msg : Balance = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

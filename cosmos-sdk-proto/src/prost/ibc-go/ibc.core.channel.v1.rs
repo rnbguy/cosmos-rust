@@ -1688,7 +1688,7 @@ pub struct PacketSequence {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_CHANNEL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.Channel")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.Channel")]
     impl ::prost_wkt::MessageSerde for Channel {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1697,7 +1697,7 @@ const IMPL_MESSAGE_SERDE_FOR_CHANNEL: () = {
             "Channel"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.Channel"
+            "/ibc.core.channel.v1.Channel"
         }
         fn new_instance(
             &self,
@@ -1717,13 +1717,13 @@ const IMPL_MESSAGE_SERDE_FOR_CHANNEL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.Channel" , decoder : | buf : & [u8] | { let msg : Channel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.Channel" , decoder : | buf : & [u8] | { let msg : Channel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CHANNEL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.IdentifiedChannel")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.IdentifiedChannel")]
     impl ::prost_wkt::MessageSerde for IdentifiedChannel {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1732,7 +1732,7 @@ const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CHANNEL: () = {
             "IdentifiedChannel"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.IdentifiedChannel"
+            "/ibc.core.channel.v1.IdentifiedChannel"
         }
         fn new_instance(
             &self,
@@ -1752,13 +1752,13 @@ const IMPL_MESSAGE_SERDE_FOR_IDENTIFIED_CHANNEL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.IdentifiedChannel" , decoder : | buf : & [u8] | { let msg : IdentifiedChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.IdentifiedChannel" , decoder : | buf : & [u8] | { let msg : IdentifiedChannel = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.Counterparty")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.Counterparty")]
     impl ::prost_wkt::MessageSerde for Counterparty {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1767,7 +1767,7 @@ const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
             "Counterparty"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.Counterparty"
+            "/ibc.core.channel.v1.Counterparty"
         }
         fn new_instance(
             &self,
@@ -1787,13 +1787,13 @@ const IMPL_MESSAGE_SERDE_FOR_COUNTERPARTY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.Counterparty" , decoder : | buf : & [u8] | { let msg : Counterparty = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.Counterparty" , decoder : | buf : & [u8] | { let msg : Counterparty = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.Packet")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.Packet")]
     impl ::prost_wkt::MessageSerde for Packet {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1802,7 +1802,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET: () = {
             "Packet"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.Packet"
+            "/ibc.core.channel.v1.Packet"
         }
         fn new_instance(
             &self,
@@ -1822,13 +1822,13 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.Packet" , decoder : | buf : & [u8] | { let msg : Packet = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.Packet" , decoder : | buf : & [u8] | { let msg : Packet = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.PacketState")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.PacketState")]
     impl ::prost_wkt::MessageSerde for PacketState {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1837,7 +1837,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_STATE: () = {
             "PacketState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.PacketState"
+            "/ibc.core.channel.v1.PacketState"
         }
         fn new_instance(
             &self,
@@ -1857,13 +1857,13 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.PacketState" , decoder : | buf : & [u8] | { let msg : PacketState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.PacketState" , decoder : | buf : & [u8] | { let msg : PacketState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_ACKNOWLEDGEMENT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.Acknowledgement")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.Acknowledgement")]
     impl ::prost_wkt::MessageSerde for Acknowledgement {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1872,7 +1872,7 @@ const IMPL_MESSAGE_SERDE_FOR_ACKNOWLEDGEMENT: () = {
             "Acknowledgement"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.Acknowledgement"
+            "/ibc.core.channel.v1.Acknowledgement"
         }
         fn new_instance(
             &self,
@@ -1892,13 +1892,13 @@ const IMPL_MESSAGE_SERDE_FOR_ACKNOWLEDGEMENT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.Acknowledgement" , decoder : | buf : & [u8] | { let msg : Acknowledgement = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.Acknowledgement" , decoder : | buf : & [u8] | { let msg : Acknowledgement = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelRequest")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryChannelRequest")]
     impl ::prost_wkt::MessageSerde for QueryChannelRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1907,7 +1907,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_REQUEST: () = {
             "QueryChannelRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelRequest"
+            "/ibc.core.channel.v1.QueryChannelRequest"
         }
         fn new_instance(
             &self,
@@ -1927,13 +1927,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryChannelResponse")]
     impl ::prost_wkt::MessageSerde for QueryChannelResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1942,7 +1942,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_RESPONSE: () = {
             "QueryChannelResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelResponse"
+            "/ibc.core.channel.v1.QueryChannelResponse"
         }
         fn new_instance(
             &self,
@@ -1962,13 +1962,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelsRequest")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryChannelsRequest")]
     impl ::prost_wkt::MessageSerde for QueryChannelsRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -1977,7 +1977,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_REQUEST: () = {
             "QueryChannelsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelsRequest"
+            "/ibc.core.channel.v1.QueryChannelsRequest"
         }
         fn new_instance(
             &self,
@@ -1997,13 +1997,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelsRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelsRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelsResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryChannelsResponse")]
     impl ::prost_wkt::MessageSerde for QueryChannelsResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2012,7 +2012,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_RESPONSE: () = {
             "QueryChannelsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelsResponse"
+            "/ibc.core.channel.v1.QueryChannelsResponse"
         }
         fn new_instance(
             &self,
@@ -2032,14 +2032,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNELS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelsResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelsResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsRequest"
+        name = "/ibc.core.channel.v1.QueryConnectionChannelsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionChannelsRequest {
         fn package_name(&self) -> &'static str {
@@ -2049,7 +2049,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_REQUEST: () = {
             "QueryConnectionChannelsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsRequest"
+            "/ibc.core.channel.v1.QueryConnectionChannelsRequest"
         }
         fn new_instance(
             &self,
@@ -2069,14 +2069,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionChannelsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryConnectionChannelsRequest" , decoder : | buf : & [u8] | { let msg : QueryConnectionChannelsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsResponse"
+        name = "/ibc.core.channel.v1.QueryConnectionChannelsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryConnectionChannelsResponse {
         fn package_name(&self) -> &'static str {
@@ -2086,7 +2086,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_RESPONSE: () = {
             "QueryConnectionChannelsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsResponse"
+            "/ibc.core.channel.v1.QueryConnectionChannelsResponse"
         }
         fn new_instance(
             &self,
@@ -2106,14 +2106,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CONNECTION_CHANNELS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryConnectionChannelsResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionChannelsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryConnectionChannelsResponse" , decoder : | buf : & [u8] | { let msg : QueryConnectionChannelsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateRequest"
+        name = "/ibc.core.channel.v1.QueryChannelClientStateRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryChannelClientStateRequest {
         fn package_name(&self) -> &'static str {
@@ -2123,7 +2123,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_REQUEST: () = {
             "QueryChannelClientStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateRequest"
+            "/ibc.core.channel.v1.QueryChannelClientStateRequest"
         }
         fn new_instance(
             &self,
@@ -2143,14 +2143,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelClientStateRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelClientStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateResponse"
+        name = "/ibc.core.channel.v1.QueryChannelClientStateResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryChannelClientStateResponse {
         fn package_name(&self) -> &'static str {
@@ -2160,7 +2160,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_RESPONSE: () = {
             "QueryChannelClientStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateResponse"
+            "/ibc.core.channel.v1.QueryChannelClientStateResponse"
         }
         fn new_instance(
             &self,
@@ -2180,14 +2180,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CLIENT_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelClientStateResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelClientStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateRequest"
+        name = "/ibc.core.channel.v1.QueryChannelConsensusStateRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryChannelConsensusStateRequest {
         fn package_name(&self) -> &'static str {
@@ -2197,7 +2197,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_REQUEST: () = {
             "QueryChannelConsensusStateRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateRequest"
+            "/ibc.core.channel.v1.QueryChannelConsensusStateRequest"
         }
         fn new_instance(
             &self,
@@ -2217,14 +2217,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelConsensusStateRequest" , decoder : | buf : & [u8] | { let msg : QueryChannelConsensusStateRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateResponse"
+        name = "/ibc.core.channel.v1.QueryChannelConsensusStateResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryChannelConsensusStateResponse {
         fn package_name(&self) -> &'static str {
@@ -2234,7 +2234,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_RESPONSE: () = {
             "QueryChannelConsensusStateResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateResponse"
+            "/ibc.core.channel.v1.QueryChannelConsensusStateResponse"
         }
         fn new_instance(
             &self,
@@ -2254,13 +2254,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_CHANNEL_CONSENSUS_STATE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryChannelConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryChannelConsensusStateResponse" , decoder : | buf : & [u8] | { let msg : QueryChannelConsensusStateResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentRequest")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryPacketCommitmentRequest")]
     impl ::prost_wkt::MessageSerde for QueryPacketCommitmentRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2269,7 +2269,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_REQUEST: () = {
             "QueryPacketCommitmentRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentRequest"
+            "/ibc.core.channel.v1.QueryPacketCommitmentRequest"
         }
         fn new_instance(
             &self,
@@ -2289,14 +2289,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketCommitmentRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentResponse"
+        name = "/ibc.core.channel.v1.QueryPacketCommitmentResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketCommitmentResponse {
         fn package_name(&self) -> &'static str {
@@ -2306,7 +2306,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_RESPONSE: () = {
             "QueryPacketCommitmentResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentResponse"
+            "/ibc.core.channel.v1.QueryPacketCommitmentResponse"
         }
         fn new_instance(
             &self,
@@ -2326,14 +2326,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketCommitmentResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsRequest"
+        name = "/ibc.core.channel.v1.QueryPacketCommitmentsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketCommitmentsRequest {
         fn package_name(&self) -> &'static str {
@@ -2343,7 +2343,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_REQUEST: () = {
             "QueryPacketCommitmentsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsRequest"
+            "/ibc.core.channel.v1.QueryPacketCommitmentsRequest"
         }
         fn new_instance(
             &self,
@@ -2363,14 +2363,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketCommitmentsRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsResponse"
+        name = "/ibc.core.channel.v1.QueryPacketCommitmentsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketCommitmentsResponse {
         fn package_name(&self) -> &'static str {
@@ -2380,7 +2380,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_RESPONSE: () = {
             "QueryPacketCommitmentsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsResponse"
+            "/ibc.core.channel.v1.QueryPacketCommitmentsResponse"
         }
         fn new_instance(
             &self,
@@ -2400,13 +2400,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_COMMITMENTS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketCommitmentsResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketCommitmentsResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketCommitmentsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptRequest")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryPacketReceiptRequest")]
     impl ::prost_wkt::MessageSerde for QueryPacketReceiptRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2415,7 +2415,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_REQUEST: () = {
             "QueryPacketReceiptRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptRequest"
+            "/ibc.core.channel.v1.QueryPacketReceiptRequest"
         }
         fn new_instance(
             &self,
@@ -2435,13 +2435,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketReceiptRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketReceiptRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketReceiptRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryPacketReceiptResponse")]
     impl ::prost_wkt::MessageSerde for QueryPacketReceiptResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2450,7 +2450,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_RESPONSE: () = {
             "QueryPacketReceiptResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptResponse"
+            "/ibc.core.channel.v1.QueryPacketReceiptResponse"
         }
         fn new_instance(
             &self,
@@ -2470,14 +2470,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_RECEIPT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketReceiptResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketReceiptResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketReceiptResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketReceiptResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementRequest"
+        name = "/ibc.core.channel.v1.QueryPacketAcknowledgementRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketAcknowledgementRequest {
         fn package_name(&self) -> &'static str {
@@ -2487,7 +2487,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_REQUEST: () = {
             "QueryPacketAcknowledgementRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementRequest"
+            "/ibc.core.channel.v1.QueryPacketAcknowledgementRequest"
         }
         fn new_instance(
             &self,
@@ -2507,14 +2507,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketAcknowledgementRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementResponse"
+        name = "/ibc.core.channel.v1.QueryPacketAcknowledgementResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketAcknowledgementResponse {
         fn package_name(&self) -> &'static str {
@@ -2524,7 +2524,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_RESPONSE: () = {
             "QueryPacketAcknowledgementResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementResponse"
+            "/ibc.core.channel.v1.QueryPacketAcknowledgementResponse"
         }
         fn new_instance(
             &self,
@@ -2544,14 +2544,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketAcknowledgementResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest"
+        name = "/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketAcknowledgementsRequest {
         fn package_name(&self) -> &'static str {
@@ -2561,7 +2561,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_REQUEST: () = {
             "QueryPacketAcknowledgementsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest"
+            "/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest"
         }
         fn new_instance(
             &self,
@@ -2581,14 +2581,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketAcknowledgementsRequest" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse"
+        name = "/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryPacketAcknowledgementsResponse {
         fn package_name(&self) -> &'static str {
@@ -2598,7 +2598,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_RESPONSE: () = {
             "QueryPacketAcknowledgementsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse"
+            "/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse"
         }
         fn new_instance(
             &self,
@@ -2618,14 +2618,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PACKET_ACKNOWLEDGEMENTS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryPacketAcknowledgementsResponse" , decoder : | buf : & [u8] | { let msg : QueryPacketAcknowledgementsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsRequest"
+        name = "/ibc.core.channel.v1.QueryUnreceivedPacketsRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryUnreceivedPacketsRequest {
         fn package_name(&self) -> &'static str {
@@ -2635,7 +2635,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_REQUEST: () = {
             "QueryUnreceivedPacketsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsRequest"
+            "/ibc.core.channel.v1.QueryUnreceivedPacketsRequest"
         }
         fn new_instance(
             &self,
@@ -2655,14 +2655,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsRequest" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedPacketsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryUnreceivedPacketsRequest" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedPacketsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsResponse"
+        name = "/ibc.core.channel.v1.QueryUnreceivedPacketsResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryUnreceivedPacketsResponse {
         fn package_name(&self) -> &'static str {
@@ -2672,7 +2672,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_RESPONSE: () = {
             "QueryUnreceivedPacketsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsResponse"
+            "/ibc.core.channel.v1.QueryUnreceivedPacketsResponse"
         }
         fn new_instance(
             &self,
@@ -2692,13 +2692,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_PACKETS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedPacketsResponse" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedPacketsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryUnreceivedPacketsResponse" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedPacketsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksRequest")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryUnreceivedAcksRequest")]
     impl ::prost_wkt::MessageSerde for QueryUnreceivedAcksRequest {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2707,7 +2707,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_REQUEST: () = {
             "QueryUnreceivedAcksRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksRequest"
+            "/ibc.core.channel.v1.QueryUnreceivedAcksRequest"
         }
         fn new_instance(
             &self,
@@ -2727,13 +2727,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksRequest" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedAcksRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryUnreceivedAcksRequest" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedAcksRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.QueryUnreceivedAcksResponse")]
     impl ::prost_wkt::MessageSerde for QueryUnreceivedAcksResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2742,7 +2742,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_RESPONSE: () = {
             "QueryUnreceivedAcksResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksResponse"
+            "/ibc.core.channel.v1.QueryUnreceivedAcksResponse"
         }
         fn new_instance(
             &self,
@@ -2762,14 +2762,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_UNRECEIVED_ACKS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryUnreceivedAcksResponse" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedAcksResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryUnreceivedAcksResponse" , decoder : | buf : & [u8] | { let msg : QueryUnreceivedAcksResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveRequest"
+        name = "/ibc.core.channel.v1.QueryNextSequenceReceiveRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryNextSequenceReceiveRequest {
         fn package_name(&self) -> &'static str {
@@ -2779,7 +2779,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_REQUEST: () = {
             "QueryNextSequenceReceiveRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveRequest"
+            "/ibc.core.channel.v1.QueryNextSequenceReceiveRequest"
         }
         fn new_instance(
             &self,
@@ -2799,14 +2799,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveRequest" , decoder : | buf : & [u8] | { let msg : QueryNextSequenceReceiveRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryNextSequenceReceiveRequest" , decoder : | buf : & [u8] | { let msg : QueryNextSequenceReceiveRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveResponse"
+        name = "/ibc.core.channel.v1.QueryNextSequenceReceiveResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryNextSequenceReceiveResponse {
         fn package_name(&self) -> &'static str {
@@ -2816,7 +2816,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_RESPONSE: () = {
             "QueryNextSequenceReceiveResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveResponse"
+            "/ibc.core.channel.v1.QueryNextSequenceReceiveResponse"
         }
         fn new_instance(
             &self,
@@ -2836,13 +2836,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_NEXT_SEQUENCE_RECEIVE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.QueryNextSequenceReceiveResponse" , decoder : | buf : & [u8] | { let msg : QueryNextSequenceReceiveResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.QueryNextSequenceReceiveResponse" , decoder : | buf : & [u8] | { let msg : QueryNextSequenceReceiveResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInit")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenInit")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenInit {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2851,7 +2851,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT: () = {
             "MsgChannelOpenInit"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInit"
+            "/ibc.core.channel.v1.MsgChannelOpenInit"
         }
         fn new_instance(
             &self,
@@ -2871,13 +2871,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInit" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenInit" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInitResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenInitResponse")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenInitResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2886,7 +2886,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT_RESPONSE: () = {
             "MsgChannelOpenInitResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInitResponse"
+            "/ibc.core.channel.v1.MsgChannelOpenInitResponse"
         }
         fn new_instance(
             &self,
@@ -2906,13 +2906,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_INIT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenInitResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenInitResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTry")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenTry")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenTry {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2921,7 +2921,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY: () = {
             "MsgChannelOpenTry"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTry"
+            "/ibc.core.channel.v1.MsgChannelOpenTry"
         }
         fn new_instance(
             &self,
@@ -2941,13 +2941,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTry" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenTry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenTry" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenTry = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTryResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenTryResponse")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenTryResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2956,7 +2956,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY_RESPONSE: () = {
             "MsgChannelOpenTryResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTryResponse"
+            "/ibc.core.channel.v1.MsgChannelOpenTryResponse"
         }
         fn new_instance(
             &self,
@@ -2976,13 +2976,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_TRY_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenTryResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenTryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenTryResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenTryResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAck")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenAck")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenAck {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -2991,7 +2991,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK: () = {
             "MsgChannelOpenAck"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAck"
+            "/ibc.core.channel.v1.MsgChannelOpenAck"
         }
         fn new_instance(
             &self,
@@ -3011,13 +3011,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAck" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenAck = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenAck" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenAck = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAckResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenAckResponse")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenAckResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3026,7 +3026,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK_RESPONSE: () = {
             "MsgChannelOpenAckResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAckResponse"
+            "/ibc.core.channel.v1.MsgChannelOpenAckResponse"
         }
         fn new_instance(
             &self,
@@ -3046,13 +3046,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_ACK_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenAckResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenAckResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenAckResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenAckResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirm")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelOpenConfirm")]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenConfirm {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3061,7 +3061,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM: () = {
             "MsgChannelOpenConfirm"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirm"
+            "/ibc.core.channel.v1.MsgChannelOpenConfirm"
         }
         fn new_instance(
             &self,
@@ -3081,14 +3081,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirm" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenConfirm" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirmResponse"
+        name = "/ibc.core.channel.v1.MsgChannelOpenConfirmResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgChannelOpenConfirmResponse {
         fn package_name(&self) -> &'static str {
@@ -3098,7 +3098,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM_RESPONSE: () = {
             "MsgChannelOpenConfirmResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirmResponse"
+            "/ibc.core.channel.v1.MsgChannelOpenConfirmResponse"
         }
         fn new_instance(
             &self,
@@ -3118,13 +3118,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_OPEN_CONFIRM_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelOpenConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelOpenConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelOpenConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInit")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelCloseInit")]
     impl ::prost_wkt::MessageSerde for MsgChannelCloseInit {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3133,7 +3133,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT: () = {
             "MsgChannelCloseInit"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInit"
+            "/ibc.core.channel.v1.MsgChannelCloseInit"
         }
         fn new_instance(
             &self,
@@ -3153,13 +3153,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInit" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelCloseInit" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseInit = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInitResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelCloseInitResponse")]
     impl ::prost_wkt::MessageSerde for MsgChannelCloseInitResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3168,7 +3168,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT_RESPONSE: () = {
             "MsgChannelCloseInitResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInitResponse"
+            "/ibc.core.channel.v1.MsgChannelCloseInitResponse"
         }
         fn new_instance(
             &self,
@@ -3188,13 +3188,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_INIT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseInitResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelCloseInitResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseInitResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirm")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgChannelCloseConfirm")]
     impl ::prost_wkt::MessageSerde for MsgChannelCloseConfirm {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3203,7 +3203,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM: () = {
             "MsgChannelCloseConfirm"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirm"
+            "/ibc.core.channel.v1.MsgChannelCloseConfirm"
         }
         fn new_instance(
             &self,
@@ -3223,14 +3223,14 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirm" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelCloseConfirm" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseConfirm = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirmResponse"
+        name = "/ibc.core.channel.v1.MsgChannelCloseConfirmResponse"
     )]
     impl ::prost_wkt::MessageSerde for MsgChannelCloseConfirmResponse {
         fn package_name(&self) -> &'static str {
@@ -3240,7 +3240,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM_RESPONSE: () = {
             "MsgChannelCloseConfirmResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirmResponse"
+            "/ibc.core.channel.v1.MsgChannelCloseConfirmResponse"
         }
         fn new_instance(
             &self,
@@ -3260,13 +3260,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_CHANNEL_CLOSE_CONFIRM_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgChannelCloseConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgChannelCloseConfirmResponse" , decoder : | buf : & [u8] | { let msg : MsgChannelCloseConfirmResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacket")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgRecvPacket")]
     impl ::prost_wkt::MessageSerde for MsgRecvPacket {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3275,7 +3275,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET: () = {
             "MsgRecvPacket"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacket"
+            "/ibc.core.channel.v1.MsgRecvPacket"
         }
         fn new_instance(
             &self,
@@ -3295,13 +3295,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacket" , decoder : | buf : & [u8] | { let msg : MsgRecvPacket = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgRecvPacket" , decoder : | buf : & [u8] | { let msg : MsgRecvPacket = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacketResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgRecvPacketResponse")]
     impl ::prost_wkt::MessageSerde for MsgRecvPacketResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3310,7 +3310,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET_RESPONSE: () = {
             "MsgRecvPacketResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacketResponse"
+            "/ibc.core.channel.v1.MsgRecvPacketResponse"
         }
         fn new_instance(
             &self,
@@ -3330,13 +3330,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_RECV_PACKET_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgRecvPacketResponse" , decoder : | buf : & [u8] | { let msg : MsgRecvPacketResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgRecvPacketResponse" , decoder : | buf : & [u8] | { let msg : MsgRecvPacketResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgTimeout")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgTimeout")]
     impl ::prost_wkt::MessageSerde for MsgTimeout {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3345,7 +3345,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT: () = {
             "MsgTimeout"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgTimeout"
+            "/ibc.core.channel.v1.MsgTimeout"
         }
         fn new_instance(
             &self,
@@ -3365,13 +3365,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgTimeout" , decoder : | buf : & [u8] | { let msg : MsgTimeout = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgTimeout" , decoder : | buf : & [u8] | { let msg : MsgTimeout = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgTimeoutResponse")]
     impl ::prost_wkt::MessageSerde for MsgTimeoutResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3380,7 +3380,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_RESPONSE: () = {
             "MsgTimeoutResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutResponse"
+            "/ibc.core.channel.v1.MsgTimeoutResponse"
         }
         fn new_instance(
             &self,
@@ -3400,13 +3400,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutResponse" , decoder : | buf : & [u8] | { let msg : MsgTimeoutResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgTimeoutResponse" , decoder : | buf : & [u8] | { let msg : MsgTimeoutResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnClose")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgTimeoutOnClose")]
     impl ::prost_wkt::MessageSerde for MsgTimeoutOnClose {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3415,7 +3415,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE: () = {
             "MsgTimeoutOnClose"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnClose"
+            "/ibc.core.channel.v1.MsgTimeoutOnClose"
         }
         fn new_instance(
             &self,
@@ -3435,13 +3435,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnClose" , decoder : | buf : & [u8] | { let msg : MsgTimeoutOnClose = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgTimeoutOnClose" , decoder : | buf : & [u8] | { let msg : MsgTimeoutOnClose = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnCloseResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgTimeoutOnCloseResponse")]
     impl ::prost_wkt::MessageSerde for MsgTimeoutOnCloseResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3450,7 +3450,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE_RESPONSE: () = {
             "MsgTimeoutOnCloseResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnCloseResponse"
+            "/ibc.core.channel.v1.MsgTimeoutOnCloseResponse"
         }
         fn new_instance(
             &self,
@@ -3470,13 +3470,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TIMEOUT_ON_CLOSE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgTimeoutOnCloseResponse" , decoder : | buf : & [u8] | { let msg : MsgTimeoutOnCloseResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgTimeoutOnCloseResponse" , decoder : | buf : & [u8] | { let msg : MsgTimeoutOnCloseResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgement")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgAcknowledgement")]
     impl ::prost_wkt::MessageSerde for MsgAcknowledgement {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3485,7 +3485,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT: () = {
             "MsgAcknowledgement"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgement"
+            "/ibc.core.channel.v1.MsgAcknowledgement"
         }
         fn new_instance(
             &self,
@@ -3505,13 +3505,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgement" , decoder : | buf : & [u8] | { let msg : MsgAcknowledgement = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgAcknowledgement" , decoder : | buf : & [u8] | { let msg : MsgAcknowledgement = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgementResponse")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.MsgAcknowledgementResponse")]
     impl ::prost_wkt::MessageSerde for MsgAcknowledgementResponse {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3520,7 +3520,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT_RESPONSE: () = {
             "MsgAcknowledgementResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgementResponse"
+            "/ibc.core.channel.v1.MsgAcknowledgementResponse"
         }
         fn new_instance(
             &self,
@@ -3540,13 +3540,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_ACKNOWLEDGEMENT_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.MsgAcknowledgementResponse" , decoder : | buf : & [u8] | { let msg : MsgAcknowledgementResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.MsgAcknowledgementResponse" , decoder : | buf : & [u8] | { let msg : MsgAcknowledgementResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.GenesisState")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3555,7 +3555,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.GenesisState"
+            "/ibc.core.channel.v1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -3575,13 +3575,13 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PACKET_SEQUENCE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.core.channel.v1.PacketSequence")]
+    #[typetag::serde(name = "/ibc.core.channel.v1.PacketSequence")]
     impl ::prost_wkt::MessageSerde for PacketSequence {
         fn package_name(&self) -> &'static str {
             "ibc.core.channel.v1"
@@ -3590,7 +3590,7 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_SEQUENCE: () = {
             "PacketSequence"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.core.channel.v1.PacketSequence"
+            "/ibc.core.channel.v1.PacketSequence"
         }
         fn new_instance(
             &self,
@@ -3610,5 +3610,5 @@ const IMPL_MESSAGE_SERDE_FOR_PACKET_SEQUENCE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.core.channel.v1.PacketSequence" , decoder : | buf : & [u8] | { let msg : PacketSequence = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.core.channel.v1.PacketSequence" , decoder : | buf : & [u8] | { let msg : PacketSequence = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

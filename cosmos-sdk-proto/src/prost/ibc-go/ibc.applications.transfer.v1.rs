@@ -454,7 +454,7 @@ pub struct GenesisState {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_DENOM_TRACE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.DenomTrace")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.DenomTrace")]
     impl ::prost_wkt::MessageSerde for DenomTrace {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -463,7 +463,7 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_TRACE: () = {
             "DenomTrace"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.DenomTrace"
+            "/ibc.applications.transfer.v1.DenomTrace"
         }
         fn new_instance(
             &self,
@@ -483,13 +483,13 @@ const IMPL_MESSAGE_SERDE_FOR_DENOM_TRACE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.DenomTrace" , decoder : | buf : & [u8] | { let msg : DenomTrace = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.DenomTrace" , decoder : | buf : & [u8] | { let msg : DenomTrace = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.Params")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.Params")]
     impl ::prost_wkt::MessageSerde for Params {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -498,7 +498,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             "Params"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.Params"
+            "/ibc.applications.transfer.v1.Params"
         }
         fn new_instance(
             &self,
@@ -518,14 +518,14 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMS: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.Params" , decoder : | buf : & [u8] | { let msg : Params = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceRequest"
+        name = "/ibc.applications.transfer.v1.QueryDenomTraceRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomTraceRequest {
         fn package_name(&self) -> &'static str {
@@ -535,7 +535,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_REQUEST: () = {
             "QueryDenomTraceRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceRequest"
+            "/ibc.applications.transfer.v1.QueryDenomTraceRequest"
         }
         fn new_instance(
             &self,
@@ -555,14 +555,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomTraceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomTraceRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomTraceRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceResponse"
+        name = "/ibc.applications.transfer.v1.QueryDenomTraceResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomTraceResponse {
         fn package_name(&self) -> &'static str {
@@ -572,7 +572,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_RESPONSE: () = {
             "QueryDenomTraceResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceResponse"
+            "/ibc.applications.transfer.v1.QueryDenomTraceResponse"
         }
         fn new_instance(
             &self,
@@ -592,14 +592,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACE_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTraceResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomTraceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomTraceResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomTraceResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesRequest"
+        name = "/ibc.applications.transfer.v1.QueryDenomTracesRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomTracesRequest {
         fn package_name(&self) -> &'static str {
@@ -609,7 +609,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_REQUEST: () = {
             "QueryDenomTracesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesRequest"
+            "/ibc.applications.transfer.v1.QueryDenomTracesRequest"
         }
         fn new_instance(
             &self,
@@ -629,14 +629,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomTracesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomTracesRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomTracesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesResponse"
+        name = "/ibc.applications.transfer.v1.QueryDenomTracesResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomTracesResponse {
         fn package_name(&self) -> &'static str {
@@ -646,7 +646,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_RESPONSE: () = {
             "QueryDenomTracesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesResponse"
+            "/ibc.applications.transfer.v1.QueryDenomTracesResponse"
         }
         fn new_instance(
             &self,
@@ -666,13 +666,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_TRACES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomTracesResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomTracesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomTracesResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomTracesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsRequest")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.QueryParamsRequest")]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -681,7 +681,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsRequest"
+            "/ibc.applications.transfer.v1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -701,13 +701,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsResponse")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.QueryParamsResponse")]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -716,7 +716,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsResponse"
+            "/ibc.applications.transfer.v1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -736,14 +736,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_REQUEST: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashRequest"
+        name = "/ibc.applications.transfer.v1.QueryDenomHashRequest"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomHashRequest {
         fn package_name(&self) -> &'static str {
@@ -753,7 +753,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_REQUEST: () = {
             "QueryDenomHashRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashRequest"
+            "/ibc.applications.transfer.v1.QueryDenomHashRequest"
         }
         fn new_instance(
             &self,
@@ -773,14 +773,14 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomHashRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomHashRequest" , decoder : | buf : & [u8] | { let msg : QueryDenomHashRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_RESPONSE: () = {
     use ::prost_wkt::typetag;
     #[typetag::serde(
-        name = "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashResponse"
+        name = "/ibc.applications.transfer.v1.QueryDenomHashResponse"
     )]
     impl ::prost_wkt::MessageSerde for QueryDenomHashResponse {
         fn package_name(&self) -> &'static str {
@@ -790,7 +790,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_RESPONSE: () = {
             "QueryDenomHashResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashResponse"
+            "/ibc.applications.transfer.v1.QueryDenomHashResponse"
         }
         fn new_instance(
             &self,
@@ -810,13 +810,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_DENOM_HASH_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.QueryDenomHashResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomHashResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.QueryDenomHashResponse" , decoder : | buf : & [u8] | { let msg : QueryDenomHashResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.MsgTransfer")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.MsgTransfer")]
     impl ::prost_wkt::MessageSerde for MsgTransfer {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -825,7 +825,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER: () = {
             "MsgTransfer"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.MsgTransfer"
+            "/ibc.applications.transfer.v1.MsgTransfer"
         }
         fn new_instance(
             &self,
@@ -845,13 +845,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.MsgTransfer" , decoder : | buf : & [u8] | { let msg : MsgTransfer = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.MsgTransfer" , decoder : | buf : & [u8] | { let msg : MsgTransfer = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.MsgTransferResponse")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.MsgTransferResponse")]
     impl ::prost_wkt::MessageSerde for MsgTransferResponse {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -860,7 +860,7 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER_RESPONSE: () = {
             "MsgTransferResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.MsgTransferResponse"
+            "/ibc.applications.transfer.v1.MsgTransferResponse"
         }
         fn new_instance(
             &self,
@@ -880,13 +880,13 @@ const IMPL_MESSAGE_SERDE_FOR_MSG_TRANSFER_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.MsgTransferResponse" , decoder : | buf : & [u8] | { let msg : MsgTransferResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.MsgTransferResponse" , decoder : | buf : & [u8] | { let msg : MsgTransferResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/ibc.applications.transfer.v1.GenesisState")]
+    #[typetag::serde(name = "/ibc.applications.transfer.v1.GenesisState")]
     impl ::prost_wkt::MessageSerde for GenesisState {
         fn package_name(&self) -> &'static str {
             "ibc.applications.transfer.v1"
@@ -895,7 +895,7 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             "GenesisState"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/ibc.applications.transfer.v1.GenesisState"
+            "/ibc.applications.transfer.v1.GenesisState"
         }
         fn new_instance(
             &self,
@@ -915,5 +915,5 @@ const IMPL_MESSAGE_SERDE_FOR_GENESIS_STATE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/ibc.applications.transfer.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/ibc.applications.transfer.v1.GenesisState" , decoder : | buf : & [u8] | { let msg : GenesisState = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };

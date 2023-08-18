@@ -426,7 +426,7 @@ pub mod query_server {
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAMETER_CHANGE_PROPOSAL: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.ParameterChangeProposal")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.ParameterChangeProposal")]
     impl ::prost_wkt::MessageSerde for ParameterChangeProposal {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -435,7 +435,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMETER_CHANGE_PROPOSAL: () = {
             "ParameterChangeProposal"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.ParameterChangeProposal"
+            "/cosmos.params.v1beta1.ParameterChangeProposal"
         }
         fn new_instance(
             &self,
@@ -455,13 +455,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAMETER_CHANGE_PROPOSAL: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.ParameterChangeProposal" , decoder : | buf : & [u8] | { let msg : ParameterChangeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.ParameterChangeProposal" , decoder : | buf : & [u8] | { let msg : ParameterChangeProposal = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_PARAM_CHANGE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.ParamChange")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.ParamChange")]
     impl ::prost_wkt::MessageSerde for ParamChange {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -470,7 +470,7 @@ const IMPL_MESSAGE_SERDE_FOR_PARAM_CHANGE: () = {
             "ParamChange"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.ParamChange"
+            "/cosmos.params.v1beta1.ParamChange"
         }
         fn new_instance(
             &self,
@@ -490,13 +490,13 @@ const IMPL_MESSAGE_SERDE_FOR_PARAM_CHANGE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.ParamChange" , decoder : | buf : & [u8] | { let msg : ParamChange = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.ParamChange" , decoder : | buf : & [u8] | { let msg : ParamChange = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.QueryParamsRequest")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.QueryParamsRequest")]
     impl ::prost_wkt::MessageSerde for QueryParamsRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -505,7 +505,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             "QueryParamsRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.QueryParamsRequest"
+            "/cosmos.params.v1beta1.QueryParamsRequest"
         }
         fn new_instance(
             &self,
@@ -525,13 +525,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.QueryParamsRequest" , decoder : | buf : & [u8] | { let msg : QueryParamsRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.QueryParamsResponse")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.QueryParamsResponse")]
     impl ::prost_wkt::MessageSerde for QueryParamsResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -540,7 +540,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             "QueryParamsResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.QueryParamsResponse"
+            "/cosmos.params.v1beta1.QueryParamsResponse"
         }
         fn new_instance(
             &self,
@@ -560,13 +560,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_PARAMS_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.QueryParamsResponse" , decoder : | buf : & [u8] | { let msg : QueryParamsResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_REQUEST: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesRequest")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.QuerySubspacesRequest")]
     impl ::prost_wkt::MessageSerde for QuerySubspacesRequest {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -575,7 +575,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_REQUEST: () = {
             "QuerySubspacesRequest"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesRequest"
+            "/cosmos.params.v1beta1.QuerySubspacesRequest"
         }
         fn new_instance(
             &self,
@@ -595,13 +595,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_REQUEST: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesRequest" , decoder : | buf : & [u8] | { let msg : QuerySubspacesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.QuerySubspacesRequest" , decoder : | buf : & [u8] | { let msg : QuerySubspacesRequest = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_RESPONSE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesResponse")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.QuerySubspacesResponse")]
     impl ::prost_wkt::MessageSerde for QuerySubspacesResponse {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -610,7 +610,7 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_RESPONSE: () = {
             "QuerySubspacesResponse"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesResponse"
+            "/cosmos.params.v1beta1.QuerySubspacesResponse"
         }
         fn new_instance(
             &self,
@@ -630,13 +630,13 @@ const IMPL_MESSAGE_SERDE_FOR_QUERY_SUBSPACES_RESPONSE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.QuerySubspacesResponse" , decoder : | buf : & [u8] | { let msg : QuerySubspacesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.QuerySubspacesResponse" , decoder : | buf : & [u8] | { let msg : QuerySubspacesResponse = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
 
 #[allow(dead_code)]
 const IMPL_MESSAGE_SERDE_FOR_SUBSPACE: () = {
     use ::prost_wkt::typetag;
-    #[typetag::serde(name = "type.googleapis.com/cosmos.params.v1beta1.Subspace")]
+    #[typetag::serde(name = "/cosmos.params.v1beta1.Subspace")]
     impl ::prost_wkt::MessageSerde for Subspace {
         fn package_name(&self) -> &'static str {
             "cosmos.params.v1beta1"
@@ -645,7 +645,7 @@ const IMPL_MESSAGE_SERDE_FOR_SUBSPACE: () = {
             "Subspace"
         }
         fn type_url(&self) -> &'static str {
-            "type.googleapis.com/cosmos.params.v1beta1.Subspace"
+            "/cosmos.params.v1beta1.Subspace"
         }
         fn new_instance(
             &self,
@@ -665,5 +665,5 @@ const IMPL_MESSAGE_SERDE_FOR_SUBSPACE: () = {
             Ok(buf)
         }
     }
-    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "type.googleapis.com/cosmos.params.v1beta1.Subspace" , decoder : | buf : & [u8] | { let msg : Subspace = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
+    ::prost_wkt::inventory::submit! { :: prost_wkt :: MessageSerdeDecoderEntry { type_url : "/cosmos.params.v1beta1.Subspace" , decoder : | buf : & [u8] | { let msg : Subspace = :: prost :: Message :: decode (buf) ? ; Ok (:: std :: boxed :: Box :: new (msg)) } } }
 };
