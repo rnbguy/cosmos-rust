@@ -131,23 +131,18 @@ fn run_cmd(cmd: impl AsRef<OsStr>, args: impl IntoIterator<Item = impl AsRef<OsS
         .args(args)
         .stdout(stdout)
         .status()
-        .unwrap_or_else(|e| match e.kind() {
-            io::ErrorKind::NotFound => panic!(
-                "error running '{:?}': command not found. Is it installed?",
-                cmd.as_ref()
-            ),
-            _ => panic!("error running '{:?}': {:?}", cmd.as_ref(), e),
-        });
+        .expect("exit status missing");
 
     if !exit_status.success() {
-        match exit_status.code() {
-            Some(code) => panic!("{:?} exited with error code: {:?}", cmd.as_ref(), code),
-            None => panic!("{:?} exited without error code", cmd.as_ref()),
-        }
+        panic!(
+            "{:?} exited with error code: {:?}",
+            cmd.as_ref(),
+            exit_status.code()
+        );
     }
 }
 
-fn run_buf(config: &str, proto_path: impl AsRef<Path>, out_dir: impl AsRef<Path>) {
+fn _run_buf(config: &str, proto_path: impl AsRef<Path>, out_dir: impl AsRef<Path>) {
     run_cmd(
         "buf",
         [
@@ -222,16 +217,73 @@ fn compile_sdk_protos_and_services(out_dir: &Path) {
         out_dir.display()
     );
 
+    let root = env!("CARGO_MANIFEST_DIR");
+    let sdk_dir = Path::new(COSMOS_SDK_DIR);
+
+    let proto_includes_paths = [
+        format!("{}/../proto", root),
+        format!("{}/proto", sdk_dir.display()),
+        format!("{}/third_party/proto", sdk_dir.display()),
+    ];
+
+    // Paths
+    let proto_paths = [
+        format!("{}/../proto/definitions/mock", root),
+        format!("{}/proto/cosmos/auth", sdk_dir.display()),
+        format!("{}/proto/cosmos/authz", sdk_dir.display()),
+        format!("{}/proto/cosmos/bank", sdk_dir.display()),
+        format!("{}/proto/cosmos/base", sdk_dir.display()),
+        format!("{}/proto/cosmos/base/tendermint", sdk_dir.display()),
+        format!("{}/proto/cosmos/capability", sdk_dir.display()),
+        format!("{}/proto/cosmos/crisis", sdk_dir.display()),
+        format!("{}/proto/cosmos/crypto", sdk_dir.display()),
+        format!("{}/proto/cosmos/distribution", sdk_dir.display()),
+        format!("{}/proto/cosmos/evidence", sdk_dir.display()),
+        format!("{}/proto/cosmos/feegrant", sdk_dir.display()),
+        format!("{}/proto/cosmos/genutil", sdk_dir.display()),
+        format!("{}/proto/cosmos/gov", sdk_dir.display()),
+        format!("{}/proto/cosmos/mint", sdk_dir.display()),
+        format!("{}/proto/cosmos/params", sdk_dir.display()),
+        format!("{}/proto/cosmos/slashing", sdk_dir.display()),
+        format!("{}/proto/cosmos/staking", sdk_dir.display()),
+        format!("{}/proto/cosmos/tx", sdk_dir.display()),
+        format!("{}/proto/cosmos/upgrade", sdk_dir.display()),
+        format!("{}/proto/cosmos/vesting", sdk_dir.display()),
+    ];
+
+    // List available proto files
+    let mut protos: Vec<PathBuf> = vec![];
+    collect_protos(&proto_paths, &mut protos);
+
+    // List available paths for dependencies
+    let includes: Vec<PathBuf> = proto_includes_paths.iter().map(PathBuf::from).collect();
+
     // Compile all of the proto files, along with grpc service clients
     info!("Compiling proto definitions and clients for GRPC services!");
-    let proto_path = Path::new(COSMOS_SDK_DIR).join("proto");
-    run_buf("buf.sdk.gen.yaml", &proto_path, out_dir);
+    tonic_build::configure()
+        .build_client(true)
+        .build_server(true)
+        .out_dir(out_dir)
+        .extern_path(".tendermint", "::tendermint_proto")
+        .compile(&protos, &includes)
+        .unwrap();
+
     info!("=> Done!");
 }
 
 fn compile_wasmd_proto_and_services(out_dir: &Path) {
-    let sdk_dir = Path::new(WASMD_DIR);
-    let proto_path = sdk_dir.join("proto");
+    let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    let sdk_dir = PathBuf::from(WASMD_DIR);
+
+    let proto_includes_paths = [
+        root.join("../proto"),
+        sdk_dir.join("proto"),
+        sdk_dir.join("third_party/proto"),
+    ];
+
+    // List available paths for dependencies
+    let includes: Vec<PathBuf> = proto_includes_paths.iter().map(PathBuf::from).collect();
+
     let proto_paths = [format!("{}/proto/cosmwasm/wasm", sdk_dir.display())];
 
     // List available proto files
@@ -240,7 +292,13 @@ fn compile_wasmd_proto_and_services(out_dir: &Path) {
 
     // Compile all proto client for GRPC services
     info!("Compiling wasmd proto clients for GRPC services!");
-    run_buf("buf.wasmd.gen.yaml", proto_path, out_dir);
+    tonic_build::configure()
+        .build_client(true)
+        .build_server(false)
+        .out_dir(out_dir)
+        .compile(&protos, &includes)
+        .unwrap();
+
     info!("=> Done!");
 }
 
