@@ -297,11 +297,13 @@ fn compile_sdk_protos_and_services(out_dir: &Path) {
 fn compile_wasmd_proto_and_services(out_dir: &Path) {
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let sdk_dir = PathBuf::from(WASMD_DIR);
+    let cosmos_sdk_dir = PathBuf::from(COSMOS_SDK_DIR);
 
     let proto_includes_paths = [
         root.join("../proto"),
         sdk_dir.join("proto"),
         sdk_dir.join("third_party/proto"),
+        sdk_dir.join("..").join(cosmos_sdk_dir).join("proto")
     ];
 
     // List available paths for dependencies
