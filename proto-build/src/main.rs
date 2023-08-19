@@ -268,7 +268,7 @@ fn compile_sdk_protos_and_services(out_dir: &Path) {
         .build_client(true)
         .build_server(true)
         .out_dir(out_dir)
-        .extern_path(".tendermint", "::tendermint_proto")
+        .extern_path(".tendermint", "::tendermint_proto::v0_34")
         .type_attribute(".", "#[derive(::serde::Serialize, ::serde::Deserialize)]")
         .field_attribute("PubKey.key", "#[serde(with = \"serde_with::As::<serde_with::base64::Base64>\")]")
         .field_attribute("PrivKey.key", "#[serde(with = \"serde_with::As::<serde_with::base64::Base64>\")]")
@@ -394,7 +394,7 @@ fn compile_ibc_protos_and_services(out_dir: &Path) {
         .build_client(true)
         .build_server(false)
         .out_dir(out_dir)
-        .extern_path(".tendermint", "::tendermint_proto")
+        .extern_path(".tendermint", "::tendermint_proto::v0_34")
         .type_attribute(".", "#[derive(::serde::Serialize, ::serde::Deserialize)]")
         .extern_path(".google.protobuf.Any", "::prost_wkt_types::Any")
         .extern_path(".google.protobuf.Timestamp", "::prost_wkt_types::Timestamp")
@@ -469,7 +469,7 @@ fn copy_and_patch(src: impl AsRef<Path>, dest: impl AsRef<Path>) -> io::Result<(
     /// Regex substitutions to apply to the prost-generated output
     const REPLACEMENTS: &[(&str, &str)] = &[
         // Use `tendermint-proto` proto definitions
-        ("(super::)+tendermint", "tendermint_proto"),
+        ("(super::)+tendermint", "tendermint_proto::v0_34"),
         // Feature-gate gRPC client modules
         (
             "/// Generated client implementations.",
